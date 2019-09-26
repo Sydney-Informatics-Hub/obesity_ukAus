@@ -1,0 +1,35 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+# New Project template
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+This is a template for a new project. It should contain the following
+folders: 
+
+- 000_scoping
+- 001_projectname.taskpaper (flatfile with list of tasks for project)
+- 002_emails_and_meetings
+- 003_literature
+- 100_data_cleaning_scripts_EDA
+- 100_data_raw
+- 200_data_clean
+- 400_analysis
+- 500_report
+- 999_other
+
+You can create other interim(ly) indexed folders between these if you need the flexibility of multiple folders for analysis/outputs.
+
+
+If there are other resouces (e.g., OSF folders, Overleaf documents, Google docs) that are linked to the project, they should be listed in this document.
