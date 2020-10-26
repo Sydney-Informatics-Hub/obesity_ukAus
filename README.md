@@ -1,11 +1,4 @@
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # New Project template
-
-<!-- badges: start -->
-
-<!-- badges: end -->
 
 This is a template for a new project. It should contain the following
 folders:
