@@ -24,6 +24,4 @@ folders:
 You can create other interim(ly) indexed folders between these if you
 need the flexibility of multiple folders for analysis/outputs.
 
-If there are other resouces (e.g., OSF folders, Overleaf documents,
-Google docs) that are linked to the project, they should be listed in
-this document.
+If there are other resouces (e.g., Data stored elsewhere, literature stored elsewhere) that are linked to the project, they should be listed in this document.
