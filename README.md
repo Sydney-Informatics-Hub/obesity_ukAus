@@ -25,3 +25,5 @@ You can create other interim(ly) indexed folders between these if you
 need the flexibility of multiple folders for analysis/outputs.
 
 If there are other resouces (e.g., Data stored elsewhere, literature stored elsewhere) that are linked to the project, they should be listed in this document.
+
+In general, data should not be uploaded to github and should be excluded via the .gitignore file. A link to, or information on how to get access to the data if you have the correct permissions, should be included.
