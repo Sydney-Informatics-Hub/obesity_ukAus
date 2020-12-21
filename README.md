@@ -1,6 +1,6 @@
 # New Project template
 
-This is a template for a new project. It should contain the following
+This is a template for a new project, from (https://github.sydney.edu.au/informatics/newRprojecttemplate)[https://github.sydney.edu.au/informatics/newRprojecttemplate]. It should contain the following
 folders:
 
   - 000\_scoping
