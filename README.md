@@ -1,7 +1,7 @@
 # New Project template
 
-This is a template for a new project, from [https://github.sydney.edu.au/informatics/newRprojecttemplate](https://github.sydney.edu.au/informatics/newRprojecttemplate). It should contain the following
-folders:
+This is a template for a new project, from [https://github.sydney.edu.au/informatics/newRprojecttemplate](https://github.sydney.edu.au/informatics/newRprojecttemplate). 
+It should contain the following folders:
 
   - 000\_scoping
   - 001\_projectname.taskpaper (flatfile with list of tasks for project)
