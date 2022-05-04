@@ -2,9 +2,6 @@
 title: "PIPE-XXX: PROJECT TITLE"
 author: "Authors"
 date: "dd/mm/yyyy"
-output: 
-  redoc::redoc:
-    keep_md: true
 ---
 
 ```{r setup, include=FALSE}

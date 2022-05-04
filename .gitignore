@@ -2,6 +2,15 @@
 .Rhistory
 .RData
 .DS_Store
+.Rprofile
 
 # Ignore raw data
 100_data_raw/*
+
+/.quarto/
+
+# ignore renv files
+renv/
+
+# ignore freeze cache
+_freeze

@@ -1,0 +1,27 @@
+---
+title: "Sydney Informatics Hub"
+about:
+  image: https://avatars.githubusercontent.com/u/38518764?s=400&u=37d5cdf704cab65064b965283a091982cb8fa034&v=4
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/Sydney-Informatics-Hub
+---
+
+The [Sydney Informatics Hub](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub.html) is a Core Research Facility of the University of Sydney.
+
+The use of the SIH services including the Artemis HPC and associated support and training warrants acknowledgement in any publications, conference proceedings or posters describing work facilitated by these services.
+
+The continued acknowledgement of the use of SIH facilities ensures the sustainability of our services.
+
+## Suggested wording
+
+### General acknowledgement:
+
+*The authors acknowledge the technical assistance provided by the Sydney Informatics Hub, a Core Research Facility of the University of Sydney.*
+
+### Acknowledging specific staff:
+
+*The authors acknowledge the technical assistance of (name of staff) of the Sydney Informatics Hub, a Core Research Facility of the University of Sydney.*
+
+For further information about acknowledging the Sydney Informatics Hub, please contact us at [sih.info\@sydney.edu.au](mailto:sih.info@sydney.edu.au).

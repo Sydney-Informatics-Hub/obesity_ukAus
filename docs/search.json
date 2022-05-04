@@ -1,0 +1,163 @@
+[
+  {
+    "objectID": "400_analysis/step1.html",
+    "href": "400_analysis/step1.html",
+    "title": "New SIH project",
+    "section": "",
+    "text": "This is step 1"
+  },
+  {
+    "objectID": "400_analysis/step1.html#quarto",
+    "href": "400_analysis/step1.html#quarto",
+    "title": "New SIH project",
+    "section": "Quarto",
+    "text": "Quarto\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "400_analysis/step1.html#running-code",
+    "href": "400_analysis/step1.html#running-code",
+    "title": "New SIH project",
+    "section": "Running Code",
+    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\nCodelibrary(ggplot2)\nggplot(data = mtcars, \n       aes(x = mpg, y = hp, \n           col = as.factor(cyl))) + \n  geom_point() + \n  theme_minimal()\n\n\n\nCode1 + 1\n\n[1] 2\n\n\nYou can add options to executable code like this\n\nCode2 * 2\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
+  },
+  {
+    "objectID": "400_analysis/step2.html",
+    "href": "400_analysis/step2.html",
+    "title": "New SIH project",
+    "section": "",
+    "text": "This is step 2"
+  },
+  {
+    "objectID": "400_analysis/step2.html#quarto",
+    "href": "400_analysis/step2.html#quarto",
+    "title": "New SIH project",
+    "section": "Quarto",
+    "text": "Quarto\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "400_analysis/step2.html#running-code",
+    "href": "400_analysis/step2.html#running-code",
+    "title": "New SIH project",
+    "section": "Running Code",
+    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\nCodelibrary(ggplot2)\nggplot(data = mtcars, \n       aes(x = mpg, y = hp, \n           col = as.factor(cyl))) + \n  geom_point() + \n  theme_minimal()\n\n\n\nCode1 + 1\n\n[1] 2\n\n\nYou can add options to executable code like this\n\nCode2 * 2\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "quarto_test",
+    "section": "",
+    "text": "To learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Sydney Informatics Hub",
+    "section": "",
+    "text": "The Sydney Informatics Hub is a Core Research Facility of the University of Sydney.\nThe use of the SIH services including the Artemis HPC and associated support and training warrants acknowledgement in any publications, conference proceedings or posters describing work facilitated by these services.\nThe continued acknowledgement of the use of SIH facilities ensures the sustainability of our services."
+  },
+  {
+    "objectID": "about.html#suggested-wording",
+    "href": "about.html#suggested-wording",
+    "title": "Sydney Informatics Hub",
+    "section": "Suggested wording",
+    "text": "Suggested wording\n\nGeneral acknowledgement:\nThe authors acknowledge the technical assistance provided by the Sydney Informatics Hub, a Core Research Facility of the University of Sydney.\n\n\nAcknowledging specific staff:\nThe authors acknowledge the technical assistance of (name of staff) of the Sydney Informatics Hub, a Core Research Facility of the University of Sydney.\nFor further information about acknowledging the Sydney Informatics Hub, please contact us at sih.info@sydney.edu.au."
+  },
+  {
+    "objectID": "100_data_cleaning_scripts_EDA/step1.html",
+    "href": "100_data_cleaning_scripts_EDA/step1.html",
+    "title": "New SIH project",
+    "section": "",
+    "text": "This is step 1"
+  },
+  {
+    "objectID": "100_data_cleaning_scripts_EDA/step1.html#quarto",
+    "href": "100_data_cleaning_scripts_EDA/step1.html#quarto",
+    "title": "New SIH project",
+    "section": "Quarto",
+    "text": "Quarto\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "100_data_cleaning_scripts_EDA/step1.html#running-code",
+    "href": "100_data_cleaning_scripts_EDA/step1.html#running-code",
+    "title": "New SIH project",
+    "section": "Running Code",
+    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\nCodelibrary(ggplot2)\nggplot(data = mtcars, \n       aes(x = mpg, y = hp, \n           col = as.factor(cyl))) + \n  geom_point() + \n  theme_minimal()\n\n\n\nCode1 + 1\n\n[1] 2\n\n\nYou can add options to executable code like this\n\nCode2 * 2\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
+  },
+  {
+    "objectID": "100_data_cleaning_scripts_EDA/step2.html",
+    "href": "100_data_cleaning_scripts_EDA/step2.html",
+    "title": "New SIH project",
+    "section": "",
+    "text": "This is step 2"
+  },
+  {
+    "objectID": "100_data_cleaning_scripts_EDA/step2.html#quarto",
+    "href": "100_data_cleaning_scripts_EDA/step2.html#quarto",
+    "title": "New SIH project",
+    "section": "Quarto",
+    "text": "Quarto\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "100_data_cleaning_scripts_EDA/step2.html#running-code",
+    "href": "100_data_cleaning_scripts_EDA/step2.html#running-code",
+    "title": "New SIH project",
+    "section": "Running Code",
+    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\nCodelibrary(ggplot2)\nggplot(data = mtcars, \n       aes(x = mpg, y = hp, \n           col = as.factor(cyl))) + \n  geom_point() + \n  theme_minimal()\n\n\n\nCode1 + 1\n\n[1] 2\n\n\nYou can add options to executable code like this\n\nCode2 * 2\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
+  },
+  {
+    "objectID": "000_scoping/scoping.html",
+    "href": "000_scoping/scoping.html",
+    "title": "PIPE-XXX: PROJECT TITLE",
+    "section": "",
+    "text": "Clients: X, Y, Z\nFaculty: X\nSchool: ?\nResearch centre: ?\nCollaborators and their affilications: ?"
+  },
+  {
+    "objectID": "000_scoping/scoping.html#project-scoping-details",
+    "href": "000_scoping/scoping.html#project-scoping-details",
+    "title": "PIPE-XXX: PROJECT TITLE",
+    "section": "Project scoping details",
+    "text": "Project scoping details\n\nScope prepared by X\nScope prepared on\nProject manager\n\nResearcher Availability\n\nWho is the active person helping?\nHow available are they to participate in this study?"
+  },
+  {
+    "objectID": "000_scoping/scoping.html#project-summary",
+    "href": "000_scoping/scoping.html#project-summary",
+    "title": "PIPE-XXX: PROJECT TITLE",
+    "section": "2. Project summary",
+    "text": "2. Project summary\nResearch context\nThis research aims to:\n\nX\nB\nClient needs\n\nA\nB\nC\nCurrent data\n\nX"
+  },
+  {
+    "objectID": "000_scoping/scoping.html#project-implementation",
+    "href": "000_scoping/scoping.html#project-implementation",
+    "title": "PIPE-XXX: PROJECT TITLE",
+    "section": "3. Project Implementation",
+    "text": "3. Project Implementation\nProject plan\n\nWhat needs to be done?\nWhat’s the timeline for each step?\nScheduling\n\nAny notes?\nDeliverables\n\nA\nB\nC\nSIH skills required\n\nPython/R/SQL?\nXXX\nyyyy\nIn scope\nOut of scope\n\nMore than X weeks FTE work\nAcceptance Criteria\n\nx\nHandover plan\n\nX"
+  },
+  {
+    "objectID": "000_scoping/scoping.html#project-evaluation",
+    "href": "000_scoping/scoping.html#project-evaluation",
+    "title": "PIPE-XXX: PROJECT TITLE",
+    "section": "4. Project Evaluation",
+    "text": "4. Project Evaluation\nSIH Benefits (Summary)\n\nX/\nCost (FTE weeks)\n\nX weeks FTE\n\n\nSIH staff will fill out the below"
+  },
+  {
+    "objectID": "000_scoping/scoping.html#essential-criteria",
+    "href": "000_scoping/scoping.html#essential-criteria",
+    "title": "PIPE-XXX: PROJECT TITLE",
+    "section": "5. Essential criteria",
+    "text": "5. Essential criteria\n\n\nSydney Researcher\nY:\n\n\nClear project statement\nY\n\n\nData quality\nY\n\n\nSolvable\nY\n\n\nDomain Expert\nY\n\n\nPlanned\nY\n\n\nStrategic Plan\nY\n\n\nData Science\nY\n\n\nPriority\nY: Health\n\n\nDeliverables\nY\n\n\nInfrastructure\nY"
+  },
+  {
+    "objectID": "000_scoping/scoping.html#value-and-impact",
+    "href": "000_scoping/scoping.html#value-and-impact",
+    "title": "PIPE-XXX: PROJECT TITLE",
+    "section": "6. Value and Impact",
+    "text": "6. Value and Impact\nDrives the success of larger groups, larger collaborations or high-profile projects.\n\nScore: X/10\nDetails:\n\nName of Research Group/Centre:\nName of Collaboration:\n\n\nPublications that are high-impact - foundational, highly cited, with potential for wider adoption of methods and knock-on outcomes.\n\nScore: X/10\n\n\nTarget Journal: Nature (Impact Factor 40000)\n\n\nName of Authors: Amazing researcher, (name of SIH data analyst?)\nProposed Paper Title: How to write a Science paper in 5 days.\nPotential for patents, start-ups, open-source code, policy influence.\n\nPolicy influence X/10\nDevelop funding opportunities for the university and/or SIH, such as large CoE-scale grants and further involvement with successful and well funded groups.\n\nScore: X/10\nName of Grant Application:\nDate of Proposed Submission:\nTotal score\nX/40 (refer to Rubric for scoring guide)"
+  },
+  {
+    "objectID": "000_scoping/scoping.html#kpi",
+    "href": "000_scoping/scoping.html#kpi",
+    "title": "PIPE-XXX: PROJECT TITLE",
+    "section": "7. KPI",
+    "text": "7. KPI\n\n\nPapers SIH Coauthors (*measure only, not KPI)\nN\n\n\nNumber of Papers: Papers SIH Acknowledged\nY - Number of Papers: 1000\n\n\nCollaborators who publish\nName: Amazing Researcher\n\n\nCollaborators who have grants\nName: Amazing Researcher\n\n\nGrant applications created\nY:\n\n\nGrants project supporting\nName of Grant:\n\n\nSoftware released for public use\nY/N: TBA\n\n\nNew Clients\nY\n\n\nKPI Score\n?/6"
+  }
+]

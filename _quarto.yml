@@ -1,0 +1,53 @@
+project:
+  type: website
+  output-dir: docs
+
+
+execute:
+  freeze: auto  # re-render only when source changes
+
+website:
+  title: "New SIH project"
+  navbar:
+    background: primary
+    left:
+      - href: index.qmd
+        text: Home
+      - text: "Data Cleaning & EDA"
+        menu:
+          - text: "Step 1"
+            href: 100_data_cleaning_scripts_EDA/step1.qmd
+          - text: "Step 2"
+            href: 100_data_cleaning_scripts_EDA/step2.qmd
+      - text: Analysis
+        menu:
+          - text: "Step 1"
+            href: 400_analysis/step1.qmd
+          - text: "Step 2"
+            href: 400_analysis/step2.qmd
+    right:
+      - text: "Scope"
+        href: 000_scoping/scoping.qmd
+      - about.qmd
+  repo-url: https://github.com/Sydney-Informatics-Hub/
+  repo-actions: [edit, issue]
+  search:
+    location: navbar
+    type: textbox
+  page-footer:
+    center: "Copyright 2022, AnalystNameTODO, Sydney Informatics Hub"
+
+about:
+  template: solana
+
+format:
+  html:
+    toc: true
+    theme:
+      light: flatly
+      dark: darkly
+    toc-depth: 2
+    code-link: true
+    code-fold: true
+
+
