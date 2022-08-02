@@ -1,7 +1,10 @@
 ---
-title: "quarto_test"
+title: "Obesity comparison of UK and Australian corpora"
 ---
 
-This is a Quarto website.
+This is the landing page for the comparison between the UK and Australian obesity corpora.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Please see the following:
+
+- [Exploratory data analysis and summary statistics](100_data_cleaning_scripts_EDA/dataEDA.html)
+- [Condition- vs Person- first language and use of nominal "the obese"](400_analysis/ConditionAndPersonFirst.html)
