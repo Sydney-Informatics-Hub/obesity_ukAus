@@ -7,7 +7,7 @@ execute:
   freeze: auto  # re-render only when source changes
 
 website:
-  title: "New SIH project"
+  title: "Obesity UK vs Australian corpus comparison"
   navbar:
     background: primary
     left:
@@ -19,7 +19,7 @@ website:
             href: 100_data_cleaning_scripts_EDA/dataEDA.qmd
       - text: Analysis
         menu:
-          - text: "Step 1"
+          - text: "Analysis"
             href: 400_analysis/ConditionAndPersonFirst.qmd
     right:
       - text: "Scope"
@@ -31,7 +31,7 @@ website:
     location: navbar
     type: textbox
   page-footer:
-    center: "Copyright 2022, AnalystNameTODO, Sydney Informatics Hub"
+    center: "Copyright 2022, Darya Vanichkina, Sydney Informatics Hub"
 
 about:
   template: solana
