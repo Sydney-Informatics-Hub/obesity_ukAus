@@ -14,3 +14,7 @@ renv/
 
 # ignore freeze cache
 _freeze
+
+200_data_clean/
+
+300_data_processed/

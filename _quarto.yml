@@ -15,16 +15,12 @@ website:
         text: Home
       - text: "Data Cleaning & EDA"
         menu:
-          - text: "Step 1"
-            href: 100_data_cleaning_scripts_EDA/step1.qmd
-          - text: "Step 2"
-            href: 100_data_cleaning_scripts_EDA/step2.qmd
+          - text: "Dataset comparison and cleaning"
+            href: 100_data_cleaning_scripts_EDA/dataEDA.qmd
       - text: Analysis
         menu:
           - text: "Step 1"
-            href: 400_analysis/step1.qmd
-          - text: "Step 2"
-            href: 400_analysis/step2.qmd
+            href: 400_analysis/ConditionAndPersonFirst.qmd
     right:
       - text: "Scope"
         href: 000_scoping/scoping.qmd
