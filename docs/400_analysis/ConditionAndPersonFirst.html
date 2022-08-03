@@ -171,9 +171,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>We use the following tests to compare the sub-corpora:</p>
 <ul>
-<li>Chi-square tests, considering the total sub-corpus word count as the probability of observing a specific feature</li>
+<li>Chi-square tests, considering the total sub-corpus word count as the probability of observing a specific feature.</li>
 <li>Parametric t-tests comparing the mean frequencies, with texts without the feature considered to have a value of 0.</li>
-<li>The non-parametric Fisher-Pitman test with 10000 re-samples, comparing the mean frequencies, with texts without the feature considered to have a value of 0.</li>
+<li>The non-parametric Fisher-Pitman Permutation Test test with 10000 re-samples, comparing the mean frequencies, with texts without the feature considered to have a value of 0.</li>
 </ul>
 <section id="article-length-differences" class="level3"><h3 class="anchored" data-anchor-id="article-length-differences">Article length differences:</h3>
 <ul>
@@ -185,20 +185,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><p>Australian broadsheets have somewhat higher total number of instances (p(Chi-sq) &lt; 0.05) and number of articles (p &lt; 0.001) using person-first language than Australian tabloids, however, this difference is not supported when considering the mean frequency of language use across the corpus with parametric or non-parametric tests.</p></li>
 <li><p>In the UK corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets, when considering contingency table and frequency based analyses similar to the above.</p></li>
-<li><p>Australian broadsheets have somewhat higher total number of instances (p(Chi-sq) &lt; 0.005) and number of articles (p &lt; 0.005) using person-first language than UK broadsheets. This difference is supported when considering the mean frequency of language use (mean Australian broadsheets = 17.81 words per million, mean UK broadsheets 8.52 wpm) across the corpus with parametric and non-parametric tests (p &lt;0.05)).</p></li>
+<li><p>Australian broadsheets have somewhat higher total number of instances (p(Chi-sq) &lt; 0.005) and number of articles (p &lt; 0.005) using person-first language than UK broadsheets. This difference is supported when considering the mean frequency of language use (mean Australian broadsheets = 17.81 words per million (wpm), mean UK broadsheets 8.52 wpm) across the corpus with parametric and non-parametric tests (p &lt;0.05)).</p></li>
 <li><p>There is no difference between the number of instances, articles or frequency of between Australian and UK tabloids.</p></li>
 </ul></section><section id="use-of-condition-first-language" class="level3"><h3 class="anchored" data-anchor-id="use-of-condition-first-language">Use of condition-first language:</h3>
 <ul>
 <li><p>Australian broadsheets have somewhat lower total number of instances (p(Chi-sq) &lt; 0.001) and number of articles (p &lt; 0.1) using condition-first language than Australian tabloids. If we instead look at the frequency of use, the opposite result is observed, with a higher frequency of condition-first language in tabloids than in broadsheets (mean broadsheets = 847.96 wpm vs 1315.95 wpm in tabloids, p(FP) &lt; 1e-04). This discrepancy may be attributable to the fact that articles in broadsheets are substantially longer than those in tabloids, so comparing mean frequencies of the same number of instances results in a difference frequency because the word count being divided by for broadsheets is larger than that of tabloids.</p></li>
-<li><p>In the UK corpus, there is a higher number of instances and articles containing at least one instance of condition-first language used in tabloids, and a lower number of instances in broadsheets (p &lt; 0.001). A very small difference is also detected, with a higher mean frequency in tabloids than broadsheets (mean tabloids 629.40 wpm, mean of broadsheets 835.37 wpm, p(FP) &lt; 1e-04)</p></li>
+<li><p>In the UK corpus, there is a higher number of instances and articles containing at least one instance of condition-first language used in tabloids, and a lower number of instances in broadsheets (p &lt; 0.001). A very small difference is also detected, with a higher mean frequency in tabloids than broadsheets (mean broadsheets 629.40 wpm, mean of tabloids 835.37 wpm, p(FP) &lt; 1e-04)</p></li>
 <li><p>There is a higher number of instances and articles with at least one instance (p(Chi-sq) &lt; 0.001) of condition-first language in Australian vs UK broadsheets. If we consider the frequency, a very small difference is also detected, with Australian broadsheets having a higher frequency than UK ones (mean Australian 847.96 wpm, mean UK 629.40 wpm, p(FP) &lt; 1e-04).</p></li>
 <li><p>There is a higher number of instances and articles that use condition-first language in Australian tabloids, and a lower number in UK tabloids (p(Chi-sq) &lt; 0.001). The frequency is also higher in Australian tabloids (mean Australian 1315.95 wpm, mean UK 835.37 wpm, p(FP) &lt; 1e-04). This is especially striking given that there is no difference in overall article length between Australian and UK tabloids.</p></li>
-</ul></section><section id="use-of-the-nominal-the-obese" class="level3"><h3 class="anchored" data-anchor-id="use-of-the-nominal-the-obese">Use of the nominal “the obese”</h3>
+</ul></section><section id="use-of-adjectival-nominal-the-obese" class="level3"><h3 class="anchored" data-anchor-id="use-of-adjectival-nominal-the-obese">Use of adjectival nominal “the obese”</h3>
 <ul>
 <li><p>In the Australian corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) &lt; 0.05, p(FP) &lt; 0.1) when considering frequencies, with tabloids having a higher frequency of use of condition-first language vs broadsheets (mean broadsheet frequency 42.65 wpm, mean tabloid 70.46 wpm). This discrepancy is most likely at least partially explained by the much longer article lengths of broadsheets vs tabloids in this corpus.</p></li>
 <li><p>Similarly, in the UK corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) &lt; 0.01, p(FP) &lt; 0.01) when considering frequencies, with tabloids having a higher frequency of use of “the obese” vs broadsheets (mean broadsheet frequency 62.96 wpm, mean tabloid 96.08 wpm). This discrepancy is most likely at least partially explained by the much longer article lengths of broadsheets vs tabloids in this corpus, similar to the Australian corpus.</p></li>
-<li><p>When comparing use of “the obese” in the Australian vs UK broadsheets, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) &lt; 0.01, p(FP) &lt; 0.01) when considering frequencies, with Australian broadsheets having a higher frequency of use of “the obese” vs UK ones (mean frequency Australia - 42.65 wpm, UK - 62.96 wpm).</p></li>
-<li><p>There is a somewhat higher number of total instances of use and articles with at least one instance of use of “the obese” in Australian tabloids, and a lower number in UK tabloids (p(Chi-sq) &lt; 0.05). However, this difference is not supported by frequency analysis, when using both parametric or non-parametric tests.</p></li>
+<li><p>When comparing use of “the obese” in the Australian vs UK broadsheets, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) &lt; 0.01, p(FP) &lt; 0.01) when considering frequencies, with UK broadsheets having a higher frequency of use of “the obese” vs Australian ones (mean frequency Australia - 42.65 wpm, UK - 62.96 wpm).</p></li>
+<li><p>There is a somewhat lower number of total instances of use and articles with at least one instance of use of “the obese” in Australian tabloids, and a higher number in UK tabloids (p(Chi-sq) &lt; 0.05). However, this difference is not supported by frequency analysis, when using both parametric or non-parametric tests.</p></li>
 </ul>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://here.r-lib.org/">here</a></span><span class="op">)</span></span>
@@ -210,6 +210,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://patchwork.data-imaginist.com">patchwork</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/taiyun/corrplot">corrplot</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://coin.r-forge.r-project.org">coin</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">ggvenn</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme_get.html">theme_set</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
@@ -217,360 +218,302 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <details><summary>Code</summary><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">metadata</span> <span class="op">&lt;-</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"200_data_clean/"</span>, <span class="st">"full_metadata.csv"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">both_datasets</span> <span class="op">&lt;-</span>  <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"200_data_clean/"</span>, <span class="st">"both_datasets.csv"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="co"># get data for correct time window</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">&gt;=</span> <span class="fl">2008</span> <span class="op">&amp;</span> <span class="va">year</span> <span class="op">&lt;=</span><span class="fl">2016</span><span class="op">)</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">&gt;=</span> <span class="fl">2008</span> <span class="op">&amp;</span> <span class="va">year</span> <span class="op">&lt;=</span><span class="fl">2016</span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/source.html">source</a></span><span class="op">(</span><span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"400_analysis"</span>, <span class="st">"functions.R"</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># get some wordcounts </span></span>
-<span><span class="va">au_tabloid_wordcounts</span> <span class="op">&lt;-</span> </span>
-<span>  <span class="va">metadata</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">corpus</span> <span class="op">==</span> <span class="st">"AUS"</span> <span class="op">&amp;</span> <span class="va">source_type</span> <span class="op">==</span> <span class="st">"tabloid"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="va">no_words_in_text</span><span class="op">)</span> </span>
+<span><span class="va">au_tabloid_wordcounts</span> <span class="op">&lt;-</span> <span class="fu">get_wc</span><span class="op">(</span></span>
+<span>  corpuslabel <span class="op">=</span> <span class="st">"AUS"</span>,</span>
+<span>  sourcetypelabel <span class="op">=</span> <span class="st">"tabloid"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">au_broadsheet_wordcounts</span> <span class="op">&lt;-</span> </span>
-<span>  <span class="va">metadata</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">corpus</span> <span class="op">==</span> <span class="st">"AUS"</span> <span class="op">&amp;</span> <span class="va">source_type</span> <span class="op">==</span> <span class="st">"broadsheet"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="va">no_words_in_text</span><span class="op">)</span> </span>
+<span><span class="va">au_broadsheet_wordcounts</span> <span class="op">&lt;-</span> <span class="fu">get_wc</span><span class="op">(</span></span>
+<span>  corpuslabel <span class="op">=</span> <span class="st">"AUS"</span>,</span>
+<span>  sourcetypelabel <span class="op">=</span> <span class="st">"broadsheet"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">uk_tabloid_wordcounts</span> <span class="op">&lt;-</span> </span>
-<span>  <span class="va">metadata</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">corpus</span> <span class="op">==</span> <span class="st">"UK"</span> <span class="op">&amp;</span> <span class="va">source_type</span> <span class="op">==</span> <span class="st">"tabloid"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="va">no_words_in_text</span><span class="op">)</span> </span>
+<span><span class="va">uk_tabloid_wordcounts</span> <span class="op">&lt;-</span> <span class="fu">get_wc</span><span class="op">(</span></span>
+<span>  corpuslabel <span class="op">=</span> <span class="st">"UK"</span>,</span>
+<span>  sourcetypelabel <span class="op">=</span> <span class="st">"tabloid"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">uk_broadsheet_wordcounts</span> <span class="op">&lt;-</span> </span>
-<span>  <span class="va">metadata</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">corpus</span> <span class="op">==</span> <span class="st">"UK"</span> <span class="op">&amp;</span> <span class="va">source_type</span> <span class="op">==</span> <span class="st">"broadsheet"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="va">no_words_in_text</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">generate_conting_tab_sumhits</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">df</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">tmp</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">corpus</span>, <span class="va">source_type</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>sum <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">no_hits_in_text</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op">(</span>names_from <span class="op">=</span> <span class="va">corpus</span>, values_from <span class="op">=</span> <span class="va">sum</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">tmp</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">tmp</span><span class="op">$</span><span class="va">source_type</span></span>
-<span>  <span class="va">tmp</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">source_type</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="op">}</span></span>
+<span><span class="va">uk_broadsheet_wordcounts</span> <span class="op">&lt;-</span> <span class="fu">get_wc</span><span class="op">(</span></span>
+<span>  corpuslabel <span class="op">=</span> <span class="st">"UK"</span>,</span>
+<span>  sourcetypelabel <span class="op">=</span> <span class="st">"broadsheet"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">generate_conting_tab_noarticles</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">df</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">tmp</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">corpus</span>, <span class="va">source_type</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>count <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op">(</span>names_from <span class="op">=</span> <span class="va">corpus</span>, values_from <span class="op">=</span> <span class="va">count</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">tmp</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">tmp</span><span class="op">$</span><span class="va">source_type</span></span>
-<span>  <span class="va">tmp</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">source_type</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="va">generate_wc</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">df</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">tmp</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">corpus</span>, <span class="va">source_type</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>total_words <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">no_words_in_text</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op">(</span>names_from <span class="op">=</span> <span class="va">corpus</span>, values_from <span class="op">=</span> <span class="va">total_words</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">tmp</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">tmp</span><span class="op">$</span><span class="va">source_type</span></span>
-<span>  <span class="va">tmp</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">source_type</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="va">generate_article_count</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">df</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">tmp</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">corpus</span>, <span class="va">source_type</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>total_articles <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op">(</span>names_from <span class="op">=</span> <span class="va">corpus</span>, values_from <span class="op">=</span> <span class="va">total_articles</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">tmp</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">tmp</span><span class="op">$</span><span class="va">source_type</span></span>
-<span>  <span class="va">tmp</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">source_type</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span></span>
-<span><span class="va">get_chisq_tabloid_broadsheet</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">matrix</span>, <span class="va">col_no</span>, <span class="va">type</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  </span>
-<span>  <span class="va">normalisation_matrix</span> <span class="op">&lt;-</span> <span class="kw">if</span> <span class="op">(</span><span class="va">type</span> <span class="op">==</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="fu">generate_wc</span><span class="op">(</span><span class="va">metadata</span><span class="op">)</span></span>
-<span>  <span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
-<span>    <span class="fu">generate_article_count</span><span class="op">(</span><span class="va">metadata</span><span class="op">)</span></span>
-<span>  <span class="op">}</span></span>
-<span>  </span>
-<span>  <span class="co"># needing to subset the matrix with [,col_no]</span></span>
-<span>  <span class="co"># is why we have a diff funct for Aus vs UK</span></span>
-<span>  <span class="va">chisq_result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/chisq.test.html">chisq.test</a></span><span class="op">(</span></span>
-<span>  <span class="va">matrix</span><span class="op">[</span>,<span class="va">col_no</span><span class="op">]</span>,</span>
-<span>  p <span class="op">=</span> <span class="va">normalisation_matrix</span><span class="op">[</span>,<span class="va">col_no</span><span class="op">]</span>,</span>
-<span>  rescale.p <span class="op">=</span> <span class="cn">TRUE</span></span>
-<span><span class="op">)</span> </span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span><span class="op">{</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="va">chisq_result</span><span class="op">$</span><span class="va">observed</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename_with</a></span><span class="op">(</span>.fn <span class="op">=</span> <span class="op">~</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">.x</span>, <span class="st">"_observed"</span><span class="op">)</span><span class="op">)</span><span class="op">}</span>,</span>
-<span>    <span class="op">{</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="va">chisq_result</span><span class="op">$</span><span class="va">expected</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>        <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename_with</a></span><span class="op">(</span>.fn <span class="op">=</span> <span class="op">~</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">.x</span>, <span class="st">"_expected"</span><span class="op">)</span><span class="op">)</span><span class="op">}</span>,</span>
-<span>    <span class="fu">broom</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/tidy.html">tidy</a></span><span class="op">(</span><span class="va">chisq_result</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">method</span>,</span>
-<span>         <span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html">starts_with</a></span><span class="op">(</span><span class="st">"broadsheet"</span><span class="op">)</span>, </span>
-<span>         <span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html">starts_with</a></span><span class="op">(</span><span class="st">"tabloid"</span><span class="op">)</span>,</span>
-<span>         <span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html">everything</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="op">)</span> </span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="va">get_chisq_aus_uk</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">matrix</span>, <span class="va">row_no</span>, <span class="va">type</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="va">normalisation_matrix</span> <span class="op">&lt;-</span> <span class="kw">if</span> <span class="op">(</span><span class="va">type</span> <span class="op">==</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="fu">generate_wc</span><span class="op">(</span><span class="va">metadata</span><span class="op">)</span></span>
-<span>  <span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
-<span>    <span class="fu">generate_article_count</span><span class="op">(</span><span class="va">metadata</span><span class="op">)</span></span>
-<span>  <span class="op">}</span></span>
-<span>  <span class="co"># needing to subset the matrix with [row_no,]</span></span>
-<span>  <span class="co"># is why we have a diff funct for tab vs broad</span></span>
-<span>  <span class="va">chisq_result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/chisq.test.html">chisq.test</a></span><span class="op">(</span></span>
-<span>    <span class="va">matrix</span><span class="op">[</span><span class="va">row_no</span>,<span class="op">]</span>,</span>
-<span>    <span class="co"># this takes word count into consideration,</span></span>
-<span>    <span class="co"># so need dif funct for article_count</span></span>
-<span>    p <span class="op">=</span> <span class="va">normalisation_matrix</span><span class="op">[</span><span class="va">row_no</span>,<span class="op">]</span>,</span>
-<span>    rescale.p <span class="op">=</span> <span class="cn">TRUE</span></span>
-<span>  <span class="op">)</span> </span>
-<span>  </span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span><span class="op">{</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="va">chisq_result</span><span class="op">$</span><span class="va">observed</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>      <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename_with</a></span><span class="op">(</span>.fn <span class="op">=</span> <span class="op">~</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">.x</span>, <span class="st">"_observed"</span><span class="op">)</span><span class="op">)</span><span class="op">}</span>,</span>
-<span>      <span class="op">{</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">chisq_result</span><span class="op">$</span><span class="va">expected</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>          <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename_with</a></span><span class="op">(</span>.fn <span class="op">=</span> <span class="op">~</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">.x</span>, <span class="st">"_expected"</span><span class="op">)</span><span class="op">)</span><span class="op">}</span>,</span>
-<span>      <span class="fu">broom</span><span class="fu">::</span><span class="fu"><a href="https://generics.r-lib.org/reference/tidy.html">tidy</a></span><span class="op">(</span><span class="va">chisq_result</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">method</span>,</span>
-<span>         <span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html">starts_with</a></span><span class="op">(</span><span class="st">"AUS"</span><span class="op">)</span>, </span>
-<span>         <span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html">starts_with</a></span><span class="op">(</span><span class="st">"UK"</span><span class="op">)</span>,</span>
-<span>         <span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html">everything</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="op">)</span> </span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="va">ttest_broad_vs_tabl</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">freq_table</span>, </span>
-<span>                               <span class="va">corpus_label</span>,</span>
-<span>                               <span class="va">variable</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">broadsheet</span> <span class="op">&lt;-</span> <span class="va">freq_table</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">corpus</span> <span class="op">==</span> <span class="va">corpus_label</span> <span class="op">&amp;</span> <span class="va">source_type</span> <span class="op">==</span> <span class="st">"broadsheet"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="va">variable</span><span class="op">)</span></span>
-<span>  <span class="va">tabloid</span> <span class="op">&lt;-</span> <span class="va">freq_table</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">corpus</span> <span class="op">==</span> <span class="va">corpus_label</span> <span class="op">&amp;</span> <span class="va">source_type</span> <span class="op">==</span> <span class="st">"tabloid"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="va">variable</span><span class="op">)</span></span>
-<span><span class="fu">report</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/report/reference/report.html">report</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">broadsheet</span>, <span class="va">tabloid</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="va">mydistribution</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/coin/man/NullDistribution.html">approximate</a></span><span class="op">(</span>nresample <span class="op">=</span> <span class="fl">10000</span>,</span>
-<span>                                         parallel <span class="op">=</span> <span class="st">"multicore"</span>,</span>
-<span>                                         ncpus <span class="op">=</span> <span class="fl">8</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">wmw_test_broad_vs_tabl</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span></span>
-<span>    <span class="va">freq_table</span> <span class="op">=</span> <span class="va">frequency_table</span>, </span>
-<span>    <span class="va">corpus_label</span> <span class="op">=</span> <span class="st">"AUS"</span>,</span>
-<span>    <span class="va">dataset</span> <span class="op">=</span> <span class="st">"cond"</span>,</span>
-<span>    <span class="va">myformula</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/formula.html">formula</a></span><span class="op">(</span><span class="va">cond_freq</span> <span class="op">~</span> <span class="va">source_type</span><span class="op">)</span>,</span>
-<span>    <span class="va">dist</span> <span class="op">=</span> <span class="va">mydistribution</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">df</span> <span class="op">&lt;-</span> <span class="va">freq_table</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">corpus</span> <span class="op">==</span> <span class="va">corpus_label</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">source_type</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">dataset</span>, <span class="st">"_freq"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>source_type <span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">source_type</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/coin/man/LocationTests.html">wilcox_test</a></span><span class="op">(</span><span class="va">myformula</span>,</span>
-<span>              <span class="va">df</span>,</span>
-<span>            distribution <span class="op">=</span> <span class="va">dist</span>,</span>
-<span>            conf.int <span class="op">=</span> <span class="cn">TRUE</span> <span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="va">wmw_test_aus_vs_uk</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span></span>
-<span>    <span class="va">freq_table</span> <span class="op">=</span> <span class="va">frequency_table</span>, </span>
-<span>    <span class="va">source_label</span> <span class="op">=</span> <span class="st">"broadsheet"</span>,</span>
-<span>    <span class="va">dataset</span> <span class="op">=</span> <span class="st">"cond"</span>,</span>
-<span>    <span class="va">myformula</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/formula.html">formula</a></span><span class="op">(</span><span class="va">cond_freq</span> <span class="op">~</span> <span class="va">corpus</span><span class="op">)</span>,</span>
-<span>    <span class="va">dist</span> <span class="op">=</span> <span class="va">mydistribution</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">df</span> <span class="op">&lt;-</span> <span class="va">freq_table</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">source_type</span> <span class="op">==</span> <span class="va">source_label</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">corpus</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">dataset</span>, <span class="st">"_freq"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>corpus <span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">corpus</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/coin/man/LocationTests.html">wilcox_test</a></span><span class="op">(</span><span class="va">myformula</span>,</span>
-<span>              <span class="va">df</span>,</span>
-<span>            distribution <span class="op">=</span> <span class="va">dist</span>,</span>
-<span>            conf.int <span class="op">=</span> <span class="cn">TRUE</span> <span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span>         </span>
-<span><span class="va">fp_test_broad_vs_tabl</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span></span>
-<span>    <span class="va">freq_table</span> <span class="op">=</span> <span class="va">frequency_table</span>, </span>
-<span>    <span class="va">corpus_label</span> <span class="op">=</span> <span class="st">"AUS"</span>,</span>
-<span>    <span class="va">dataset</span> <span class="op">=</span> <span class="st">"cond"</span>,</span>
-<span>    <span class="va">myformula</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/formula.html">formula</a></span><span class="op">(</span><span class="va">cond_freq</span> <span class="op">~</span> <span class="va">source_type</span><span class="op">)</span>,</span>
-<span>    <span class="va">dist</span> <span class="op">=</span> <span class="va">mydistribution</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">df</span> <span class="op">&lt;-</span> <span class="va">freq_table</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">corpus</span> <span class="op">==</span> <span class="va">corpus_label</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">source_type</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">dataset</span>, <span class="st">"_freq"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>source_type <span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">source_type</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="fu">coin</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/coin/man/LocationTests.html">oneway_test</a></span><span class="op">(</span><span class="va">myformula</span>,</span>
-<span>              <span class="va">df</span>,</span>
-<span>            distribution <span class="op">=</span> <span class="va">dist</span>,</span>
-<span>            conf.int <span class="op">=</span> <span class="cn">TRUE</span> <span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="va">fp_test_aus_vs_uk</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span></span>
-<span>    <span class="va">freq_table</span> <span class="op">=</span> <span class="va">frequency_table</span>, </span>
-<span>    <span class="va">source_label</span> <span class="op">=</span> <span class="st">"broadsheet"</span>,</span>
-<span>    <span class="va">dataset</span> <span class="op">=</span> <span class="st">"cond"</span>,</span>
-<span>    <span class="va">myformula</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/formula.html">formula</a></span><span class="op">(</span><span class="va">cond_freq</span> <span class="op">~</span> <span class="va">corpus</span><span class="op">)</span>,</span>
-<span>    <span class="va">dist</span> <span class="op">=</span> <span class="va">mydistribution</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">df</span> <span class="op">&lt;-</span> <span class="va">freq_table</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">source_type</span> <span class="op">==</span> <span class="va">source_label</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">corpus</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">dataset</span>, <span class="st">"_freq"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>corpus <span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">corpus</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="fu">coin</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/coin/man/LocationTests.html">oneway_test</a></span><span class="op">(</span><span class="va">myformula</span>,</span>
-<span>              <span class="va">df</span>,</span>
-<span>            distribution <span class="op">=</span> <span class="va">dist</span>,</span>
-<span>            conf.int <span class="op">=</span> <span class="cn">TRUE</span> <span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="va">fp_test_wc</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span></span>
-<span>    <span class="va">wc1</span> <span class="op">=</span> <span class="va">au_broadsheet_wordcounts</span>, </span>
-<span>    <span class="va">wc2</span> <span class="op">=</span> <span class="va">au_tabloid_wordcounts</span>,</span>
-<span>    <span class="va">label1</span> <span class="op">=</span> <span class="st">"broadsheet"</span>,</span>
-<span>    <span class="va">label2</span> <span class="op">=</span> <span class="st">"tabloid"</span>,</span>
-<span>    <span class="va">dist</span> <span class="op">=</span> <span class="va">mydistribution</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">df</span> <span class="op">&lt;-</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>wc <span class="op">=</span> <span class="va">wc1</span>,</span>
-<span>                     label <span class="op">=</span> <span class="va">label1</span><span class="op">)</span>,</span>
-<span>          <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>wc <span class="op">=</span> <span class="va">wc2</span>,</span>
-<span>                     label <span class="op">=</span> <span class="va">label2</span><span class="op">)</span><span class="op">)</span><span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>label <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">label</span><span class="op">)</span><span class="op">)</span></span>
-<span>  </span>
-<span>  <span class="fu">coin</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/coin/man/LocationTests.html">oneway_test</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/formula.html">formula</a></span><span class="op">(</span><span class="va">wc</span> <span class="op">~</span> <span class="va">label</span><span class="op">)</span>,</span>
-<span>              <span class="va">df</span>,</span>
-<span>              distribution <span class="op">=</span> <span class="va">dist</span>,</span>
-<span>              conf.int <span class="op">=</span> <span class="cn">TRUE</span> <span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="va">wmw_test_wc</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span></span>
-<span>    <span class="va">wc1</span> <span class="op">=</span> <span class="va">au_broadsheet_wordcounts</span>, </span>
-<span>    <span class="va">wc2</span> <span class="op">=</span> <span class="va">au_tabloid_wordcounts</span>,</span>
-<span>    <span class="va">label1</span> <span class="op">=</span> <span class="st">"broadsheet"</span>,</span>
-<span>    <span class="va">label2</span> <span class="op">=</span> <span class="st">"tabloid"</span>,</span>
-<span>    <span class="va">dist</span> <span class="op">=</span> <span class="va">mydistribution</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">df</span> <span class="op">&lt;-</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>wc <span class="op">=</span> <span class="va">wc1</span>,</span>
-<span>                     label <span class="op">=</span> <span class="va">label1</span><span class="op">)</span>,</span>
-<span>          <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>wc <span class="op">=</span> <span class="va">wc2</span>,</span>
-<span>                     label <span class="op">=</span> <span class="va">label2</span><span class="op">)</span><span class="op">)</span><span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>label <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">label</span><span class="op">)</span><span class="op">)</span></span>
-<span>  </span>
-<span>  <span class="fu">coin</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/coin/man/LocationTests.html">wilcox_test</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/formula.html">formula</a></span><span class="op">(</span><span class="va">wc</span> <span class="op">~</span> <span class="va">label</span><span class="op">)</span>,</span>
-<span>              <span class="va">df</span>,</span>
-<span>              distribution <span class="op">=</span> <span class="va">dist</span>,</span>
-<span>              conf.int <span class="op">=</span> <span class="cn">TRUE</span> <span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="va">ttest_aus_vs_uk</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">freq_table</span>, </span>
-<span>                               <span class="va">source_type_label</span>,</span>
-<span>                               <span class="va">variable</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">aus</span> <span class="op">&lt;-</span> <span class="va">freq_table</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">corpus</span> <span class="op">==</span> <span class="st">"AUS"</span> <span class="op">&amp;</span> <span class="va">source_type</span> <span class="op">==</span> <span class="va">source_type_label</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="va">variable</span><span class="op">)</span></span>
-<span>  <span class="va">uk</span> <span class="op">&lt;-</span> <span class="va">freq_table</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">corpus</span> <span class="op">==</span> <span class="st">"UK"</span> <span class="op">&amp;</span> <span class="va">source_type</span> <span class="op">==</span> <span class="va">source_type_label</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="va">variable</span><span class="op">)</span></span>
-<span><span class="fu">report</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/report/reference/report.html">report</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">aus</span>, <span class="va">uk</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="va">ttest_broad_vs_tabl_non0</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">freq_table</span>, </span>
-<span>                               <span class="va">corpus_label</span>,</span>
-<span>                               <span class="va">variable</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">broadsheet</span> <span class="op">&lt;-</span> <span class="va">freq_table</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">corpus</span> <span class="op">==</span> <span class="va">corpus_label</span> <span class="op">&amp;</span> <span class="va">source_type</span> <span class="op">==</span> <span class="st">"broadsheet"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="va">variable</span><span class="op">)</span></span>
-<span>  <span class="va">tabloid</span> <span class="op">&lt;-</span> <span class="va">freq_table</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">corpus</span> <span class="op">==</span> <span class="va">corpus_label</span> <span class="op">&amp;</span> <span class="va">source_type</span> <span class="op">==</span> <span class="st">"tabloid"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="va">variable</span><span class="op">)</span></span>
-<span>  <span class="va">broadsheet</span> <span class="op">&lt;-</span> <span class="va">broadsheet</span><span class="op">[</span><span class="va">broadsheet</span> <span class="op">!=</span> <span class="fl">0</span><span class="op">]</span></span>
-<span>  <span class="va">tabloid</span> <span class="op">&lt;-</span> <span class="va">tabloid</span><span class="op">[</span><span class="va">tabloid</span> <span class="op">!=</span> <span class="fl">0</span><span class="op">]</span></span>
-<span><span class="fu">report</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/report/reference/report.html">report</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">broadsheet</span>, <span class="va">tabloid</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="va">ttest_aus_vs_uk_non0</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">freq_table</span>, </span>
-<span>                               <span class="va">source_type_label</span>,</span>
-<span>                               <span class="va">variable</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">aus</span> <span class="op">&lt;-</span> <span class="va">freq_table</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">corpus</span> <span class="op">==</span> <span class="st">"AUS"</span> <span class="op">&amp;</span> <span class="va">source_type</span> <span class="op">==</span> <span class="va">source_type_label</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="va">variable</span><span class="op">)</span></span>
-<span>  <span class="va">uk</span> <span class="op">&lt;-</span> <span class="va">freq_table</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">corpus</span> <span class="op">==</span> <span class="st">"UK"</span> <span class="op">&amp;</span> <span class="va">source_type</span> <span class="op">==</span> <span class="va">source_type_label</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="va">variable</span><span class="op">)</span></span>
-<span>  <span class="va">aus</span> <span class="op">&lt;-</span> <span class="va">aus</span><span class="op">[</span><span class="va">aus</span> <span class="op">!=</span> <span class="fl">0</span><span class="op">]</span></span>
-<span>  <span class="va">uk</span> <span class="op">&lt;-</span> <span class="va">uk</span><span class="op">[</span><span class="va">uk</span> <span class="op">!=</span> <span class="fl">0</span><span class="op">]</span></span>
-<span><span class="fu">report</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/report/reference/report.html">report</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">aus</span>, <span class="va">uk</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="va">histogram_pairwise</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span></span>
-<span>    <span class="co"># for word counts</span></span>
-<span>    <span class="va">wc1</span> <span class="op">=</span> <span class="va">au_broadsheet_wordcounts</span>, </span>
-<span>    <span class="va">wc2</span> <span class="op">=</span> <span class="va">au_tabloid_wordcounts</span>, </span>
-<span>    <span class="va">label1</span> <span class="op">=</span> <span class="st">"broadsheet"</span>, </span>
-<span>    <span class="va">label2</span> <span class="op">=</span> <span class="st">"tabloid"</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span><span class="op">(</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>wc <span class="op">=</span> <span class="va">wc1</span>,</span>
-<span>           corpus <span class="op">=</span> <span class="va">label1</span><span class="op">)</span>,</span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>wc <span class="op">=</span> <span class="va">wc2</span>,</span>
-<span>           corpus <span class="op">=</span> <span class="va">label2</span><span class="op">)</span></span>
-<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">wc</span>, fill <span class="op">=</span> <span class="va">corpus</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span>bins <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span> <span class="op">+</span> </span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Word count, CQP web"</span>,</span>
-<span>       y <span class="op">=</span> <span class="st">"Number of articles"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cond_freq</span> <span class="op">&lt;-</span> <span class="va">both_datasets</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">dataset</span> <span class="op">==</span> <span class="st">"cond"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">article_id</span>, <span class="va">freq_per_million_words</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>cond_freq <span class="op">=</span> <span class="va">freq_per_million_words</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">pers_freq</span> <span class="op">&lt;-</span> <span class="va">both_datasets</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">dataset</span> <span class="op">==</span> <span class="st">"pers"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">article_id</span>, <span class="va">freq_per_million_words</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>pers_freq <span class="op">=</span> <span class="va">freq_per_million_words</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">obes_freq</span> <span class="op">&lt;-</span>  <span class="va">both_datasets</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">dataset</span> <span class="op">==</span> <span class="st">"obes"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">article_id</span>, <span class="va">freq_per_million_words</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>obes_freq <span class="op">=</span> <span class="va">freq_per_million_words</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">frequency_table</span> <span class="op">&lt;-</span></span>
 <span>  <span class="va">metadata</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">article_id</span>, <span class="va">corpus</span>, <span class="va">source_type</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">cond_freq</span>, by <span class="op">=</span> <span class="st">"article_id"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">pers_freq</span>, by <span class="op">=</span> <span class="st">"article_id"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">obes_freq</span>, by <span class="op">=</span> <span class="st">"article_id"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span></span>
+<span>    <span class="op">{</span></span>
+<span>  <span class="co"># this gets a frequency table per article where</span></span>
+<span>  <span class="co"># a language type is used</span></span>
+<span>  <span class="va">both_datasets</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">dataset</span>, <span class="va">article_id</span>, <span class="va">freq_per_million_words</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op">(</span>names_from <span class="op">=</span> <span class="va">dataset</span>, </span>
+<span>              names_glue <span class="op">=</span> <span class="st">"{dataset}_freq"</span>,</span>
+<span>              values_from <span class="op">=</span> <span class="va">freq_per_million_words</span>,</span>
+<span>              values_fill <span class="op">=</span> <span class="fl">0</span><span class="op">)</span><span class="op">}</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/replace_na.html">replace_na</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>cond_freq <span class="op">=</span> <span class="fl">0</span>, </span>
 <span>                  pers_freq <span class="op">=</span> <span class="fl">0</span>,</span>
 <span>                  obes_freq <span class="op">=</span> <span class="fl">0</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-</section></section><section id="article-length-differences-in-australian-and-uk-broadsheets-and-tabloids" class="level2"><h2 class="anchored" data-anchor-id="article-length-differences-in-australian-and-uk-broadsheets-and-tabloids">Article length differences in Australian and UK broadsheets and tabloids</h2>
+</section></section><section id="proportion-and-number-of-articles-using-any-of-the-language-types-in-the-two-corpora" class="level2"><h2 class="anchored" data-anchor-id="proportion-and-number-of-articles-using-any-of-the-language-types-in-the-two-corpora">Proportion and number of articles using any of the language types in the two corpora</h2>
+<p>Let’s find the total number of articles that use one or more language types in the two corpora.</p>
+<div class="cell">
+<details><summary>Code</summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">article_id_cond</span> <span class="op">&lt;-</span> <span class="fu">get_article_ids</span><span class="op">(</span><span class="va">both_datasets</span>, <span class="st">"cond"</span><span class="op">)</span></span>
+<span><span class="va">article_id_pers</span> <span class="op">&lt;-</span> <span class="fu">get_article_ids</span><span class="op">(</span><span class="va">both_datasets</span>, <span class="st">"pers"</span><span class="op">)</span></span>
+<span><span class="va">article_id_obes</span> <span class="op">&lt;-</span> <span class="fu">get_article_ids</span><span class="op">(</span><span class="va">both_datasets</span>, <span class="st">"obes"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/ggvenn/man/ggvenn.html">ggvenn</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>  `Condition first` <span class="op">=</span> <span class="va">article_id_cond</span>,</span>
+<span>  `Person first` <span class="op">=</span> <span class="va">article_id_pers</span>,</span>
+<span>  `Obese` <span class="op">=</span> <span class="va">article_id_obes</span><span class="op">)</span>,</span>
+<span>  fill_color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"white"</span>, <span class="st">"white"</span>, <span class="st">"white"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Number of articles that use the language features"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
+<p><img src="ConditionAndPersonFirst_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+</div>
+<details><summary>Code</summary><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">for_stacked_chart</span> <span class="op">&lt;-</span></span>
+<span>  <span class="va">metadata</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">article_id</span>, <span class="va">corpus</span>, <span class="va">source_type</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>grp <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
+<span>    <span class="va">article_id</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu">base</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/base/sets.html">intersect</a></span><span class="op">(</span><span class="fu">base</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/base/sets.html">intersect</a></span><span class="op">(</span><span class="va">article_id_cond</span>, <span class="va">article_id_pers</span><span class="op">)</span>, <span class="va">article_id_obes</span><span class="op">)</span> <span class="op">~</span> <span class="st">"all3"</span>,</span>
+<span>    <span class="co"># two</span></span>
+<span>    <span class="va">article_id</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu">base</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/base/sets.html">intersect</a></span><span class="op">(</span><span class="va">article_id_cond</span>, <span class="va">article_id_pers</span><span class="op">)</span> <span class="op">~</span> <span class="st">"cond_pers"</span>,</span>
+<span>    <span class="va">article_id</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu">base</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/base/sets.html">intersect</a></span><span class="op">(</span><span class="va">article_id_obes</span>, <span class="va">article_id_cond</span><span class="op">)</span> <span class="op">~</span> <span class="st">"cond_obes"</span>,</span>
+<span>    <span class="va">article_id</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu">base</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/base/sets.html">intersect</a></span><span class="op">(</span><span class="va">article_id_obes</span>, <span class="va">article_id_pers</span><span class="op">)</span> <span class="op">~</span> <span class="st">"pers_obes"</span>,</span>
+<span>    <span class="co"># one</span></span>
+<span>    <span class="va">article_id</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">article_id_cond</span> <span class="op">~</span> <span class="st">"cond"</span>,</span>
+<span>    <span class="va">article_id</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">article_id_pers</span> <span class="op">~</span> <span class="st">"pers"</span>,</span>
+<span>    <span class="va">article_id</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">article_id_obes</span> <span class="op">~</span> <span class="st">"obes"</span>,</span>
+<span>    <span class="co"># none</span></span>
+<span>    <span class="cn">TRUE</span> <span class="op">~</span> <span class="st">"none"</span></span>
+<span>  <span class="op">)</span><span class="op">)</span> </span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span>device <span class="op">=</span> <span class="st">"png"</span>,</span>
+<span>       <span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"400_analysis"</span>,<span class="st">"stacked_chart.png"</span><span class="op">)</span>,</span>
+<span>       bg <span class="op">=</span> <span class="st">"white"</span>,</span>
+<span>       width <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>       height <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">for_stacked_chart</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>group <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
+<span>    <span class="va">grp</span> <span class="op">==</span> <span class="st">"cond_obes"</span> <span class="op">~</span> <span class="st">"two"</span>,</span>
+<span>    <span class="va">grp</span> <span class="op">==</span> <span class="st">"pers_obes"</span> <span class="op">~</span> <span class="st">"two"</span>,</span>
+<span>    <span class="va">grp</span> <span class="op">==</span> <span class="st">"cond_pers"</span> <span class="op">~</span> <span class="st">"two"</span>,</span>
+<span>    <span class="cn">TRUE</span> <span class="op">~</span> <span class="va">grp</span></span>
+<span>  <span class="op">)</span><span class="op">)</span>  <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">group</span>, </span>
+<span> levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"none"</span>, <span class="st">"all3"</span>, <span class="st">"two"</span>, <span class="st">"cond_obes"</span>, <span class="st">"cond_pers"</span>, <span class="st">"pers_obes"</span>, <span class="st">"obes"</span>, <span class="st">"pers"</span>, <span class="st">"cond"</span><span class="op">)</span>,</span>
+<span> labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>   <span class="st">"no occurrences of any of the three targeted language practices"</span>,</span>
+<span>   <span class="st">"occurrences of all three targeted language practices"</span>,</span>
+<span>   <span class="st">"occurrences of two of the three targeted language practices"</span>,</span>
+<span>   <span class="st">"cond_obes"</span>, <span class="st">"cond_pers"</span>, <span class="st">"pers_obes"</span>,</span>
+<span>   <span class="st">"occurrences of adjectival nominal 'the obese'"</span>,</span>
+<span>   <span class="st">"occurrences of person-first language"</span>,</span>
+<span>   <span class="st">"occurrences of condition-first language"</span></span>
+<span>   <span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span></span>
+<span>      <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>fill<span class="op">=</span><span class="va">group</span>, </span>
+<span>          x<span class="op">=</span><span class="va">source_type</span><span class="op">)</span>,</span>
+<span>      position<span class="op">=</span><span class="st">"fill"</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_grid.html">facet_grid</a></span><span class="op">(</span><span class="op">~</span><span class="va">corpus</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">scale_fill_brewer</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"Accent"</span><span class="op">)</span> <span class="op">+</span></span>
+<span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"Proportion articles in corpus"</span>,</span>
+<span>                    labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="va"><a href="https://scales.r-lib.org/reference/percent_format.html">percent</a></span><span class="op">)</span> <span class="op">+</span></span>
+<span> <span class="co"># set axis limits in coord_cartesian</span></span>
+<span> <span class="co"># + coord_cartesian(ylim = c(0, 0.4))</span></span>
+<span><span class="co"># scale_fill_grey(start = 0.9, end = 0.2) + </span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>axis.text.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>angle <span class="op">=</span> <span class="fl">35</span>, vjust <span class="op">=</span> <span class="fl">1</span>, hjust<span class="op">=</span><span class="fl">1</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">""</span>,</span>
+<span>       fill <span class="op">=</span> <span class="st">""</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
+<p><img src="ConditionAndPersonFirst_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<details><summary>Code</summary><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">corpus_articles_grouped</span> <span class="op">&lt;-</span> <span class="va">for_stacked_chart</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">corpus</span>, <span class="va">source_type</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>total_articles <span class="op">=</span> <span class="va">n</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">for_stacked_chart</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">corpus</span>, <span class="va">source_type</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">grp</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="op">-</span><span class="va">n</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">corpus_articles_grouped</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>percent <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">100</span> <span class="op">*</span> <span class="va">n</span><span class="op">/</span><span class="va">total_articles</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">total_articles</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op">(</span>names_from <span class="op">=</span> <span class="va">corpus</span>, values_from <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">n</span>, <span class="va">percent</span><span class="op">)</span>, values_fill <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>observed_language <span class="op">=</span> <span class="va">grp</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead><tr class="header">
+<th style="text-align: left;">source_type</th>
+<th style="text-align: left;">observed_language</th>
+<th style="text-align: right;">n_UK</th>
+<th style="text-align: right;">n_AUS</th>
+<th style="text-align: right;">percent_UK</th>
+<th style="text-align: right;">percent_AUS</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">broadsheet</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">6170</td>
+<td style="text-align: right;">1631</td>
+<td style="text-align: right;">81.66</td>
+<td style="text-align: right;">73.80</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tabloid</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">6156</td>
+<td style="text-align: right;">2271</td>
+<td style="text-align: right;">78.91</td>
+<td style="text-align: right;">71.69</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tabloid</td>
+<td style="text-align: left;">cond</td>
+<td style="text-align: right;">1395</td>
+<td style="text-align: right;">815</td>
+<td style="text-align: right;">17.88</td>
+<td style="text-align: right;">25.73</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">broadsheet</td>
+<td style="text-align: left;">cond</td>
+<td style="text-align: right;">1145</td>
+<td style="text-align: right;">490</td>
+<td style="text-align: right;">15.15</td>
+<td style="text-align: right;">22.17</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">broadsheet</td>
+<td style="text-align: left;">cond_obes</td>
+<td style="text-align: right;">112</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">1.48</td>
+<td style="text-align: right;">1.49</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tabloid</td>
+<td style="text-align: left;">cond_obes</td>
+<td style="text-align: right;">112</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">1.44</td>
+<td style="text-align: right;">1.17</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tabloid</td>
+<td style="text-align: left;">obes</td>
+<td style="text-align: right;">109</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">1.40</td>
+<td style="text-align: right;">1.01</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">broadsheet</td>
+<td style="text-align: left;">obes</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">1.20</td>
+<td style="text-align: right;">1.27</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">broadsheet</td>
+<td style="text-align: left;">cond_pers</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">0.24</td>
+<td style="text-align: right;">0.77</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tabloid</td>
+<td style="text-align: left;">pers</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">0.21</td>
+<td style="text-align: right;">0.22</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">broadsheet</td>
+<td style="text-align: left;">pers</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0.20</td>
+<td style="text-align: right;">0.45</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tabloid</td>
+<td style="text-align: left;">cond_pers</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0.14</td>
+<td style="text-align: right;">0.19</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">broadsheet</td>
+<td style="text-align: left;">all3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.05</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">broadsheet</td>
+<td style="text-align: left;">pers_obes</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tabloid</td>
+<td style="text-align: left;">all3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tabloid</td>
+<td style="text-align: left;">pers_obes</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="article-length-differences-in-australian-and-uk-broadsheets-and-tabloids" class="level2"><h2 class="anchored" data-anchor-id="article-length-differences-in-australian-and-uk-broadsheets-and-tabloids">Article length differences in Australian and UK broadsheets and tabloids</h2>
 <section id="australian-broadsheets-vs-tabloids" class="level3"><h3 class="anchored" data-anchor-id="australian-broadsheets-vs-tabloids">Australian broadsheets vs tabloids</h3>
 <p>Are texts in the Australian sub-corpus used for this study also longer than in broadsheets than in tabloids, like was reported for the larger study?</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">histogram_pairwise</span><span class="op">(</span><span class="va">au_broadsheet_wordcounts</span>,</span>
+<details><summary>Code</summary><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">histogram_pairwise</span><span class="op">(</span><span class="va">au_broadsheet_wordcounts</span>,</span>
 <span>                   <span class="va">au_tabloid_wordcounts</span>,</span>
 <span>                   <span class="st">"broadsheet"</span>,</span>
 <span>                   <span class="st">"tabloid"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<p><img src="ConditionAndPersonFirst_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+<p><img src="ConditionAndPersonFirst_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Let’s use a t-test to consider?</p>
-<details><summary>Code</summary><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">report</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/report/reference/report.html">report</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">au_broadsheet_wordcounts</span>,</span>
+<details><summary>Code</summary><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">report</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/report/reference/report.html">report</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">au_broadsheet_wordcounts</span>,</span>
 <span>                      <span class="va">au_tabloid_wordcounts</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between au_broadsheet_wordcounts and au_tabloid_wordcounts (mean of x = 841.70, mean of y = 555.04) suggests that the effect is positive, statistically significant, and medium (difference = 286.66, 95% CI [257.15, 316.17], t(4261.47) = 19.04, p &lt; .001; Cohen’s d = 0.54, 95% CI [0.48, 0.59])</p>
 <p>Does the non-parametric FP test support this as well?</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_wc</span><span class="op">(</span>wc1 <span class="op">=</span> <span class="va">au_broadsheet_wordcounts</span>,</span>
+<details><summary>Code</summary><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_wc</span><span class="op">(</span>wc1 <span class="op">=</span> <span class="va">au_broadsheet_wordcounts</span>,</span>
 <span>           wc2 <span class="op">=</span> <span class="va">au_tabloid_wordcounts</span>,</span>
 <span>           label1 <span class="op">=</span> <span class="st">"broadsheet"</span>,</span>
 <span>           label2 <span class="op">=</span> <span class="st">"tabloid"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -586,15 +529,15 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </section><section id="uk-broadsheets-vs-tabloids" class="level3"><h3 class="anchored" data-anchor-id="uk-broadsheets-vs-tabloids">UK broadsheets vs tabloids</h3>
 <p>Are texts in tabloids also shorter than in broadsheets in the UK, like they are in Australia?</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">histogram_pairwise</span><span class="op">(</span>wc1 <span class="op">=</span> <span class="va">uk_broadsheet_wordcounts</span>,</span>
+<details><summary>Code</summary><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">histogram_pairwise</span><span class="op">(</span>wc1 <span class="op">=</span> <span class="va">uk_broadsheet_wordcounts</span>,</span>
 <span>                   wc2 <span class="op">=</span> <span class="va">uk_tabloid_wordcounts</span>,</span>
 <span>                   label1 <span class="op">=</span> <span class="st">"broadsheets"</span>,</span>
 <span>                   label2 <span class="op">=</span> <span class="st">"tabloids"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<p><img src="ConditionAndPersonFirst_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+<p><img src="ConditionAndPersonFirst_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<details><summary>Code</summary><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">report</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/report/reference/report.html">report</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">report</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/report/reference/report.html">report</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span></span>
 <span>  <span class="va">uk_broadsheet_wordcounts</span>, </span>
 <span>  <span class="va">uk_tabloid_wordcounts</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
@@ -602,7 +545,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <p>Yes, they are, although the effect size is not as large (small vs medium for the Australian corpus). Hence this is what probably explains the contradiction.</p>
 <p>Does the non-parametric FP test support this as well?</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_wc</span><span class="op">(</span>wc1 <span class="op">=</span> <span class="va">uk_broadsheet_wordcounts</span>,</span>
+<details><summary>Code</summary><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_wc</span><span class="op">(</span>wc1 <span class="op">=</span> <span class="va">uk_broadsheet_wordcounts</span>,</span>
 <span>           wc2 <span class="op">=</span> <span class="va">uk_tabloid_wordcounts</span>,</span>
 <span>           label1 <span class="op">=</span> <span class="st">"broadsheet"</span>,</span>
 <span>           label2 <span class="op">=</span> <span class="st">"tabloid"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -618,23 +561,23 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </section><section id="australian-vs-uk-broadsheets" class="level3"><h3 class="anchored" data-anchor-id="australian-vs-uk-broadsheets">Australian vs UK broadsheets</h3>
 <p>Are texts in broadsheets from Australia and the UK different in length?</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">histogram_pairwise</span><span class="op">(</span><span class="va">au_broadsheet_wordcounts</span>,</span>
+<details><summary>Code</summary><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">histogram_pairwise</span><span class="op">(</span><span class="va">au_broadsheet_wordcounts</span>,</span>
 <span>                   <span class="va">uk_broadsheet_wordcounts</span>,</span>
 <span>                   <span class="st">"Aus"</span>,</span>
 <span>                   <span class="st">"UK"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<p><img src="ConditionAndPersonFirst_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+<p><img src="ConditionAndPersonFirst_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Let’s use a t-test to consider?</p>
-<details><summary>Code</summary><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">report</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/report/reference/report.html">report</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">au_broadsheet_wordcounts</span>,</span>
+<details><summary>Code</summary><div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">report</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/report/reference/report.html">report</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">au_broadsheet_wordcounts</span>,</span>
 <span>                      <span class="va">uk_broadsheet_wordcounts</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between au_broadsheet_wordcounts and uk_broadsheet_wordcounts (mean of x = 841.70, mean of y = 718.31) suggests that the effect is positive, statistically significant, and small (difference = 123.39, 95% CI [95.96, 150.83], t(3660.02) = 8.82, p &lt; .001; Cohen’s d = 0.21, 95% CI [0.16, 0.26])</p>
 <p>Yes, there appears to be a small difference in text length between Australian and UK broadsheets, with articles in UK broadsheets being somewhat shorter.</p>
 <p>Does the non-parametric FP test support this as well?</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_wc</span><span class="op">(</span>wc1 <span class="op">=</span> <span class="va">au_broadsheet_wordcounts</span>,</span>
+<details><summary>Code</summary><div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_wc</span><span class="op">(</span>wc1 <span class="op">=</span> <span class="va">au_broadsheet_wordcounts</span>,</span>
 <span>           wc2 <span class="op">=</span> <span class="va">uk_broadsheet_wordcounts</span>,</span>
 <span>           label1 <span class="op">=</span> <span class="st">"AUS"</span>,</span>
 <span>           label2 <span class="op">=</span> <span class="st">"UK"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -650,23 +593,23 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </section><section id="australian-vs-uk-tabloids" class="level3"><h3 class="anchored" data-anchor-id="australian-vs-uk-tabloids">Australian vs UK tabloids</h3>
 <p>Are texts in tabloids from Australia and the UK different in length?</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">histogram_pairwise</span><span class="op">(</span><span class="va">au_tabloid_wordcounts</span>,</span>
+<details><summary>Code</summary><div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">histogram_pairwise</span><span class="op">(</span><span class="va">au_tabloid_wordcounts</span>,</span>
 <span>                   <span class="va">uk_tabloid_wordcounts</span>,</span>
 <span>                   <span class="st">"Aus"</span>,</span>
 <span>                   <span class="st">"UK"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<p><img src="ConditionAndPersonFirst_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
+<p><img src="ConditionAndPersonFirst_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Let’s use a t-test to consider?</p>
-<details><summary>Code</summary><div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">report</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/report/reference/report.html">report</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">au_tabloid_wordcounts</span>,</span>
+<details><summary>Code</summary><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">report</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/report/reference/report.html">report</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">au_tabloid_wordcounts</span>,</span>
 <span>                      <span class="va">uk_tabloid_wordcounts</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between au_tabloid_wordcounts and uk_tabloid_wordcounts (mean of x = 555.04, mean of y = 561.20) suggests that the effect is negative, statistically not significant, and very small (difference = -6.16, 95% CI [-26.64, 14.31], t(6001.53) = -0.59, p = 0.555; Cohen’s d = -0.01, 95% CI [-0.05, 0.03])</p>
 <p>No, there appears to be no difference in length between articles in Australian and UK tabloids.</p>
 <p>Does the non-parametric FP test support this as well?</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_wc</span><span class="op">(</span>wc1 <span class="op">=</span> <span class="va">au_tabloid_wordcounts</span>,</span>
+<details><summary>Code</summary><div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_wc</span><span class="op">(</span>wc1 <span class="op">=</span> <span class="va">au_tabloid_wordcounts</span>,</span>
 <span>           wc2 <span class="op">=</span> <span class="va">uk_tabloid_wordcounts</span>,</span>
 <span>           label1 <span class="op">=</span> <span class="st">"AUS"</span>,</span>
 <span>           label2 <span class="op">=</span> <span class="st">"UK"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -674,7 +617,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  wc by label (AUS, UK)
-Z = -0.58397, p-value = 0.5537
+Z = -0.58397, p-value = 0.5622
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
@@ -683,7 +626,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <section id="australian-corpus" class="level3"><h3 class="anchored" data-anchor-id="australian-corpus">Australian corpus</h3>
 <p>Let’s generate a frequency table (sum of no hits in text) for person-first language:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pers_4chisq_matrix_sumhits</span> <span class="op">&lt;-</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pers_4chisq_matrix_sumhits</span> <span class="op">&lt;-</span></span>
 <span>  <span class="va">both_datasets</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">dataset</span> <span class="op">==</span> <span class="st">"pers"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">generate_conting_tab_sumhits</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -721,7 +664,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 <p>We also need to find the probability of observing these values given the total word count in each of the cells (for example, the number of total words in the Australian broadsheet corpus). Let’s calculate these values:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">generate_wc</span><span class="op">(</span><span class="va">metadata</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">generate_wc</span><span class="op">(</span><span class="va">metadata</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <table class="table table-sm table-striped">
@@ -747,7 +690,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 <p>Is there a difference in the frequency of use of person-first language in tabloids and broadsheets in the Australian corpus?</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">pers_4chisq_matrix_sumhits</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">pers_4chisq_matrix_sumhits</span>, </span>
 <span>                             col_no <span class="op">=</span> <span class="fl">1</span>, </span>
 <span>                             type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -785,13 +728,21 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <td style="text-align: left;">parameter</td>
 <td style="text-align: left;">1</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">statistic_uncorrected</td>
+<td style="text-align: left;">4.194932</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pval_uncorrected</td>
+<td style="text-align: left;">0.04054498</td>
+</tr>
 </tbody></table>
 </div>
 </div>
 <p>Based on a Chi-square test, there is a slight difference between the expected and observed frequency of instances of person-first language in the Australian corpus (p &lt; 0.05), with broadsheets having somewhat more instances of person-first language than tabloids in the Australian corpus.</p>
 <p>This also holds true when we consider the number of articles that have at least one instance of person-first language:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">pers_4chisq_matrix_noarticles</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">pers_4chisq_matrix_noarticles</span>, </span>
 <span>                             col_no <span class="op">=</span> <span class="fl">1</span>, </span>
 <span>                             type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -829,16 +780,24 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <td style="text-align: left;">parameter</td>
 <td style="text-align: left;">1</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">statistic_uncorrected</td>
+<td style="text-align: left;">12.53039</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pval_uncorrected</td>
+<td style="text-align: left;">0.0004003854</td>
+</tr>
 </tbody></table>
 </div>
 </div>
 <p>If we consider a t-test on the frequency (per million words) of the Australian corpus (including all texts in each sub-corpus, including those without instances), a difference is not detected.</p>
-<details><summary>Code</summary><div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"AUS"</span>, <span class="st">"pers_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"AUS"</span>, <span class="st">"pers_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between broadsheet and tabloid (mean of x = 17.81, mean of y = 11.68) suggests that the effect is positive, statistically not significant, and very small (difference = 6.13, 95% CI [-4.24, 16.51], t(5183.11) = 1.16, p = 0.247; Cohen’s d = 0.03, 95% CI [-0.02, 0.09])</p>
 <p>If we instead use a non-parametric test, there is also no difference detected.</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_broad_vs_tabl</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>,</span>
+<details><summary>Code</summary><div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_broad_vs_tabl</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>,</span>
 <span>                      corpus_label <span class="op">=</span> <span class="st">"AUS"</span>,</span>
 <span>                      dataset <span class="op">=</span> <span class="st">"pers"</span>,</span>
 <span>                      myformula <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/formula.html">formula</a></span><span class="op">(</span><span class="va">pers_freq</span> <span class="op">~</span> <span class="va">source_type</span><span class="op">)</span>,</span>
@@ -847,14 +806,14 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  pers_freq by source_type (broadsheet, tabloid)
-Z = 1.1248, p-value = 0.2725
+Z = 1.1248, p-value = 0.2674
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 </section><section id="uk-corpus" class="level3"><h3 class="anchored" data-anchor-id="uk-corpus">UK corpus</h3>
 <p>What about the total number of instances of person-first language in the UK corpus?</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">pers_4chisq_matrix_sumhits</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">pers_4chisq_matrix_sumhits</span>, </span>
 <span>                             col_no <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>                             type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -892,12 +851,20 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <td style="text-align: left;">parameter</td>
 <td style="text-align: left;">1</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">statistic_uncorrected</td>
+<td style="text-align: left;">0.1646923</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pval_uncorrected</td>
+<td style="text-align: left;">0.6848727</td>
+</tr>
 </tbody></table>
 </div>
 </div>
 <p>No difference is observed between the number of observed and expected instances of use of person-first language in the UK corpus between tabloids and broadsheets.</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">pers_4chisq_matrix_noarticles</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">pers_4chisq_matrix_noarticles</span>, </span>
 <span>                             col_no <span class="op">=</span> <span class="fl">2</span>, </span>
 <span>                             type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -935,17 +902,25 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <td style="text-align: left;">parameter</td>
 <td style="text-align: left;">1</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">statistic_uncorrected</td>
+<td style="text-align: left;">1.513559</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pval_uncorrected</td>
+<td style="text-align: left;">0.2185969</td>
+</tr>
 </tbody></table>
 </div>
 </div>
 <p>This lack of a difference also holds true when we consider the number of articles that have at least one instance of person-first language.</p>
 <p>If we consider a t-test on the frequency (per million words) of the UK corpus (including all texts in each sub-corpus, including those without instances), a difference is not detected.</p>
-<details><summary>Code</summary><div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"UK"</span>, <span class="st">"pers_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"UK"</span>, <span class="st">"pers_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between broadsheet and tabloid (mean of x = 8.52, mean of y = 12.12) suggests that the effect is negative, statistically not significant, and very small (difference = -3.61, 95% CI [-9.81, 2.60], t(13624.58) = -1.14, p = 0.255; Cohen’s d = -0.02, 95% CI [-0.05, 0.01])</p>
 <p>If we use a non-parametric test, there is also no difference detected.</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_broad_vs_tabl</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>,</span>
+<details><summary>Code</summary><div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_broad_vs_tabl</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>,</span>
 <span>                      corpus_label <span class="op">=</span> <span class="st">"UK"</span>,</span>
 <span>                      dataset <span class="op">=</span> <span class="st">"pers"</span>,</span>
 <span>                      myformula <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/formula.html">formula</a></span><span class="op">(</span><span class="va">pers_freq</span> <span class="op">~</span> <span class="va">source_type</span><span class="op">)</span>,</span>
@@ -954,7 +929,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  pers_freq by source_type (broadsheet, tabloid)
-Z = -1.1324, p-value = 0.263
+Z = -1.1324, p-value = 0.2599
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
@@ -962,7 +937,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <p>Let’s compare Australian and UK broadsheets.</p>
 <p>Is there a difference in the frequency of use of person-first language in broadsheets in the Australian vs UK corpus?</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># broadsheets</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># broadsheets</span></span>
 <span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">pers_4chisq_matrix_sumhits</span>, </span>
 <span>                 row_no <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>                 type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span><span class="op">|&gt;</span></span>
@@ -1013,7 +988,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <p>There is a difference between the expected and observed frequency of instances of person-first language in Australian vs UK broadsheets(p &lt; 0.005).</p>
 <p>We can see that person-first language is used more frequently than we would expect in Australian broadsheets, and less frequently in UK ones.</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># broadsheets</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># broadsheets</span></span>
 <span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">pers_4chisq_matrix_noarticles</span>, </span>
 <span>                 row_no <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>                 type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span><span class="op">|&gt;</span></span>
@@ -1063,12 +1038,12 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 <p>This also holds true when we consider the number of articles that have at least one instance of person-first language.</p>
 <p>If we consider the frequency (per million words) of the Australian vs UK broadsheets (including all texts in each sub-corpus, including those without instances), a very small difference is detected, with Australian broadsheets having a higher frequency than UK ones:</p>
-<details><summary>Code</summary><div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"broadsheet"</span>, <span class="st">"pers_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"broadsheet"</span>, <span class="st">"pers_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between aus and uk (mean of x = 17.81, mean of y = 8.52) suggests that the effect is positive, statistically significant, and very small (difference = 9.30, 95% CI [1.14, 17.46], t(3250.78) = 2.23, p = 0.026; Cohen’s d = 0.08, 95% CI [9.57e-03, 0.15])</p>
 <p>Is this supported by non-parametric analysis</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_aus_vs_uk</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>,</span>
+<details><summary>Code</summary><div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_aus_vs_uk</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>,</span>
 <span>                  source_label <span class="op">=</span> <span class="st">"broadsheet"</span>,</span>
 <span>                  dataset <span class="op">=</span> <span class="st">"pers"</span>,</span>
 <span>                  myformula <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/formula.html">formula</a></span><span class="op">(</span><span class="va">pers_freq</span> <span class="op">~</span> <span class="va">corpus</span><span class="op">)</span>,</span>
@@ -1077,7 +1052,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  pers_freq by corpus (AUS, UK)
-Z = 2.408, p-value = 0.0153
+Z = 2.408, p-value = 0.014
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
@@ -1085,7 +1060,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <p>Let’s compare Australian and UK tabloids</p>
 <p>Is there a difference in the frequency of use of person-first language in tabloids in the Australian vs UK corpus?</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># tabloids</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># tabloids</span></span>
 <span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">pers_4chisq_matrix_sumhits</span>, </span>
 <span>                 row_no <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>                 type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span><span class="op">|&gt;</span></span>
@@ -1136,7 +1111,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <p>The observed and expected number of instances of person-first language is approximately the same in Australian and British tabloids.</p>
 <p>This also holds true when we consider the number of articles that have at least one instance of person-first language:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># tabloids</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># tabloids</span></span>
 <span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">pers_4chisq_matrix_noarticles</span>, </span>
 <span>                 row_no <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>                 type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span><span class="op">|&gt;</span></span>
@@ -1185,12 +1160,12 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>If we consider the frequency (per million words) in the Australian vs UK tabloids (including all texts in each sub-corpus, including those without instances), no significant differences are observed as well.</p>
-<details><summary>Code</summary><div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"tabloid"</span>, <span class="st">"pers_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"tabloid"</span>, <span class="st">"pers_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between aus and uk (mean of x = 11.68, mean of y = 12.12) suggests that the effect is negative, statistically not significant, and very small (difference = -0.45, 95% CI [-9.37, 8.48], t(6445.87) = -0.10, p = 0.922; Cohen’s d = -2.44e-03, 95% CI [-0.05, 0.05])</p>
 <p>The non-parametric test leads to a similar conclusion:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>,</span>
+<details><summary>Code</summary><div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>,</span>
 <span>                  <span class="st">"tabloid"</span>,</span>
 <span>                  <span class="st">"pers"</span>,</span>
 <span>                  <span class="fu"><a href="https://rdrr.io/r/stats/formula.html">formula</a></span><span class="op">(</span><span class="va">pers_freq</span> <span class="op">~</span> <span class="va">corpus</span><span class="op">)</span>,</span>
@@ -1199,14 +1174,14 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  pers_freq by corpus (AUS, UK)
-Z = -0.093724, p-value = 0.9243
+Z = -0.093724, p-value = 0.9267
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <hr></section></section><section id="condition-first-language" class="level2"><h2 class="anchored" data-anchor-id="condition-first-language">Condition-first language</h2>
 <p>Let’s generate a frequency table (sum of no hits in text) for condition-first language:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cond_4chisq_matrix_sumhits</span> <span class="op">&lt;-</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cond_4chisq_matrix_sumhits</span> <span class="op">&lt;-</span></span>
 <span>  <span class="va">both_datasets</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">dataset</span> <span class="op">==</span> <span class="st">"cond"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">generate_conting_tab_sumhits</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -1245,7 +1220,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <section id="australian-corpus-1" class="level3"><h3 class="anchored" data-anchor-id="australian-corpus-1">Australian corpus</h3>
 <p>We can assess the difference between these total number of uses of condition-first language in the Australian corpus, using a Chi-square test:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">cond_4chisq_matrix_sumhits</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb45"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">cond_4chisq_matrix_sumhits</span>, </span>
 <span>                             col_no <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>                             type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1283,12 +1258,20 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <td style="text-align: left;">parameter</td>
 <td style="text-align: left;">1</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">statistic_uncorrected</td>
+<td style="text-align: left;">49.70315</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pval_uncorrected</td>
+<td style="text-align: left;">1.788587e-12</td>
+</tr>
 </tbody></table>
 </div>
 </div>
 <p>There is a higher number of instances of condition-first language used in tabloids, and a lower number of instances in broadsheets in the Australian corpus.</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb45"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">cond_4chisq_matrix_noarticles</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb46"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">cond_4chisq_matrix_noarticles</span>, </span>
 <span>                             col_no <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>                             type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span><span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1326,16 +1309,24 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <td style="text-align: left;">parameter</td>
 <td style="text-align: left;">1</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">statistic_uncorrected</td>
+<td style="text-align: left;">3.392658</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pval_uncorrected</td>
+<td style="text-align: left;">0.06548731</td>
+</tr>
 </tbody></table>
 </div>
 </div>
 <p>This also somewhat holds true, although is not highly significant, when we consider the number of articles that have at least one instance of condition-first language.</p>
 <p>If we consider a t-test on the frequency (per million words) of the Australian corpus (including all texts in each sub-corpus, including those without instances), a very small difference is detected, with tabloids having a higher frequency of use of condition-first language vs broadsheets.</p>
-<details><summary>Code</summary><div class="sourceCode" id="cb46"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"AUS"</span>, <span class="st">"cond_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"AUS"</span>, <span class="st">"cond_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between broadsheet and tabloid (mean of x = 847.96, mean of y = 1315.95) suggests that the effect is negative, statistically significant, and very small (difference = -467.99, 95% CI [-614.83, -321.16], t(5364.35) = -6.25, p &lt; .001; Cohen’s d = -0.17, 95% CI [-0.22, -0.12])</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>,</span>
+<details><summary>Code</summary><div class="sourceCode" id="cb48"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>,</span>
 <span>                      corpus_label <span class="op">=</span> <span class="st">"AUS"</span>,</span>
 <span>                      dataset <span class="op">=</span> <span class="st">"cond"</span>, </span>
 <span>                      <span class="fu"><a href="https://rdrr.io/r/stats/formula.html">formula</a></span><span class="op">(</span><span class="va">cond_freq</span> <span class="op">~</span> <span class="va">source_type</span><span class="op">)</span>, </span>
@@ -1351,7 +1342,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </section><section id="uk-corpus-1" class="level3"><h3 class="anchored" data-anchor-id="uk-corpus-1">UK corpus</h3>
 <p>We can assess the difference between these total number of uses of condition-first language in the UK corpus, using a Chi-square test. There is a higher number of instances of condition-first language used in tabloids, and a lower number of instances in broadsheets, in the UK corpus:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb49"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">cond_4chisq_matrix_sumhits</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb50"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">cond_4chisq_matrix_sumhits</span>, </span>
 <span>                             col_no <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>                             type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1389,12 +1380,20 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <td style="text-align: left;">parameter</td>
 <td style="text-align: left;">1</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">statistic_uncorrected</td>
+<td style="text-align: left;">73.14586</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pval_uncorrected</td>
+<td style="text-align: left;">1.204139e-17</td>
+</tr>
 </tbody></table>
 </div>
 </div>
 <p>This also holds true when we consider the number of articles that have at least one instance of condition-first language.</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb50"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">cond_4chisq_matrix_noarticles</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb51"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">cond_4chisq_matrix_noarticles</span>, </span>
 <span>                             col_no <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>                             type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1432,16 +1431,24 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <td style="text-align: left;">parameter</td>
 <td style="text-align: left;">1</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">statistic_uncorrected</td>
+<td style="text-align: left;">13.644</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pval_uncorrected</td>
+<td style="text-align: left;">0.0002209459</td>
+</tr>
 </tbody></table>
 </div>
 </div>
 <p>If we consider a t-test on the frequency (per million words) of the UK corpus (including all texts in each sub-corpus, including those without instances), a very small difference is detected, with a higher mean frequency in tabloids than broadsheets.</p>
-<details><summary>Code</summary><div class="sourceCode" id="cb51"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"UK"</span>, <span class="st">"cond_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb52"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"UK"</span>, <span class="st">"cond_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between broadsheet and tabloid (mean of x = 629.40, mean of y = 835.37) suggests that the effect is negative, statistically significant, and very small (difference = -205.97, 95% CI [-277.76, -134.18], t(15067.94) = -5.62, p &lt; .001; Cohen’s d = -0.09, 95% CI [-0.12, -0.06])</p>
 <p>This is also supported by the FP test:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb52"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>,</span>
+<details><summary>Code</summary><div class="sourceCode" id="cb53"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>,</span>
 <span>                      corpus_label <span class="op">=</span> <span class="st">"UK"</span>,</span>
 <span>                      dataset <span class="op">=</span> <span class="st">"cond"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
@@ -1455,7 +1462,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </section><section id="australian-vs-uk-broadsheets-2" class="level3"><h3 class="anchored" data-anchor-id="australian-vs-uk-broadsheets-2">Australian vs UK broadsheets</h3>
 <p>There is a higher number of uses of condition-first language in Australian broadsheets, and a lower number in UK broadsheets:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb54"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">cond_4chisq_matrix_sumhits</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb55"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">cond_4chisq_matrix_sumhits</span>, </span>
 <span>                 row_no <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>                 type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1504,7 +1511,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 <p>This also holds true when we consider the number of articles that have at least one instance of condition-first language:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb55"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">cond_4chisq_matrix_noarticles</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb56"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">cond_4chisq_matrix_noarticles</span>, </span>
 <span>                             row_no <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>                             type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1552,12 +1559,12 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>If we consider the frequency (per million words) of the Australian vs UK broadsheets (including all texts in each sub-corpus, including those without instances), a very small difference is detected, with Australian broadsheets having a higher frequency than UK ones:</p>
-<details><summary>Code</summary><div class="sourceCode" id="cb56"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"broadsheet"</span>, <span class="st">"cond_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb57"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"broadsheet"</span>, <span class="st">"cond_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between aus and uk (mean of x = 847.96, mean of y = 629.40) suggests that the effect is positive, statistically significant, and very small (difference = 218.56, 95% CI [115.85, 321.27], t(3442.55) = 4.17, p &lt; .001; Cohen’s d = 0.14, 95% CI [0.08, 0.21])</p>
 <p>This is also supported by the FP test:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb57"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_aus_vs_uk</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb58"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_aus_vs_uk</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>, </span>
 <span>    source_label <span class="op">=</span> <span class="st">"broadsheet"</span>,</span>
 <span>    dataset <span class="op">=</span> <span class="st">"cond"</span>,</span>
 <span>    myformula <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/formula.html">formula</a></span><span class="op">(</span><span class="va">cond_freq</span> <span class="op">~</span> <span class="va">corpus</span><span class="op">)</span>,</span>
@@ -1573,7 +1580,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </section><section id="australian-vs-uk-tabloids-2" class="level3"><h3 class="anchored" data-anchor-id="australian-vs-uk-tabloids-2">Australian vs UK tabloids</h3>
 <p>There is a higher number of uses of condition-first language in Australian tabloids, and a lower number in UK tabloids:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb59"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">cond_4chisq_matrix_sumhits</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb60"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">cond_4chisq_matrix_sumhits</span>, </span>
 <span>                 row_no <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>                 type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1622,7 +1629,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 <p>This also holds true when we consider the number of articles that have at least one instance of condition-first language:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb60"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">cond_4chisq_matrix_noarticles</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb61"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">cond_4chisq_matrix_noarticles</span>, </span>
 <span>                             row_no  <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>                             type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1670,12 +1677,12 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>If we consider the frequency (per million words) in the Australian vs UK tabloids (including all texts in each sub-corpus, including those without instances), the frequency of use of condition-first language is higher in Australian tabloids, and lower in UK ones.</p>
-<details><summary>Code</summary><div class="sourceCode" id="cb61"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"tabloid"</span>, <span class="st">"cond_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb62"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"tabloid"</span>, <span class="st">"cond_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between aus and uk (mean of x = 1315.95, mean of y = 835.37) suggests that the effect is positive, statistically significant, and small (difference = 480.58, 95% CI [353.41, 607.75], t(4659.62) = 7.41, p &lt; .001; Cohen’s d = 0.22, 95% CI [0.16, 0.27])</p>
 <p>This is also supported by the FP test:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb62"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_aus_vs_uk</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb63"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_aus_vs_uk</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>, </span>
 <span>    source_label <span class="op">=</span> <span class="st">"tabloid"</span>,</span>
 <span>    dataset <span class="op">=</span> <span class="st">"cond"</span>,</span>
 <span>    myformula <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/formula.html">formula</a></span><span class="op">(</span><span class="va">cond_freq</span> <span class="op">~</span> <span class="va">corpus</span><span class="op">)</span>,</span>
@@ -1689,10 +1696,10 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>As shown above, there is no significant difference in articles lengths between Australian and UK tabloids.</p>
-<hr></section></section><section id="use-of-nominal-the-obese" class="level2"><h2 class="anchored" data-anchor-id="use-of-nominal-the-obese">Use of nominal “the obese”</h2>
+<hr></section></section><section id="use-of-adjectival-nominal-the-obese-1" class="level2"><h2 class="anchored" data-anchor-id="use-of-adjectival-nominal-the-obese-1">Use of adjectival nominal “the obese”</h2>
 <p>Let’s generate a frequency table (sum of no hits in text) for use of “the obese”:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb64"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">obes_4chisq_matrix_sumhits</span> <span class="op">&lt;-</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb65"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">obes_4chisq_matrix_sumhits</span> <span class="op">&lt;-</span></span>
 <span>  <span class="va">both_datasets</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">dataset</span> <span class="op">==</span> <span class="st">"obes"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">generate_conting_tab_sumhits</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -1731,7 +1738,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <section id="australian-corpus-2" class="level3"><h3 class="anchored" data-anchor-id="australian-corpus-2">Australian corpus</h3>
 <p>We can assess the difference between these total number of uses of “the obese” language in the Australian corpus, using a Chi-square test:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb65"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">obes_4chisq_matrix_sumhits</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb66"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">obes_4chisq_matrix_sumhits</span>, </span>
 <span>                             col_no <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>                             type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1769,12 +1776,20 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <td style="text-align: left;">parameter</td>
 <td style="text-align: left;">1</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">statistic_uncorrected</td>
+<td style="text-align: left;">0.6968781</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pval_uncorrected</td>
+<td style="text-align: left;">0.4038347</td>
+</tr>
 </tbody></table>
 </div>
 </div>
 <p>There is no difference in the total count of use of “the obese” in Australian broadsheets vs tabloids.</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb66"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">obes_4chisq_matrix_noarticles</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb67"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">obes_4chisq_matrix_noarticles</span>, </span>
 <span>                             col_no <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>                             type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span><span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1812,18 +1827,26 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <td style="text-align: left;">parameter</td>
 <td style="text-align: left;">1</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">statistic_uncorrected</td>
+<td style="text-align: left;">2.103752</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pval_uncorrected</td>
+<td style="text-align: left;">0.1469382</td>
+</tr>
 </tbody></table>
 </div>
 </div>
 <p>There is no difference in the number of articles that use “the obese” in Australian broadsheets vs tabloids.</p>
 <p>If we consider a t-test on the frequency (per million words) of the Australian corpus (including all texts in each sub-corpus, including those without instances), a very small difference is detected (p &lt; 0.05), with tabloids having a higher frequency of use of condition-first language vs broadsheets.</p>
-<details><summary>Code</summary><div class="sourceCode" id="cb67"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"AUS"</span>, <span class="st">"obes_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb68"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"AUS"</span>, <span class="st">"obes_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between broadsheet and tabloid (mean of x = 42.65, mean of y = 70.46) suggests that the effect is negative, statistically significant, and very small (difference = -27.81, 95% CI [-53.34, -2.29], t(4843.32) = -2.14, p = 0.033; Cohen’s d = -0.06, 95% CI [-0.12, -5.04e-03])</p>
 <p>This could be attributed in part to the longer article length described for tabloids than for broadsheets above.</p>
 <p>This is not strongly supported (p &lt; 0.1) via a non-parametric FP test:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb68"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>,</span>
+<details><summary>Code</summary><div class="sourceCode" id="cb69"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>,</span>
 <span>                      corpus_label <span class="op">=</span> <span class="st">"AUS"</span>,</span>
 <span>                      dataset <span class="op">=</span> <span class="st">"obes"</span>, </span>
 <span>                      <span class="fu"><a href="https://rdrr.io/r/stats/formula.html">formula</a></span><span class="op">(</span><span class="va">obes_freq</span> <span class="op">~</span> <span class="va">source_type</span><span class="op">)</span>, </span>
@@ -1832,14 +1855,14 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  obes_freq by source_type (broadsheet, tabloid)
-Z = -1.9091, p-value = 0.0546
+Z = -1.9091, p-value = 0.0571
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 </section><section id="uk-corpus-2" class="level3"><h3 class="anchored" data-anchor-id="uk-corpus-2">UK corpus</h3>
 <p>We can assess the difference between these total number of uses of “the obese” in the UK corpus between tabloids and broadsheets. Similar to the Australian corpus, no difference is detected.</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb70"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">pers_4chisq_matrix_sumhits</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb71"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">pers_4chisq_matrix_sumhits</span>, </span>
 <span>                             col_no <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>                             type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1877,12 +1900,20 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <td style="text-align: left;">parameter</td>
 <td style="text-align: left;">1</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">statistic_uncorrected</td>
+<td style="text-align: left;">0.1646923</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pval_uncorrected</td>
+<td style="text-align: left;">0.6848727</td>
+</tr>
 </tbody></table>
 </div>
 </div>
 <p>There is also no difference when we consider the number of articles that have at least one instance of condition-first language.</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb71"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">pers_4chisq_matrix_noarticles</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb72"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">pers_4chisq_matrix_noarticles</span>, </span>
 <span>                             col_no <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>                             type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1920,17 +1951,25 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <td style="text-align: left;">parameter</td>
 <td style="text-align: left;">1</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">statistic_uncorrected</td>
+<td style="text-align: left;">1.513559</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pval_uncorrected</td>
+<td style="text-align: left;">0.2185969</td>
+</tr>
 </tbody></table>
 </div>
 </div>
 <p>If we consider a t-test on the frequency (per million words) of the UK corpus (including all texts in each sub-corpus, including those without instances), a very small difference is detected, with a higher mean frequency in tabloids than broadsheets.</p>
-<details><summary>Code</summary><div class="sourceCode" id="cb72"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"UK"</span>, <span class="st">"obes_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb73"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"UK"</span>, <span class="st">"obes_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between broadsheet and tabloid (mean of x = 62.96, mean of y = 96.08) suggests that the effect is negative, statistically significant, and very small (difference = -33.12, 95% CI [-54.84, -11.40], t(13745.07) = -2.99, p = 0.003; Cohen’s d = -0.05, 95% CI [-0.08, -0.02])</p>
 <p>Again, like the case of the Australian corpus, this could be explained by articles in tabloids being overall shorter than in broadsheets in the UK corpus.</p>
 <p>There is some support for this difference when using a non-parametric FP test (p &lt; 0.01):</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb73"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>,</span>
+<details><summary>Code</summary><div class="sourceCode" id="cb74"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>,</span>
 <span>                      corpus_label <span class="op">=</span> <span class="st">"UK"</span>,</span>
 <span>                      dataset <span class="op">=</span> <span class="st">"obes"</span>, </span>
 <span>                      <span class="fu"><a href="https://rdrr.io/r/stats/formula.html">formula</a></span><span class="op">(</span><span class="va">obes_freq</span> <span class="op">~</span> <span class="va">source_type</span><span class="op">)</span>, </span>
@@ -1939,14 +1978,14 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  obes_freq by source_type (broadsheet, tabloid)
-Z = -2.9707, p-value = 0.0024
+Z = -2.9707, p-value = 0.0028
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 </section><section id="australian-vs-uk-broadsheets-3" class="level3"><h3 class="anchored" data-anchor-id="australian-vs-uk-broadsheets-3">Australian vs UK broadsheets</h3>
 <p>There is not a strong difference in use of “the obese” between Australian and UK broadsheets.</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb75"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">obes_4chisq_matrix_sumhits</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb76"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">obes_4chisq_matrix_sumhits</span>, </span>
 <span>                 row_no <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>                 type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1995,7 +2034,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 <p>This lack of a difference also holds true when we consider the number of articles that have at least one instance of “the obese”:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb76"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">obes_4chisq_matrix_sumhits</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb77"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">obes_4chisq_matrix_sumhits</span>, </span>
 <span>                             row_no <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>                             type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2043,12 +2082,12 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>If we consider the frequency (per million words) of the Australian vs UK broadsheets (including all texts in each sub-corpus, including those without instances), a very small difference is detected, with UK broadsheets having a higher frequency than Australian ones:</p>
-<details><summary>Code</summary><div class="sourceCode" id="cb77"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"broadsheet"</span>, <span class="st">"obes_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb78"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"broadsheet"</span>, <span class="st">"obes_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between aus and uk (mean of x = 42.65, mean of y = 62.96) suggests that the effect is negative, statistically significant, and very small (difference = -20.31, 95% CI [-37.99, -2.62], t(6599.44) = -2.25, p = 0.024; Cohen’s d = -0.06, 95% CI [-0.10, -7.15e-03])</p>
 <p>This is also supported by the FP test:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb78"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_aus_vs_uk</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb79"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_aus_vs_uk</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>, </span>
 <span>    source_label <span class="op">=</span> <span class="st">"broadsheet"</span>,</span>
 <span>    dataset <span class="op">=</span> <span class="st">"obes"</span>,</span>
 <span>    myformula <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/formula.html">formula</a></span><span class="op">(</span><span class="va">obes_freq</span> <span class="op">~</span> <span class="va">corpus</span><span class="op">)</span>,</span>
@@ -2057,15 +2096,15 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  obes_freq by corpus (AUS, UK)
-Z = -1.6747, p-value = 0.0904
+Z = -1.6747, p-value = 0.0936
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>This discrepancy may be explained by the fact that, as discussed above, articles in UK broadsheets are somewhat shorter than in Australian ones.</p>
 </section><section id="australian-vs-uk-tabloids-3" class="level3"><h3 class="anchored" data-anchor-id="australian-vs-uk-tabloids-3">Australian vs UK tabloids</h3>
-<p>There is a somewhat higher number of total instances of use of “the obese” in Australian tabloids, and a lower number in UK tabloids (p &lt; 0.05):</p>
+<p>There is a somewhat lower number of total instances of use of “the obese” in Australian tabloids, and a higher number in UK tabloids (p &lt; 0.05):</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb80"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">obes_4chisq_matrix_sumhits</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb81"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">obes_4chisq_matrix_sumhits</span>, </span>
 <span>                 row_no <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>                 type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2114,7 +2153,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 <p>This also holds true when we consider the number of articles that have at least one instance of “the obese”:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb81"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">obes_4chisq_matrix_noarticles</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb82"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">obes_4chisq_matrix_noarticles</span>, </span>
 <span>                             row_no  <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>                             type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2162,12 +2201,12 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>If we consider the frequency (per million words) in the Australian vs UK tabloids (including all texts in each sub-corpus, including those without instances), no significant differences in frequency are observed.</p>
-<details><summary>Code</summary><div class="sourceCode" id="cb82"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"tabloid"</span>, <span class="st">"obes_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb83"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"tabloid"</span>, <span class="st">"obes_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between aus and uk (mean of x = 70.46, mean of y = 96.08) suggests that the effect is negative, statistically not significant, and very small (difference = -25.62, 95% CI [-54.08, 2.85], t(7380.43) = -1.76, p = 0.078; Cohen’s d = -0.04, 95% CI [-0.09, 4.57e-03])</p>
 <p>This is also supported by the FP test:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb83"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_aus_vs_uk</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb84"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_aus_vs_uk</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>, </span>
 <span>    source_label <span class="op">=</span> <span class="st">"tabloid"</span>,</span>
 <span>    dataset <span class="op">=</span> <span class="st">"obes"</span>,</span>
 <span>    myformula <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/formula.html">formula</a></span><span class="op">(</span><span class="va">obes_freq</span> <span class="op">~</span> <span class="va">corpus</span><span class="op">)</span>,</span>
@@ -2176,7 +2215,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  obes_freq by corpus (AUS, UK)
-Z = -1.5974, p-value = 0.1121
+Z = -1.5974, p-value = 0.1075
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>

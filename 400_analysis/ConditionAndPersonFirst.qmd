@@ -11,9 +11,9 @@ execute:
 
 We use the following tests to compare the sub-corpora:
 
-- Chi-square tests, considering the total sub-corpus word count as the probability of observing a specific feature
+- Chi-square tests, considering the total sub-corpus word count as the probability of observing a specific feature.
 - Parametric t-tests comparing the mean frequencies, with texts without the feature considered to have a value of 0.
-- The non-parametric Fisher-Pitman test with 10000 re-samples, comparing the mean frequencies, with texts without the feature considered to have a value of 0. 
+- The non-parametric Fisher-Pitman Permutation Test test with 10000 re-samples, comparing the mean frequencies, with texts without the feature considered to have a value of 0. 
 
 ### Article length differences:
 
@@ -28,7 +28,7 @@ We use the following tests to compare the sub-corpora:
 
 - In the UK corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets, when considering contingency table and frequency based analyses similar to the above.
 
-- Australian broadsheets have somewhat higher total number of instances (p(Chi-sq) < 0.005) and number of articles (p < 0.005) using person-first language than UK broadsheets. This difference is supported when considering the mean frequency of language use (mean Australian broadsheets = 17.81 words per million, mean UK broadsheets 8.52 wpm) across the corpus with parametric and non-parametric tests (p <0.05)).
+- Australian broadsheets have somewhat higher total number of instances (p(Chi-sq) < 0.005) and number of articles (p < 0.005) using person-first language than UK broadsheets. This difference is supported when considering the mean frequency of language use (mean Australian broadsheets = 17.81 words per million (wpm), mean UK broadsheets 8.52 wpm) across the corpus with parametric and non-parametric tests (p <0.05)).
 
 - There is no difference between the number of instances, articles or frequency of between Australian and UK tabloids.
 
@@ -36,23 +36,23 @@ We use the following tests to compare the sub-corpora:
 
 - Australian broadsheets have somewhat lower total number of instances (p(Chi-sq) < 0.001) and number of articles (p < 0.1) using condition-first language than Australian tabloids. If we instead look at the frequency of use, the opposite result is observed, with a higher frequency of condition-first language in tabloids than in broadsheets (mean broadsheets = 847.96 wpm vs 1315.95 wpm in tabloids, p(FP) < 1e-04). This discrepancy may be attributable to the fact that articles in broadsheets are substantially longer than those in tabloids, so comparing mean frequencies of the same number of instances results in a difference frequency because the word count being divided by for broadsheets is larger than that of tabloids.
 
-- In the UK corpus, there is a higher number of instances and articles containing at least one instance of condition-first language used in tabloids, and a lower number of instances in broadsheets (p < 0.001). A very small difference is also detected, with a higher mean frequency in tabloids than broadsheets (mean tabloids 629.40 wpm, mean of broadsheets 835.37 wpm, p(FP) < 1e-04)
+- In the UK corpus, there is a higher number of instances and articles containing at least one instance of condition-first language used in tabloids, and a lower number of instances in broadsheets (p < 0.001). A very small difference is also detected, with a higher mean frequency in tabloids than broadsheets (mean broadsheets 629.40 wpm, mean of tabloids 835.37 wpm, p(FP) < 1e-04)
 
 - There is a higher number of instances and articles with at least one instance (p(Chi-sq) < 0.001) of condition-first language in Australian vs UK broadsheets. If we consider the frequency, a very small difference is also detected, with Australian broadsheets having a higher frequency than UK ones (mean Australian 847.96 wpm, mean UK 629.40 wpm, p(FP) < 1e-04).
 
 - There is a higher number of instances and articles that use condition-first language in Australian tabloids, and a lower number in UK tabloids (p(Chi-sq) < 0.001). The frequency is also higher in Australian tabloids (mean Australian 1315.95 wpm, mean UK 835.37 wpm, p(FP) < 1e-04). This is especially striking given that there is no difference in overall article length between Australian and UK tabloids.
 
 
-### Use of the nominal "the obese"
+### Use of adjectival nominal "the obese"
 
 - In the Australian corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.05, p(FP) < 0.1) when considering frequencies, with tabloids having a higher frequency of use of condition-first language vs broadsheets (mean broadsheet frequency 42.65 wpm, mean tabloid 70.46 wpm). This discrepancy is most likely at least partially explained by the much longer article lengths of broadsheets vs tabloids in this corpus.
 
 - Similarly, in the UK corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.01, p(FP) < 0.01) when considering frequencies, with tabloids having a higher frequency of use of "the obese"  vs broadsheets (mean broadsheet frequency 62.96 wpm, mean tabloid 96.08 wpm). This discrepancy is most likely at least partially explained by the much longer article lengths of broadsheets vs tabloids in this corpus, similar to the Australian corpus.
 
-- When comparing use of "the obese" in the Australian vs UK broadsheets, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.01, p(FP) < 0.01) when considering frequencies, with Australian broadsheets having a higher frequency of use of "the obese" vs UK ones (mean frequency Australia - 42.65 wpm, UK - 62.96 wpm).
+- When comparing use of "the obese" in the Australian vs UK broadsheets, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.01, p(FP) < 0.01) when considering frequencies, with UK broadsheets having a higher frequency of use of "the obese" vs Australian ones (mean frequency Australia - 42.65 wpm, UK - 62.96 wpm).
 
 
-- There is a somewhat higher number of total instances of use and articles with at least one instance of use of "the obese" in Australian tabloids, and a lower number in UK tabloids  (p(Chi-sq) < 0.05). However, this difference is not supported by frequency analysis, when using both parametric or non-parametric tests.
+- There is a somewhat lower number of total instances of use and articles with at least one instance of use of "the obese" in Australian tabloids, and a higher number in UK tabloids  (p(Chi-sq) < 0.05). However, this difference is not supported by frequency analysis, when using both parametric or non-parametric tests.
 
 
 ```{r loadLibs, warning=FALSE, message=FALSE}
@@ -65,6 +65,7 @@ library(knitr)
 library(patchwork)
 library(corrplot)
 library(coin)
+library(ggvenn)
 theme_set(theme_minimal())
 ```
 
@@ -73,341 +74,142 @@ theme_set(theme_minimal())
 metadata <-read_csv(here::here("200_data_clean/", "full_metadata.csv"))
 both_datasets <-  read_csv(here::here("200_data_clean/", "both_datasets.csv")) |> 
   # get data for correct time window
-  filter(year >= 2008 & year <=2016) 
+  filter(year >= 2008 & year <=2016)
+
+source(here::here("400_analysis", "functions.R"))
 
 # get some wordcounts 
-au_tabloid_wordcounts <- 
-  metadata |> 
-  filter(corpus == "AUS" & source_type == "tabloid") |>
-  pull(no_words_in_text) 
+au_tabloid_wordcounts <- get_wc(
+  corpuslabel = "AUS",
+  sourcetypelabel = "tabloid")
 
-au_broadsheet_wordcounts <- 
-  metadata |> 
-  filter(corpus == "AUS" & source_type == "broadsheet") |>
-  pull(no_words_in_text) 
+au_broadsheet_wordcounts <- get_wc(
+  corpuslabel = "AUS",
+  sourcetypelabel = "broadsheet")
 
-uk_tabloid_wordcounts <- 
-  metadata |> 
-  filter(corpus == "UK" & source_type == "tabloid") |>
-  pull(no_words_in_text) 
+uk_tabloid_wordcounts <- get_wc(
+  corpuslabel = "UK",
+  sourcetypelabel = "tabloid")
 
-uk_broadsheet_wordcounts <- 
-  metadata |> 
-  filter(corpus == "UK" & source_type == "broadsheet") |>
-  pull(no_words_in_text) 
-```
+uk_broadsheet_wordcounts <- get_wc(
+  corpuslabel = "UK",
+  sourcetypelabel = "broadsheet")
 
-
-```{r function_def}
-generate_conting_tab_sumhits <- function(df) {
-  tmp <- df |>
-  group_by(corpus, source_type) |>
-  summarize(sum = sum(no_hits_in_text)) |>
-  pivot_wider(names_from = corpus, values_from = sum) |>
-    as.data.frame()
-  rownames(tmp) <- tmp$source_type
-  tmp |>
-    select(-source_type) |>
-    ungroup()
-}
-
-generate_conting_tab_noarticles <- function(df) {
-  tmp <- df |>
-  group_by(corpus, source_type) |>
-  summarize(count = n()) |>
-  pivot_wider(names_from = corpus, values_from = count) |>
-    as.data.frame()
-  rownames(tmp) <- tmp$source_type
-  tmp |>
-    select(-source_type) |>
-    ungroup()
-}
-
-generate_wc <- function(df) {
-  tmp <- df |>
-  group_by(corpus, source_type) |>
-  summarise(total_words = sum(no_words_in_text)) |>
-  pivot_wider(names_from = corpus, values_from = total_words) |>
-    as.data.frame()
-  rownames(tmp) <- tmp$source_type
-  tmp |>
-    select(-source_type) |>
-    ungroup()
-}
-
-generate_article_count <- function(df) {
-  tmp <- df |>
-    group_by(corpus, source_type) |>
-    summarise(total_articles = n()) |>
-    pivot_wider(names_from = corpus, values_from = total_articles) |> 
-    as.data.frame()
-  rownames(tmp) <- tmp$source_type
-  tmp |>
-    select(-source_type) |>
-    ungroup()
-}
-
-
-get_chisq_tabloid_broadsheet <- function(matrix, col_no, type) {
-  
-  normalisation_matrix <- if (type == "wc") {
-    generate_wc(metadata)
-  } else {
-    generate_article_count(metadata)
-  }
-  
-  # needing to subset the matrix with [,col_no]
-  # is why we have a diff funct for Aus vs UK
-  chisq_result <- chisq.test(
-  matrix[,col_no],
-  p = normalisation_matrix[,col_no],
-  rescale.p = TRUE
-) 
-cbind({data.frame(t(chisq_result$observed)) |> 
-    rename_with(.fn = ~ paste0(.x, "_observed"))},
-    {data.frame(t(chisq_result$expected)) |> 
-        rename_with(.fn = ~ paste0(.x, "_expected"))},
-    broom::tidy(chisq_result)) |>
-  select(method,
-         starts_with("broadsheet"), 
-         starts_with("tabloid"),
-         everything()) |>
-  t() 
-}
-
-get_chisq_aus_uk <- function(matrix, row_no, type) {
-    normalisation_matrix <- if (type == "wc") {
-    generate_wc(metadata)
-  } else {
-    generate_article_count(metadata)
-  }
-  # needing to subset the matrix with [row_no,]
-  # is why we have a diff funct for tab vs broad
-  chisq_result <- chisq.test(
-    matrix[row_no,],
-    # this takes word count into consideration,
-    # so need dif funct for article_count
-    p = normalisation_matrix[row_no,],
-    rescale.p = TRUE
-  ) 
-  
-  cbind({data.frame(t(chisq_result$observed)) |> 
-      rename_with(.fn = ~ paste0(.x, "_observed"))},
-      {data.frame(chisq_result$expected) |> 
-          rename_with(.fn = ~ paste0(.x, "_expected"))},
-      broom::tidy(chisq_result)) |>
-  select(method,
-         starts_with("AUS"), 
-         starts_with("UK"),
-         everything()) |>
-  t() 
-}
-
-ttest_broad_vs_tabl <- function(freq_table, 
-                               corpus_label,
-                               variable) {
-  broadsheet <- freq_table |>
-  filter(corpus == corpus_label & source_type == "broadsheet") |>
-  pull(variable)
-  tabloid <- freq_table |>
-  filter(corpus == corpus_label & source_type == "tabloid") |>
-  pull(variable)
-report::report(t.test(broadsheet, tabloid))
-}
-
-mydistribution <- approximate(nresample = 10000,
-                                         parallel = "multicore",
-                                         ncpus = 8)
-
-wmw_test_broad_vs_tabl <- function(
-    freq_table = frequency_table, 
-    corpus_label = "AUS",
-    dataset = "cond",
-    myformula = formula(cond_freq ~ source_type),
-    dist = mydistribution) {
-  df <- freq_table |>
-    filter(corpus == corpus_label) |>
-    select(source_type, paste0(dataset, "_freq")) |>
-    mutate(source_type =as.factor(source_type))
-  wilcox_test(myformula,
-              df,
-            distribution = dist,
-            conf.int = TRUE )
-}
-
-wmw_test_aus_vs_uk <- function(
-    freq_table = frequency_table, 
-    source_label = "broadsheet",
-    dataset = "cond",
-    myformula = formula(cond_freq ~ corpus),
-    dist = mydistribution) {
-  df <- freq_table |>
-    filter(source_type == source_label) |>
-    select(corpus, paste0(dataset, "_freq")) |>
-    mutate(corpus =as.factor(corpus))
-  wilcox_test(myformula,
-              df,
-            distribution = dist,
-            conf.int = TRUE )
-}
-         
-fp_test_broad_vs_tabl <- function(
-    freq_table = frequency_table, 
-    corpus_label = "AUS",
-    dataset = "cond",
-    myformula = formula(cond_freq ~ source_type),
-    dist = mydistribution) {
-  df <- freq_table |>
-    filter(corpus == corpus_label) |>
-    select(source_type, paste0(dataset, "_freq")) |>
-    mutate(source_type =as.factor(source_type))
-  coin::oneway_test(myformula,
-              df,
-            distribution = dist,
-            conf.int = TRUE )
-}
-
-fp_test_aus_vs_uk <- function(
-    freq_table = frequency_table, 
-    source_label = "broadsheet",
-    dataset = "cond",
-    myformula = formula(cond_freq ~ corpus),
-    dist = mydistribution) {
-  df <- freq_table |>
-    filter(source_type == source_label) |>
-    select(corpus, paste0(dataset, "_freq")) |>
-    mutate(corpus =as.factor(corpus))
-  coin::oneway_test(myformula,
-              df,
-            distribution = dist,
-            conf.int = TRUE )
-}
-
-fp_test_wc <- function(
-    wc1 = au_broadsheet_wordcounts, 
-    wc2 = au_tabloid_wordcounts,
-    label1 = "broadsheet",
-    label2 = "tabloid",
-    dist = mydistribution) {
-  df <-
-    rbind(data.frame(wc = wc1,
-                     label = label1),
-          data.frame(wc = wc2,
-                     label = label2))|>
-    mutate(label = as.factor(label))
-  
-  coin::oneway_test(formula(wc ~ label),
-              df,
-              distribution = dist,
-              conf.int = TRUE )
-}
-
-wmw_test_wc <- function(
-    wc1 = au_broadsheet_wordcounts, 
-    wc2 = au_tabloid_wordcounts,
-    label1 = "broadsheet",
-    label2 = "tabloid",
-    dist = mydistribution) {
-  df <-
-    rbind(data.frame(wc = wc1,
-                     label = label1),
-          data.frame(wc = wc2,
-                     label = label2))|>
-    mutate(label = as.factor(label))
-  
-  coin::wilcox_test(formula(wc ~ label),
-              df,
-              distribution = dist,
-              conf.int = TRUE )
-}
-
-ttest_aus_vs_uk <- function(freq_table, 
-                               source_type_label,
-                               variable) {
-  aus <- freq_table |>
-  filter(corpus == "AUS" & source_type == source_type_label) |>
-  pull(variable)
-  uk <- freq_table |>
-  filter(corpus == "UK" & source_type == source_type_label) |>
-  pull(variable)
-report::report(t.test(aus, uk))
-}
-
-ttest_broad_vs_tabl_non0 <- function(freq_table, 
-                               corpus_label,
-                               variable) {
-  broadsheet <- freq_table |>
-  filter(corpus == corpus_label & source_type == "broadsheet") |>
-  pull(variable)
-  tabloid <- freq_table |>
-  filter(corpus == corpus_label & source_type == "tabloid") |>
-  pull(variable)
-  broadsheet <- broadsheet[broadsheet != 0]
-  tabloid <- tabloid[tabloid != 0]
-report::report(t.test(broadsheet, tabloid))
-}
-
-ttest_aus_vs_uk_non0 <- function(freq_table, 
-                               source_type_label,
-                               variable) {
-  aus <- freq_table |>
-  filter(corpus == "AUS" & source_type == source_type_label) |>
-  pull(variable)
-  uk <- freq_table |>
-  filter(corpus == "UK" & source_type == source_type_label) |>
-  pull(variable)
-  aus <- aus[aus != 0]
-  uk <- uk[uk != 0]
-report::report(t.test(aus, uk))
-}
-
-histogram_pairwise <- function(
-    # for word counts
-    wc1 = au_broadsheet_wordcounts, 
-    wc2 = au_tabloid_wordcounts, 
-    label1 = "broadsheet", 
-    label2 = "tabloid") {
-  rbind(
-  data.frame(wc = wc1,
-           corpus = label1),
-  data.frame(wc = wc2,
-           corpus = label2)
-  ) |>
-  ggplot(aes(x = wc, fill = corpus)) +
-  geom_histogram(bins = 1000) + 
-  labs(x = "Word count, CQP web",
-       y = "Number of articles")
-
-}
-```
-
-
-```{r}
-cond_freq <- both_datasets |>
-  filter(dataset == "cond") |>
-  select(article_id, freq_per_million_words) |>
-  rename(cond_freq = freq_per_million_words)
-
-pers_freq <- both_datasets |>
-  filter(dataset == "pers") |>
-  select(article_id, freq_per_million_words) |>
-  rename(pers_freq = freq_per_million_words)
-
-obes_freq <-  both_datasets |>
-  filter(dataset == "obes") |>
-  select(article_id, freq_per_million_words) |>
-  rename(obes_freq = freq_per_million_words)
 
 frequency_table <-
   metadata |>
   select(article_id, corpus, source_type) |> 
-  left_join(cond_freq, by = "article_id") |>
-  left_join(pers_freq, by = "article_id") |>
-  left_join(obes_freq, by = "article_id") |>
+  left_join(
+    {
+  # this gets a frequency table per article where
+  # a language type is used
+  both_datasets |>
+  select(dataset, article_id, freq_per_million_words) |>
+  pivot_wider(names_from = dataset, 
+              names_glue = "{dataset}_freq",
+              values_from = freq_per_million_words,
+              values_fill = 0)}
+  ) |>
   replace_na(list(cond_freq = 0, 
                   pers_freq = 0,
                   obes_freq = 0))
 ```
+
+## Proportion and number of articles using any of the language types in the two corpora
+
+Let's find the total number of articles that use one or more language types in the two corpora.
+
+```{r}
+article_id_cond <- get_article_ids(both_datasets, "cond")
+article_id_pers <- get_article_ids(both_datasets, "pers")
+article_id_obes <- get_article_ids(both_datasets, "obes")
+
+ggvenn(list(
+  `Condition first` = article_id_cond,
+  `Person first` = article_id_pers,
+  `Obese` = article_id_obes),
+  fill_color = c("white", "white", "white")) +
+  labs(title = "Number of articles that use the language features")
+
+for_stacked_chart <-
+  metadata |>
+  select(article_id, corpus, source_type) |>
+  mutate(grp = case_when(
+    article_id %in% base::intersect(base::intersect(article_id_cond, article_id_pers), article_id_obes) ~ "all3",
+    # two
+    article_id %in% base::intersect(article_id_cond, article_id_pers) ~ "cond_pers",
+    article_id %in% base::intersect(article_id_obes, article_id_cond) ~ "cond_obes",
+    article_id %in% base::intersect(article_id_obes, article_id_pers) ~ "pers_obes",
+    # one
+    article_id %in% article_id_cond ~ "cond",
+    article_id %in% article_id_pers ~ "pers",
+    article_id %in% article_id_obes ~ "obes",
+    # none
+    TRUE ~ "none"
+  )) 
+
+ggsave(device = "png",
+       here::here("400_analysis","stacked_chart.png"),
+       bg = "white",
+       width = 10,
+       height = 4)
+
+for_stacked_chart |> 
+  mutate(group = case_when(
+    grp == "cond_obes" ~ "two",
+    grp == "pers_obes" ~ "two",
+    grp == "cond_pers" ~ "two",
+    TRUE ~ grp
+  ))  |>
+  mutate(group = factor(group, 
+ levels = c("none", "all3", "two", "cond_obes", "cond_pers", "pers_obes", "obes", "pers", "cond"),
+ labels = c(
+   "no occurrences of any of the three targeted language practices",
+   "occurrences of all three targeted language practices",
+   "occurrences of two of the three targeted language practices",
+   "cond_obes", "cond_pers", "pers_obes",
+   "occurrences of adjectival nominal 'the obese'",
+   "occurrences of person-first language",
+   "occurrences of condition-first language"
+   ))) |>
+  ggplot() + 
+    geom_bar(
+      aes(fill=group, 
+          x=source_type),
+      position="fill") + 
+  facet_grid(~corpus) + theme_bw() + 
+  scale_fill_brewer(palette = "Accent") +
+ scale_y_continuous(name = "Proportion articles in corpus",
+                    labels = scales::percent) +
+ # set axis limits in coord_cartesian
+ # + coord_cartesian(ylim = c(0, 0.4))
+# scale_fill_grey(start = 0.9, end = 0.2) + 
+  theme(axis.text.x = element_text(angle = 35, vjust = 1, hjust=1))+
+  labs(x = "",
+       fill = "") 
+
+```
+
+```{r}
+corpus_articles_grouped <- for_stacked_chart |>
+  group_by(corpus, source_type) |>
+  count() |> 
+  rename(total_articles = n)
+
+for_stacked_chart |> 
+  group_by(corpus, source_type) |>
+  count(grp) |>
+  arrange(-n) |>
+  left_join(corpus_articles_grouped) |>
+  mutate(percent = round(100 * n/total_articles, 2)) |>
+  select(-total_articles) |>
+  pivot_wider(names_from = corpus, values_from = c(n, percent), values_fill = 0) |>
+  rename(observed_language = grp) |>
+  kable()
+```
+
+
+
 
 ## Article length differences in Australian and UK broadsheets and tabloids
 
@@ -905,7 +707,7 @@ As shown above, there is no significant difference in articles lengths between A
 
 ***
 
-## Use of nominal "the obese"
+## Use of adjectival nominal "the obese"
 
 Let's generate a frequency table (sum of no hits in text) for use of "the obese":
 
@@ -1047,7 +849,7 @@ This discrepancy may be explained by the fact that, as discussed above, articles
 
 ### Australian vs UK tabloids
 
-There is a somewhat higher number of total instances of use of "the obese" in Australian tabloids, and a lower number in UK tabloids  (p < 0.05):
+There is a somewhat lower number of total instances of use of "the obese" in Australian tabloids, and a higher number in UK tabloids  (p < 0.05):
 
 ```{r}
 get_chisq_aus_uk(obes_4chisq_matrix_sumhits, 
