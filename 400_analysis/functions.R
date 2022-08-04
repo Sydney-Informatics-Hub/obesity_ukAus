@@ -58,6 +58,15 @@ generate_article_count <- function(df) {
     ungroup()
 }
 
+get_cramers_v <- function(mymatrix, chi) {
+  # Find degrees of freedom - min row or col - 1
+  n = sum(mymatrix)
+  # always 1 for all of the comparisons in this study
+  df <- 1
+  #df <- min(dim(mymatrix)) - 1
+  sqrt((chi)/(n * df))
+}
+
 
 get_chisq_tabloid_broadsheet <- function(matrix, col_no, type) {
 
@@ -75,21 +84,13 @@ get_chisq_tabloid_broadsheet <- function(matrix, col_no, type) {
     rescale.p = TRUE
   )
 
-  chisq_result_nocorrection <-
-    chisq.test(
-      matrix[,col_no],
-      p = normalisation_matrix[,col_no],
-      rescale.p = TRUE,
-      correct = FALSE
-    )
   cbind({data.frame(t(chisq_result$observed)) |>
       rename_with(.fn = ~ paste0(.x, "_observed"))},
       {data.frame(t(chisq_result$expected)) |>
           rename_with(.fn = ~ paste0(.x, "_expected"))},
-      broom::tidy(chisq_result),
-      {broom::tidy(chisq_result_nocorrection) |>
-        select(-method, -parameter) |>
-        rename(statistic_uncorrected = statistic, pval_uncorrected = p.value)}) |>
+      broom::tidy(chisq_result)) |>
+    mutate(effect_size = get_cramers_v(mymatrix = matrix[,col_no],
+                                       chi = chisq_result$statistic)) |>
     select(method,
            starts_with("broadsheet"),
            starts_with("tabloid"),
@@ -120,6 +121,8 @@ get_chisq_aus_uk <- function(matrix, row_no, type) {
       {data.frame(chisq_result$expected) |>
           rename_with(.fn = ~ paste0(.x, "_expected"))},
       broom::tidy(chisq_result)) |>
+    mutate(effect_size = get_cramers_v(mymatrix = matrix[row_no,],
+                                       chi = chisq_result$statistic)) |>
     select(method,
            starts_with("AUS"),
            starts_with("UK"),
