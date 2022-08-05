@@ -4,22 +4,21 @@ execute:
   message: false
   warning: false
 ---
-
 ## Executive summary
 
 - Both corpora had data from 2008-2016, which was used for the analyses below.
 
 We use the following tests to compare the sub-corpora:
 
-- Chi-square tests, considering the total sub-corpus word count as the probability of observing a specific feature.
+- Chi-square goodness-of-fit tests, considering the total sub-corpus word count as the probability of observing a specific feature.
 - Parametric t-tests comparing the mean frequencies, with texts without the feature considered to have a value of 0.
 - The non-parametric Fisher-Pitman Permutation Test test with 10000 re-samples, comparing the mean frequencies, with texts without the feature considered to have a value of 0. 
 
 ### Article length differences:
 
 - Articles in Australian broadsheets are longer than in Australian tabloids (mean 841.70 vs 555.04, respectively, p(FP) < 1e-05).
-- Articles in UK broadsheets are longer than in UK tabloids (mean 718.31 vs 561.20, respectively, p(FP) < 1e-05).
-- Articles in Australian broadsheets are longer than in UK broadsheets (mean 841.70 vs 718.31, respectively, p(FP) < 1e-05).
+- Articles in UK broadsheets are longer than in UK tabloids (mean 718.31 vs 561.20, respectively, p(FP) < 1e-04).
+- Articles in Australian broadsheets are longer than in UK broadsheets (mean 841.70 vs 718.31, respectively, p(FP) < 1e-04).
 - There is no difference in length between articles in Australian and UK tabloids (mean 555.04 vs 561.20, respectively).
 
 ### Use of person-first language:
@@ -28,17 +27,17 @@ We use the following tests to compare the sub-corpora:
 
 - In the UK corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets, when considering contingency table and frequency based analyses similar to the above.
 
-- Australian broadsheets have somewhat higher total number of instances (p(Chi-sq) < 0.005) and number of articles (p < 0.005) using person-first language than UK broadsheets. This difference is supported when considering the mean frequency of language use (mean Australian broadsheets = 17.81 words per million (wpm), mean UK broadsheets 8.52 wpm) across the corpus with parametric and non-parametric tests (p <0.05)).
+- Australian broadsheets have somewhat higher total number of instances (p(Chi-sq) < 0.005) and number of articles (p < 0.0005) using person-first language than UK broadsheets. This difference is supported when considering the mean frequency of language use (mean Australian broadsheets = 17.81 words per million (wpm), mean UK broadsheets 8.52 wpm) across the corpus with parametric and non-parametric tests (p(FP) < 0.05)).
 
 - There is no difference between the number of instances, articles or frequency of between Australian and UK tabloids.
 
 ### Use of condition-first language:
 
-- Australian broadsheets have somewhat lower total number of instances (p(Chi-sq) < 0.001) and number of articles (p < 0.1) using condition-first language than Australian tabloids. If we instead look at the frequency of use, the opposite result is observed, with a higher frequency of condition-first language in tabloids than in broadsheets (mean broadsheets = 847.96 wpm vs 1315.95 wpm in tabloids, p(FP) < 1e-04). This discrepancy may be attributable to the fact that articles in broadsheets are substantially longer than those in tabloids, so comparing mean frequencies of the same number of instances results in a difference frequency because the word count being divided by for broadsheets is larger than that of tabloids.
+- Australian broadsheets have a lower than expected total number of instances (p(Chi-sq) < 0.001) and number of articles (p < 0.1) using condition-first language vs Australian tabloids. If we instead look at the frequency of use, the opposite result is observed, with a higher frequency of condition-first language in tabloids than in broadsheets (mean broadsheets = 847.96 wpm vs 1315.95 wpm in tabloids, p(FP) < 1e-04). This discrepancy may be attributable to the fact that articles in broadsheets are longer than those in tabloids (mean 841.70 words for broadsheets vs 555.04 for tabloids), as described above, so comparing mean frequencies of the same number of instances results in a difference frequency because the word count being divided by for broadsheets is 1.5x than that of tabloids.
 
-- In the UK corpus, there is a higher number of instances and articles containing at least one instance of condition-first language used in tabloids, and a lower number of instances in broadsheets (p < 0.001). A very small difference is also detected, with a higher mean frequency in tabloids than broadsheets (mean broadsheets 629.40 wpm, mean of tabloids 835.37 wpm, p(FP) < 1e-04)
+- In the UK corpus, there is a higher number than expected of instances and articles containing at least one instance of condition-first language used in tabloids, and a lower number in broadsheets (p < 0.0001). A very small difference in frequency is also detected, with a higher mean frequency in tabloids than broadsheets (mean broadsheets 629.40 wpm, mean of tabloids 835.37 wpm, p(FP) < 1e-04). 
 
-- There is a higher number of instances and articles with at least one instance (p(Chi-sq) < 0.001) of condition-first language in Australian vs UK broadsheets. If we consider the frequency, a very small difference is also detected, with Australian broadsheets having a higher frequency than UK ones (mean Australian 847.96 wpm, mean UK 629.40 wpm, p(FP) < 1e-04).
+- There is a higher number of instances and articles with at least one instance (p(Chi-sq) < 0.001) of condition-first language in Australian vs UK broadsheets. If we consider the frequency, a difference is also detected, with Australian broadsheets having a higher frequency than UK ones (mean Australian 847.96 wpm, mean UK 629.40 wpm, p(FP) < 1e-04).
 
 - There is a higher number of instances and articles that use condition-first language in Australian tabloids, and a lower number in UK tabloids (p(Chi-sq) < 0.001). The frequency is also higher in Australian tabloids (mean Australian 1315.95 wpm, mean UK 835.37 wpm, p(FP) < 1e-04). This is especially striking given that there is no difference in overall article length between Australian and UK tabloids.
 
@@ -49,11 +48,9 @@ We use the following tests to compare the sub-corpora:
 
 - Similarly, in the UK corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.01, p(FP) < 0.01) when considering frequencies, with tabloids having a higher frequency of use of "the obese"  vs broadsheets (mean broadsheet frequency 62.96 wpm, mean tabloid 96.08 wpm). This discrepancy is most likely at least partially explained by the much longer article lengths of broadsheets vs tabloids in this corpus, similar to the Australian corpus.
 
-- When comparing use of "the obese" in the Australian vs UK broadsheets, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.01, p(FP) < 0.01) when considering frequencies, with UK broadsheets having a higher frequency of use of "the obese" vs Australian ones (mean frequency Australia - 42.65 wpm, UK - 62.96 wpm).
+- When comparing use of "the obese" in the Australian vs UK broadsheets, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.05, p(FP) < 0.1) when considering frequencies, with UK broadsheets having a higher frequency of use of "the obese" vs Australian ones (mean frequency Australia - 42.65 wpm, UK - 62.96 wpm). This discrepancy may be explained by the fact that, as discussed above, articles in UK broadsheets are somewhat shorter than in Australian ones.
 
-
-- There is a somewhat lower number of total instances of use and articles with at least one instance of use of "the obese" in Australian tabloids, and a higher number in UK tabloids  (p(Chi-sq) < 0.05). However, this difference is not supported by frequency analysis, when using both parametric or non-parametric tests.
-
+- There is a somewhat lower number of total instances of use and articles with at least one instance of use of "the obese" in Australian tabloids, and a higher number in UK tabloids  (p(Chi-sq) < 0.05). However, this difference is not supported by frequency analysis (mean Australian 70.46 wpm, mean UK 96.08 wpm), when using both parametric or non-parametric tests.
 
 ```{r loadLibs, warning=FALSE, message=FALSE}
 library(here)
@@ -208,6 +205,44 @@ for_stacked_chart |>
   kable()
 ```
 
+Monika also wanted to provide a less detailed version of the above summary, where each article could be counted once to each category it belonged to (so, for example, one with all 3 could be counted 3 times: towards condition-first, person-first and obese). Let's generate this summary:
+
+```{r}
+fortable11 <-
+  both_datasets |>
+  select(article_id, corpus, source_type, dataset) |>
+  group_by(corpus, source_type, dataset) |>
+  count() |>
+  rename(article_count = n) |>
+  left_join({
+    metadata |>
+  select(article_id, corpus, source_type) |>
+  group_by(corpus, source_type) |>
+  count() |>
+  rename(corpus_count = n)}) |>
+  mutate(subset = paste(corpus, source_type, sep = "_")) |>
+  ungroup() |>
+  select(-corpus, -source_type) |>
+  mutate(dataset = factor(dataset, levels = c("pers", "cond", "obes")),
+         subset = factor(subset, levels = c("AUS_tabloid",
+                                            "UK_tabloid",
+                                            "AUS_broadsheet",
+                                            "UK_broadsheet"))) |> arrange(dataset, subset)
+
+fortable11 |>
+  select(-corpus_count) |>
+  pivot_wider(values_from = article_count, names_from = subset)
+  
+```
+
+And get the percentages table:
+```{r}
+fortable11 |>
+mutate(prop = round(100*article_count/corpus_count, 2)) |>
+  select(-article_count, -corpus_count) |>
+  pivot_wider(values_from = prop, names_from = subset)
+
+```
 
 
 
