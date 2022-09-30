@@ -2,16 +2,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.345">
+<meta name="generator" content="quarto-1.1.251">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Obesity UK vs Australian corpus comparison - Loading and exploring the data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -50,7 +55,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -63,7 +68,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -76,14 +81,24 @@ code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script><script src="../site_libs/quarto-nav/headroom.min.js"></script><script src="../site_libs/clipboard/clipboard.min.js"></script><meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script><script src="../site_libs/quarto-search/fuse.min.js"></script><script src="../site_libs/quarto-search/quarto-search.js"></script><script src="../site_libs/quarto-html/quarto.js"></script><script src="../site_libs/quarto-html/popper.min.js"></script><script src="../site_libs/quarto-html/tippy.umd.min.js"></script><script src="../site_libs/quarto-html/anchor.min.js"></script><link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link class="quarto-color-scheme" id="quarto-text-highlighting-styles" href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
-<link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" id="quarto-text-highlighting-styles" href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script><link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link class="quarto-color-scheme" href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
-<link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" href="../site_libs/bootstrap/bootstrap-dark.min.css">
-<script id="quarto-search-options" type="application/json">{
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -107,9 +122,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="../index.html">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Obesity UK vs Australian corpus comparison</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -165,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quarto-title-meta">
   </div>
 </header> 
-      <div class="about-contents"><main class="content" id="quarto-document-content"><section id="executive-summary" class="level3"><h3 class="anchored" data-anchor-id="executive-summary">Executive summary</h3>
+      <div class="about-contents"><main class="content" id="quarto-document-content"><section id="executive-summary" class="level3"><h3 data-anchor-id="executive-summary">Executive summary</h3>
 <hr>
 <p>In this file, we start by loading and exploring the data for the UK and Australian obesity corpus.</p>
 <p>The Australian corpus was first explored (for texts that had &gt;= 3 mentions of the word “obes*“, to maintain consistency with the UK corpus) using the same syntax as in our previous manuscript. This resulted in the”May” dataset (note spaces have been added after the pipe to enable line breaks below; spaces were not part of the original query).</p>
@@ -182,12 +199,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Finally, a different syntax was used to generate the final UK and Australian corpora. This “late July” dataset was used for subsequent comparison and analysis in the paper:</p>
 <ul>
-<li>Condition-first language: “[word=”obese”%c] [fullsemtag=”.<em>S2.</em>”]” (for Australian corpus: meeting criteria “<em>obesity_boolean_ukcorpus</em>: <em>True</em>”)</li>
-<li>Person-first language: “[fullsemtag=”.<em>S2.</em>”] [word=”with”] []? [word=”obesity”]”</li>
-<li>Nominal “the obese”: the_obese_nominal-&gt;Yes (2022-Jul-12 17:55): query “the obese” returned 870 matches in 713 different texts, manually categorised as “1” (UK corpus) and the_obese_nominal (1)-&gt;Yes (2022-Mar-18 05:03): query “the obese”, in subcorpus “Tara Parallel Corpus”, returned 296 matches in 259 different texts, manually categorised as “1&amp;rdquo (Aus corpus)</li>
+<li><p>Condition-first language: “[word=”obese”%c] [fullsemtag=”.<em>S2.</em>”]” (for Australian corpus: meeting criteria “<em>obesity_boolean_ukcorpus</em>: <em>True</em>”)</p></li>
+<li><p>Person-first language: “[fullsemtag=”.<em>S2.</em>”] [word=”with”] []? [word=”obesity”]”</p></li>
+<li><p>Nominal “the obese”: the_obese_nominal-&gt;Yes (2022-Jul-12 17:55): query “the obese” returned 870 matches in 713 different texts, manually categorised as “1” (UK corpus) and the_obese_nominal (1)-&gt;Yes (2022-Mar-18 05:03): query “the obese”, in subcorpus “Tara Parallel Corpus”, returned 296 matches in 259 different texts, manually categorised as “1&amp;rdquo (Aus corpus)</p></li>
+<li><p>Person-first language: UK vs Australia: i.e.&nbsp;<code>uk_with_obesity_new.txt</code> vs <code>aus_subset_with_obesity_new.txt</code>.</p></li>
+<li><p>“The adjective lemma OBESE”: UK vs Australia i.e uk_the obese <code>text-frequency-data.txt</code> vs <code>aoc_subset_the_obese_cat_nominal.txt</code></p></li>
 </ul>
-<p>Person-first language: UK vs Australia: i.e.&nbsp;uk_with_obesity_new.txt vs aus_subset_with_obesity_new.txt</p>
-<p>“The obese” nominal: UK vs Australia i.e uk_the obese nominal text-frequency-data.txt vs aoc_subset_the_obese_cat_nominal.txt</p>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://here.r-lib.org/">here</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sfirke/janitor">janitor</a></span><span class="op">)</span></span>
@@ -293,7 +310,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span><span class="va">uk_source_anno</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"100_data_raw"</span>, <span class="st">"british_corpus_source_annotation.csv"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-</section><section id="australian-data" class="level3"><h3 class="anchored" data-anchor-id="australian-data">Australian Data</h3>
+</section><section id="australian-data" class="level3"><h3 data-anchor-id="australian-data">Australian Data</h3>
 <p>The Australian May and July data don’t seem to match.</p>
 <p>The article word counts always do:</p>
 <div class="cell">
@@ -317,7 +334,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span></span>
 <span><span class="va">p1</span> <span class="op">|</span> <span class="va">p2</span> <span class="op">|</span> <span class="va">p3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<p><img src="dataEDA_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+<div id="fig-l20220930181935" class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="dataEDA_files/figure-html/fig-l20220930181935-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: Scatter plot of CQP-Web generated article word counts between the May and July Australian corpus.</figcaption><p></p>
+</figure>
+</div>
 </div>
 </div>
 <p>The same is true for the two July datasets.</p>
@@ -343,7 +364,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span></span>
 <span><span class="va">p1</span> <span class="op">|</span> <span class="va">p2</span> <span class="op">|</span> <span class="va">p3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<p><img src="dataEDA_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+<div id="fig-l20220930182052" class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="dataEDA_files/figure-html/fig-l20220930182052-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;2: Comparison of the number of hits in text parameter from CQP-Web between the May and July corpus indicate that a different number of hits are retrieved using the different query syntax.</figcaption><p></p>
+</figure>
+</div>
 </div>
 </div>
 <p>The same is true when comparing the two July datasets:</p>
@@ -368,7 +393,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span></span>
 <span><span class="va">p1</span> <span class="op">|</span> <span class="va">p2</span> <span class="op">|</span> <span class="va">p3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<p><img src="dataEDA_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+<div id="fig-l20220930182254" class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="dataEDA_files/figure-html/fig-l20220930182254-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3: Comparison of the number of hits in text between the two datasets generated in July.</figcaption><p></p>
+</figure>
+</div>
 </div>
 </div>
 <p>And so the frequencies don’t either, for “Condition-first” and “Person-first” language.</p>
@@ -391,7 +420,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>            only_may <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">only_may</span>, na.rm <span class="op">=</span> <span class="cn">T</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930182321">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;1: Comparison of number of articles retrieved using the condition-first language search in the May and early July scrapes.</caption>
 <thead><tr class="header">
 <th style="text-align: right;">matches</th>
 <th style="text-align: right;">counts_dont_match</th>
@@ -407,6 +438,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 </div>
 </div>
+</div>
 <p>What about the two July datasets?:</p>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">joined_cond</span> <span class="op">|&gt;</span> </span>
@@ -420,7 +452,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>            only_latejul <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">only_latejul</span>, na.rm <span class="op">=</span> <span class="cn">T</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930182321b">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;2: Comparison of number of articles retrieved using the condition-first language search in the early and late July scrapes.</caption>
 <thead><tr class="header">
 <th style="text-align: right;">matches</th>
 <th style="text-align: right;">counts_dont_match</th>
@@ -436,6 +470,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 </div>
 </div>
+</div>
 <p>Late July syntax clearly picks up more data.</p>
 <p>And for person-first language?</p>
 <div class="cell">
@@ -449,7 +484,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>            only_july <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">only_july</span>, na.rm <span class="op">=</span> <span class="cn">T</span><span class="op">)</span>,</span>
 <span>            only_may <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">only_may</span>, na.rm <span class="op">=</span> <span class="cn">T</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930182321c">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;3: Comparison of number of articles retrieved using the person-first language search in the May and early July scrapes.</caption>
 <thead><tr class="header">
 <th style="text-align: right;">matches</th>
 <th style="text-align: right;">counts_dont_match</th>
@@ -465,6 +502,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 </div>
 </div>
+</div>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">joined_pers</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>matching_count <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">no_hits_in_textjul</span> <span class="op">==</span> <span class="va">no_hits_in_textlatejul</span><span class="op">)</span>,</span>
@@ -476,7 +514,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>            only_july <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">only_july</span>, na.rm <span class="op">=</span> <span class="cn">T</span><span class="op">)</span>,</span>
 <span>            only_latejul <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">only_latejul</span>, na.rm <span class="op">=</span> <span class="cn">T</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930182321d">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;4: Comparison of number of articles retrieved using the person-first language search in the early and late July scrapes.</caption>
 <thead><tr class="header">
 <th style="text-align: right;">matches</th>
 <th style="text-align: right;">counts_dont_match</th>
@@ -492,8 +532,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 </div>
 </div>
+</div>
 <p>A similar trend is observed between the late July and early July exports.</p>
-</section><section id="uk-data" class="level3"><h3 class="anchored" data-anchor-id="uk-data">UK Data</h3>
+</section><section id="uk-data" class="level3"><h3 data-anchor-id="uk-data">UK Data</h3>
 <p>The UK data was not provided with any metadata, so we will need to break apart the text id to infer this information.</p>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">clean_uk</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">df</span><span class="op">)</span><span class="op">{</span></span>
@@ -538,7 +579,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">full_join</a></span><span class="op">(</span><span class="op">{</span><span class="va">latejul_uk_fullwc_clean</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">source</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>total_articles_in_corpus<span class="op">=</span><span class="va">n</span><span class="op">)</span><span class="op">}</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930183328">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;5: UK source publication, and number of articles from each of them that feature each of the language types of interest.</caption>
 <thead><tr class="header">
 <th style="text-align: left;">source</th>
 <th style="text-align: right;">cond</th>
@@ -614,6 +657,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 </div>
 </div>
+</div>
 <p>What years do we have for each of the sources?</p>
 <p>For condition-first language:</p>
 <div class="cell">
@@ -625,7 +669,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930183416">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;6: Number of articles featuring condition-first language by year and source in the UK corpus.</caption>
 <colgroup>
 <col style="width: 7%">
 <col style="width: 14%">
@@ -787,6 +833,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 </div>
 </div>
+</div>
 <p>For person-first language:</p>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">uk_all_of_interest</span> <span class="op">|&gt;</span></span>
@@ -797,7 +844,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930183416b">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;7: Number of articles featuring person-first language by year and source in the UK corpus.</caption>
 <colgroup>
 <col style="width: 8%">
 <col style="width: 6%">
@@ -935,7 +984,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 </div>
 </div>
-<p>For obese:</p>
+</div>
+<p>For the adjective lemma OBESE:</p>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">uk_all_of_interest</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">dataset</span> <span class="op">==</span> <span class="st">"obes"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -945,7 +995,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930183416c">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;8: Number of articles featuring the adjective lemma OBESE by year and source in the UK corpus.</caption>
 <colgroup>
 <col style="width: 7%">
 <col style="width: 11%">
@@ -1107,6 +1159,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 </div>
 </div>
+</div>
 <p>For the entire corpus:</p>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">latejul_uk_fullwc_clean</span> <span class="op">|&gt;</span></span>
@@ -1116,7 +1169,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930183531z">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;9: Number of articles in the entire UK corpus, by year and source.</caption>
 <colgroup>
 <col style="width: 7%">
 <col style="width: 14%">
@@ -1278,6 +1333,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 </div>
 </div>
+</div>
 <p>What years are they coming from?</p>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">uk_all_of_interest</span> <span class="op">|&gt;</span></span>
@@ -1287,7 +1343,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">full_join</a></span><span class="op">(</span><span class="op">{</span><span class="va">latejul_uk_fullwc_clean</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">year</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">year</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>total_articles_in_corpus<span class="op">=</span><span class="va">n</span><span class="op">)</span><span class="op">}</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930183531">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;10: Number of articles in the entire UK corpus, by year and language feature.</caption>
 <thead><tr class="header">
 <th style="text-align: right;">year</th>
 <th style="text-align: right;">cond</th>
@@ -1377,6 +1435,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 </div>
 </div>
+</div>
 <p>Note that this is different to the Australian corpus:</p>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">all_aus</span> <span class="op">|&gt;</span></span>
@@ -1386,7 +1445,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op">(</span>names_from<span class="op">=</span><span class="va">dataset</span>, values_from <span class="op">=</span> <span class="va">n</span>, values_fill <span class="op">=</span> <span class="fl">0</span>, id_cols<span class="op">=</span><span class="va">year</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930183531f">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;11: Number of articles in all of the Australian data, by year and language feature.</caption>
 <thead><tr class="header">
 <th style="text-align: left;">year</th>
 <th style="text-align: right;">cond</th>
@@ -1470,6 +1531,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 </div>
 </div>
+</div>
 <p>So:</p>
 <ul>
 <li>There is no data from Australia for 2006-2007</li>
@@ -1484,7 +1546,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op">(</span>names_from<span class="op">=</span><span class="va">dataset</span>, values_from <span class="op">=</span> <span class="va">n</span>, values_fill <span class="op">=</span> <span class="fl">0</span>, id_cols<span class="op">=</span><span class="va">month</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930183905">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;12: Number of articles per month in the UK corpus.</caption>
 <thead><tr class="header">
 <th style="text-align: left;">month</th>
 <th style="text-align: right;">cond</th>
@@ -1568,12 +1632,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 </div>
 </div>
+</div>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">latejul_uk_fullwc_clean</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">month</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930183905b">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;13: Number of articles per month in the late July Australian corpus.</caption>
 <thead><tr class="header">
 <th style="text-align: left;">month</th>
 <th style="text-align: right;">n</th>
@@ -1631,6 +1698,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 </div>
 </div>
+</div>
 <p>And the iterative text IDs:</p>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">uk_all_of_interest</span> <span class="op">|&gt;</span></span>
@@ -1641,7 +1709,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">index</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930183954">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;14: Number of articles with each of the ‘iterative’ text ids in the UK corpus. As expected, most articles don’t have a text id, as this is used to showcase more than one article per day per source being harvested.</caption>
 <thead><tr class="header">
 <th style="text-align: left;">index</th>
 <th style="text-align: right;">cond</th>
@@ -1836,6 +1906,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 </div>
 </div>
+</div>
 <p>For some reason, there are no “y”s in the indexing, but there are zs… Somewhat suspicious, but would probably affect 1 article tops.</p>
 <p>Let’s create some clean files we can later use for analysis.</p>
 <p>We can join the two metadata files as there are no overlaps between Aus and UK shortcodes:</p>
@@ -1899,6 +1970,11 @@ FALSE
 <li>Normalised frequency (to total number of words in corpus)</li>
 <li>Range (document frequency)</li>
 </ul>
+<p>This is provided for the:</p>
+<ul>
+<li>UK corpus</li>
+<li>Australian corpus, late July scrape</li>
+</ul>
 <ol type="1">
 <li>What is the raw frequency and document frequency of use of the language types in the two corpora?</li>
 </ol>
@@ -1910,7 +1986,9 @@ FALSE
 <span><span class="va">freq_calc</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930184147">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;15: Feature identified (dataset), total number of instances and articles with at least one instance in the Australian and UK corpus, categorised by source type.</caption>
 <colgroup>
 <col style="width: 9%">
 <col style="width: 8%">
@@ -2014,9 +2092,136 @@ FALSE
 </table>
 </div>
 </div>
+</div>
+<p>Note that sources were classified as follows across the two corpora:</p>
+<div class="cell">
+<details><summary>Code</summary><div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">both_datasets</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">source</span>, <span class="va">corpus</span>, <span class="va">source_type</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
+<div id="tbl-l20220930184341">
+<table class="table table-sm table-striped">
+<caption>Table&nbsp;16: Classification of sources in the UK and Australian corpora.</caption>
+<thead><tr class="header">
+<th style="text-align: left;">source</th>
+<th style="text-align: left;">corpus</th>
+<th style="text-align: left;">source_type</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Advertiser</td>
+<td style="text-align: left;">AUS</td>
+<td style="text-align: left;">tabloid</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Age</td>
+<td style="text-align: left;">AUS</td>
+<td style="text-align: left;">broadsheet</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Australian</td>
+<td style="text-align: left;">AUS</td>
+<td style="text-align: left;">broadsheet</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BrisTimes</td>
+<td style="text-align: left;">AUS</td>
+<td style="text-align: left;">broadsheet</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CourierMail</td>
+<td style="text-align: left;">AUS</td>
+<td style="text-align: left;">tabloid</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CanTimes</td>
+<td style="text-align: left;">AUS</td>
+<td style="text-align: left;">broadsheet</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">HobMercury</td>
+<td style="text-align: left;">AUS</td>
+<td style="text-align: left;">tabloid</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">HeraldSun</td>
+<td style="text-align: left;">AUS</td>
+<td style="text-align: left;">tabloid</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NorthernT</td>
+<td style="text-align: left;">AUS</td>
+<td style="text-align: left;">tabloid</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SydHerald</td>
+<td style="text-align: left;">AUS</td>
+<td style="text-align: left;">broadsheet</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Telegraph</td>
+<td style="text-align: left;">AUS</td>
+<td style="text-align: left;">tabloid</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">WestAus</td>
+<td style="text-align: left;">AUS</td>
+<td style="text-align: left;">tabloid</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Daily Express</td>
+<td style="text-align: left;">UK</td>
+<td style="text-align: left;">tabloid</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Daily Mail</td>
+<td style="text-align: left;">UK</td>
+<td style="text-align: left;">tabloid</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Daily Star</td>
+<td style="text-align: left;">UK</td>
+<td style="text-align: left;">tabloid</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Daily Telegraph</td>
+<td style="text-align: left;">UK</td>
+<td style="text-align: left;">broadsheet</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Guardian</td>
+<td style="text-align: left;">UK</td>
+<td style="text-align: left;">broadsheet</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Independent</td>
+<td style="text-align: left;">UK</td>
+<td style="text-align: left;">broadsheet</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mirror</td>
+<td style="text-align: left;">UK</td>
+<td style="text-align: left;">tabloid</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sun</td>
+<td style="text-align: left;">UK</td>
+<td style="text-align: left;">tabloid</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Times</td>
+<td style="text-align: left;">UK</td>
+<td style="text-align: left;">broadsheet</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 <p>We should also provide the export information only for the years where both corpora have data, i.e.&nbsp;2008-2016.</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">freq_calc_bothyears</span> <span class="op">&lt;-</span> <span class="va">both_datasets</span> <span class="op">|&gt;</span> </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">freq_calc_bothyears</span> <span class="op">&lt;-</span> <span class="va">both_datasets</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">&gt;=</span> <span class="fl">2008</span> <span class="op">&amp;</span> <span class="va">year</span> <span class="op">&lt;=</span><span class="fl">2016</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">dataset</span>, <span class="va">corpus</span>, <span class="va">source_type</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>total_instances <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">no_hits_in_text</span><span class="op">)</span>,</span>
@@ -2025,7 +2230,9 @@ FALSE
 <span><span class="va">freq_calc_bothyears</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930184147b">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;17: Feature identified (dataset), total number of instances and articles with at least one instance in the Australian and UK corpus, categorised by source type, for articles from 2008-2016, when both corpora have data. This is the dataset that was used for comparison in the analysis section.</caption>
 <colgroup>
 <col style="width: 9%">
 <col style="width: 8%">
@@ -2129,11 +2336,12 @@ FALSE
 </table>
 </div>
 </div>
+</div>
 <ol start="2" type="1">
 <li>What is the total word count of the UK and Australian corpus, grouped by broadsheets and tabloids?</li>
 </ol>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">get_total_wc</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">metadata_df</span>, <span class="va">crp</span>, <span class="va">st</span><span class="op">)</span><span class="op">{</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">get_total_wc</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">metadata_df</span>, <span class="va">crp</span>, <span class="va">st</span><span class="op">)</span><span class="op">{</span></span>
 <span>  <span class="va">metadata_df</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">corpus</span> <span class="op">==</span> <span class="va">crp</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">source_type</span> <span class="op">==</span> <span class="va">st</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
@@ -2184,28 +2392,28 @@ FALSE
 </div>
 <p>The total word counts are:</p>
 <ul>
-<li>The British tabloids corpus contains words in total</li>
-<li>The British broadsheets corpus contains words in total</li>
-<li>The Australian AOC subset tabloids corpus contains words</li>
-<li>The Australian AOC subset broadsheet corpus contains words</li>
+<li>The British tabloids corpus contains 4377933 words in total</li>
+<li>The British broadsheets corpus contains 5427551 words in total</li>
+<li>The Australian AOC subset tabloids corpus contains 1758364 words</li>
+<li>The Australian AOC subset broadsheet corpus contains 1860166 words</li>
 </ul>
-<p>This should match the information Monika provided via the manual CQP web export below.</p>
+<p>This should match the information provided via the manual CQP web export below.</p>
 <ul>
 <li>The British tabloids corpus contains 4,377,933 words in total (including all texts, not just those that have an instance of the relevant language)</li>
 <li>The British broadsheets corpus contains 5,427,551 words in total (including all texts, not just those that have an instance of the relevant language)</li>
-<li>The Australian AOC subset tabloids corpus contains 1,758,364 words (all inclu)</li>
-<li>The Australian AOC subset broadsheet corpus contains 1,860,166 words (all inclu)</li>
+<li>The Australian AOC subset tabloids corpus contains 1,758,364 words (all included)</li>
+<li>The Australian AOC subset broadsheet corpus contains 1,860,166 words (all included)</li>
 </ul>
 <p>The word counts for the years 2008 - 2016, when we have data for both corpora, are:</p>
 <ul>
-<li>The British tabloids corpus contains words in total</li>
-<li>The British broadsheets corpus contains words in total</li>
-<li>The Australian AOC subset tabloids corpus contains words</li>
-<li>The Australian AOC subset broadsheet corpus contains words</li>
-</ul></section><section id="normalised-frequency" class="level2"><h2 class="anchored" data-anchor-id="normalised-frequency">Normalised frequency</h2>
+<li>The British tabloids corpus contains 3596164 words in total</li>
+<li>The British broadsheets corpus contains 4333157 words in total</li>
+<li>The Australian AOC subset tabloids corpus contains 1418041 words</li>
+<li>The Australian AOC subset broadsheet corpus contains 1446391 words</li>
+</ul></section><section id="normalised-frequency" class="level2"><h2 data-anchor-id="normalised-frequency">Normalised frequency</h2>
 <p>What is the normalised frequency of each of the language types?</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">get_norm_freq</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">df</span>, <span class="va">wc_aus_broad</span>, <span class="va">wc_aus_tab</span>, <span class="va">wc_uk_broad</span>, <span class="va">wc_uk_tab</span><span class="op">)</span><span class="op">{</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">get_norm_freq</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">df</span>, <span class="va">wc_aus_broad</span>, <span class="va">wc_aus_tab</span>, <span class="va">wc_uk_broad</span>, <span class="va">wc_uk_tab</span><span class="op">)</span><span class="op">{</span></span>
 <span>  <span class="va">df</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">dataset</span>, <span class="va">corpus</span>, <span class="va">source_type</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>total_instances <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">no_hits_in_text</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -2239,7 +2447,9 @@ FALSE
 <span><span class="va">freq_normalised</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930185332">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;18: Normalised frequency, instances per million words as counted using CQP-web, across the entire UK and Australian corpora.</caption>
 <colgroup>
 <col style="width: 8%">
 <col style="width: 7%">
@@ -2357,12 +2567,15 @@ FALSE
 </table>
 </div>
 </div>
+</div>
 <p>What about the normalised frequency across the time period where we have data for both corpora?</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">freq_normalised_bothyears</span> <span class="op">|&gt;</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">freq_normalised_bothyears</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930185332b">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;19: Normalised frequency, instances per million words as counted using CQP-web, across the UK and Australian corpora between 2008 and 2016, when we have data from both countries (i.e.&nbsp;the final corpus used for comparison).</caption>
 <colgroup>
 <col style="width: 8%">
 <col style="width: 7%">
@@ -2480,8 +2693,9 @@ FALSE
 </table>
 </div>
 </div>
+</div>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">export_summary_stats</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">freq_calc1</span>, <span class="va">freq_norm</span>, <span class="va">outfile</span><span class="op">)</span><span class="op">{</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">export_summary_stats</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">freq_calc1</span>, <span class="va">freq_norm</span>, <span class="va">outfile</span><span class="op">)</span><span class="op">{</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span><span class="op">(</span></span>
 <span>  <span class="op">{</span><span class="va">freq_calc1</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span>cols <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"total_instances"</span>, <span class="st">"total_articles_with_one_or_more_instance"</span><span class="op">)</span><span class="op">)</span><span class="op">}</span>,</span>
@@ -2534,7 +2748,7 @@ FALSE
 </ul>
 <p>How many articles with how many words do we have in Australia in 2017 - 2019?</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">aus_missing_summary</span> <span class="op">&lt;-</span> <span class="va">aus_metadata</span> <span class="op">|&gt;</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">aus_missing_summary</span> <span class="op">&lt;-</span> <span class="va">aus_metadata</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">&gt;=</span> <span class="fl">2017</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">source_type</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>count <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span>,</span>
@@ -2549,7 +2763,9 @@ FALSE
 <span></span>
 <span><span class="va">aus_missing_summary</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930185538">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;20: Number of articles and their word count, from Australian tabloids and broadsheets, filtered out from the dataset due to no matching data existing from the UK.</caption>
 <thead><tr class="header">
 <th style="text-align: right;">year</th>
 <th style="text-align: right;">count_broadsheet</th>
@@ -2583,9 +2799,10 @@ FALSE
 </table>
 </div>
 </div>
+</div>
 <p>Total filtered out from Australian corpus:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">summary_clean</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">df</span><span class="op">)</span> <span class="op">{</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">summary_clean</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">df</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="va">x</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/across.html">across</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html">everything</a></span><span class="op">(</span><span class="op">)</span>, <span class="va">sum</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -2605,7 +2822,9 @@ FALSE
 <span>    perc_filt_out <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">100</span><span class="op">*</span> <span class="va">filtered_out</span><span class="op">/</span><span class="va">full_dataset</span>, digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
 <span>  <span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930185538c">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;21: Proportion of data filtered out from the Australian corpus.</caption>
 <colgroup>
 <col style="width: 25%">
 <col style="width: 19%">
@@ -2653,9 +2872,10 @@ FALSE
 </table>
 </div>
 </div>
+</div>
 <p>How many articles with how many words do we have in the UK in 2006 - 2007?</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">uk_missing_summary</span> <span class="op">&lt;-</span> <span class="va">full_metadata</span> <span class="op">|&gt;</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">uk_missing_summary</span> <span class="op">&lt;-</span> <span class="va">full_metadata</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">corpus</span> <span class="op">==</span> <span class="st">"UK"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">&lt;=</span> <span class="fl">2007</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">source_type</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
@@ -2665,7 +2885,9 @@ FALSE
 <span></span>
 <span><span class="va">uk_missing_summary</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930185538d">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;22: Number of articles and their word count, from UK tabloids and broadsheets, filtered out from the dataset due to no matching data existing from Australia.</caption>
 <thead><tr class="header">
 <th style="text-align: right;">year</th>
 <th style="text-align: right;">count_broadsheet</th>
@@ -2692,9 +2914,10 @@ FALSE
 </table>
 </div>
 </div>
+</div>
 <p>Total filtered out from UK corpus:</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">uk_full_summary</span> <span class="op">&lt;-</span>  <span class="va">full_metadata</span> <span class="op">|&gt;</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">uk_full_summary</span> <span class="op">&lt;-</span>  <span class="va">full_metadata</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">corpus</span> <span class="op">==</span> <span class="st">"UK"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">source_type</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>count <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span>,</span>
@@ -2711,7 +2934,9 @@ FALSE
 <span>    perc_filt_out <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">100</span><span class="op">*</span> <span class="va">filtered_out</span><span class="op">/</span><span class="va">full_dataset</span>, digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
 <span>  <span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
+<div id="tbl-l20220930185538z">
 <table class="table table-sm table-striped">
+<caption>Table&nbsp;23: Proportion of data filtered out from the UK corpus.</caption>
 <colgroup>
 <col style="width: 25%">
 <col style="width: 19%">
@@ -2759,6 +2984,7 @@ FALSE
 </table>
 </div>
 </div>
+</div>
 
 
 </section></main></div>
@@ -2767,6 +2993,24 @@ FALSE
 </div>
 <!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
   const disableStylesheet = (stylesheets) => {
     for (let i=0; i < stylesheets.length; i++) {
       const stylesheet = stylesheets[i];
@@ -2796,8 +3040,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     manageTransitions('#quarto-margin-sidebar .nav-link', false);
     if (alternate) {
       enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
     } else {
       disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
     }
     manageTransitions('#quarto-margin-sidebar .nav-link', true);
     // Switch the toggles
@@ -2811,6 +3061,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
           toggle.classList.remove("alternate");
         }
       }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
     }
   }
   const isFileUrl = () => { 
@@ -2864,13 +3124,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   if (hasAlternateSentinel()) {
     toggleColorMode(true);
   } 
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const clipboard = new window.ClipboardJS('.code-copy-button', {
     target: function(trigger) {
       return trigger.previousElementSibling;
@@ -2913,7 +3166,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
