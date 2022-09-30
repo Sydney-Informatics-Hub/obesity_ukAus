@@ -7,4 +7,4 @@ This is the landing page for the comparison between the UK and Australian obesit
 Please see the following:
 
 - [Exploratory data analysis and summary statistics](100_data_cleaning_scripts_EDA/dataEDA.html)
-- [Condition- vs Person- first language and use of nominal "the obese"](400_analysis/ConditionAndPersonFirst.html)
+- [Condition- vs Person- first language and use of adjective lemma OBESE](400_analysis/ConditionAndPersonFirst.html)

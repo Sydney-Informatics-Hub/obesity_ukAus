@@ -5,6 +5,8 @@ project:
 
 execute:
   freeze: auto  # re-render only when source changes
+  warning: false
+  message: false
 
 website:
   title: "Obesity UK vs Australian corpus comparison"
@@ -45,5 +47,8 @@ format:
     toc-depth: 2
     code-link: true
     code-fold: true
+    crossref:
+      fig-title: Figure
+      tbl-title: Table
 
 
