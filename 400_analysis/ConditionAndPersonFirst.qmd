@@ -1,5 +1,8 @@
 ---
 title: "Condition and person-first language & use of the adjective lemma OBESE"
+author: "Darya Vanichkina"
+warning: false
+message: false
 fig-cap-location: bottom
 ---
 
@@ -156,7 +159,7 @@ for_stacked_chart <-
   )) 
 
 ggsave(device = "png",
-   here::here("400_analysis","stacked_chart.png"),
+   here::here("400_analysis","venn.png"),
    bg = "white",
    width = 10,
    height = 4)
@@ -166,7 +169,7 @@ ggsave(device = "png",
 ```{r}
 #| fig-cap: "Proportion of articles in each corpus that have instances of all three language types, two language types, a single (specified) language type or no language types. We can see that most articles in both corpora have no use of any of the 3 language types described."
 #| label: fig-l20220930141902
-for_stacked_chart |> 
+for_stacked_chart_data <- for_stacked_chart |> 
   mutate(group = case_when(
   grp == "cond_obes" ~ "two",
   grp == "pers_obes" ~ "two",
@@ -174,16 +177,41 @@ for_stacked_chart |>
   TRUE ~ grp
   ))  |>
   mutate(group = factor(group, 
- levels = c("none", "all3", "two", "cond_obes", "cond_pers", "pers_obes", "obes", "pers", "cond"),
+ levels = c("none", "pers", "all3", "two", "cond_obes", "pers_obes","cond_pers", "obes",  "cond"),
  labels = c(
  "no occurrences of any of the three targeted language practices",
+ "occurrences of person-first language",
  "occurrences of all three targeted language practices",
  "occurrences of two of the three targeted language practices",
- "cond_obes", "cond_pers", "pers_obes",
+ "cond_obes", "pers_obes","cond_pers",
  "occurrences of adjective lemma 'the obese'",
- "occurrences of person-first language",
  "occurrences of condition-first language"
- ))) |>
+ ))) 
+
+for_stacked_chart_data |>
+ #    mutate(group = factor(group, 
+ # labels = c(
+ # "NoOccurence",
+ # "Person-first",
+ # "All3",
+ # "2of3",
+ # "Obese",
+ # "Condition-first"
+ # ))) |>
+  group_by(group, source_type, corpus) |>
+  summarise(n_articles = n()) |>
+  ungroup() |>
+  group_by(source_type, corpus) |>
+  mutate(total = sum(n_articles), proportion_articles = round(100 * n_articles/total, 2)) |>
+  select(-total, -n_articles) |>
+  pivot_wider(values_from = proportion_articles, names_from = group, values_fill = 0) |>
+  write_csv(here::here("300_data_processed", "percentage_table.csv"))
+
+
+
+
+mfig <-
+  for_stacked_chart_data |>
   ggplot() + 
   geom_bar(
   aes(fill=group, 
@@ -194,11 +222,38 @@ for_stacked_chart |>
  scale_y_continuous(name = "Proportion articles in corpus",
         labels = scales::percent) +
  # set axis limits in coord_cartesian
- # + coord_cartesian(ylim = c(0, 0.4))
-# scale_fill_grey(start = 0.9, end = 0.2) + 
-  theme(axis.text.x = element_text(angle = 35, vjust = 1, hjust=1))+
+ scale_fill_grey(start = 0.9, end = 0.1) + 
+  theme(axis.text.x = element_text(angle = 35, vjust = 1, hjust=1)) +
   labs(x = "",
-   fill = "") 
+   fill = "")
+
+mfig
+ggsave(device = "png",
+   here::here("400_analysis","b_w_proportion_to100.png"),
+   bg = "white",
+   width = 10,
+   height = 4)
+
+mfig + coord_cartesian(ylim = c(0, 0.3)) 
+ggsave(device = "png",
+   here::here("400_analysis","b_w_proportion.png"),
+   bg = "white",
+   width = 10,
+   height = 4)
+
+mfig + theme(legend.position = "bottom")
+ggsave(device = "png",
+   here::here("400_analysis","b_w_proportion_legendbottom_to100.png"),
+   bg = "white",
+   width = 12,
+   height = 4)
+
+mfig + theme(legend.position = "bottom") + coord_cartesian(ylim = c(0, 0.3)) 
+ggsave(device = "png",
+   here::here("400_analysis","b_w_proportion_legendbottom.png"),
+   bg = "white",
+   width = 12,
+   height = 4)
 ```
 
 

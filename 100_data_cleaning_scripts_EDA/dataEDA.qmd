@@ -1,5 +1,6 @@
 ---
 title: "Loading and exploring the data"
+author: "Darya Vanichkina"
 execute: 
   message: false
   warning: false

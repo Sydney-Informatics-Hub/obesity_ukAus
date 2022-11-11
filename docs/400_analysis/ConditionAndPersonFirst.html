@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.1.251">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Darya Vanichkina">
 <title>Obesity UK vs Australian corpus comparison - Condition and person-first language &amp; use of the adjective lemma OBESE</title>
 <style>
 code{white-space: pre-wrap;}
@@ -180,6 +181,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1 class="title">Condition and person-first language &amp; use of the adjective lemma OBESE</h1>
 </div>
 <div class="quarto-title-meta">
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Darya Vanichkina </p>
+          </div>
+  </div>
   </div>
 </header> 
       <div class="about-contents"><main class="content" id="quarto-document-content"><section id="executive-summary" class="level2"><h2 data-anchor-id="executive-summary">Executive summary</h2>
@@ -217,7 +224,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>When comparing use of the adjective lemma OBESE in the Australian vs UK broadsheets, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) &lt; 0.05, p(FP) &lt; 0.1) when considering frequencies, with UK broadsheets having a higher frequency of use of the adjective lemma OBESE vs Australian ones (mean frequency Australia - 42.65 wpm, UK - 62.96 wpm). This discrepancy may be explained by the fact that, as discussed above, articles in UK broadsheets are somewhat shorter than in Australian ones.</p></li>
 <li><p>There is a somewhat lower number of total instances of use and articles with at least one instance of use of the adjective lemma OBESE in Australian tabloids, and a higher number in UK tabloids (p(Chi-sq) &lt; 0.05). However, this difference is not supported by frequency analysis (mean Australian 70.46 wpm, mean UK 96.08 wpm), when using both parametric or non-parametric tests.</p></li>
 </ul>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/loadLibs_ce48f7ce02751629dd2637605bd9e0b5">
 <details><summary>Code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://here.r-lib.org/">here</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readr.tidyverse.org">readr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
@@ -231,7 +238,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme_get.html">theme_set</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/loadData_63a9b20cfaffd0c0986f528088ad5187">
 <details><summary>Code</summary><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">metadata</span> <span class="op">&lt;-</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"200_data_clean/"</span>, <span class="st">"full_metadata.csv"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">both_datasets</span> <span class="op">&lt;-</span>  <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"200_data_clean/"</span>, <span class="st">"both_datasets.csv"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="co"># get data for correct time window</span></span>
@@ -277,7 +284,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </details>
 </div>
 <p>We group articles into tabloids and broadsheets in the following manner:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20220930141925_50b0eccf07ce3a5c2606f58b153eb595">
 <details><summary>Code</summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">metadata</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">source</span>, <span class="va">source_type</span>, <span class="va">corpus</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -404,7 +411,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </section></section><section id="proportion-and-number-of-articles-using-any-of-the-language-types-in-the-two-corpora" class="level2"><h2 data-anchor-id="proportion-and-number-of-articles-using-any-of-the-language-types-in-the-two-corpora">Proportion and number of articles using any of the language types in the two corpora</h2>
 <p>Let’s find the total number of articles that use one or more language types in the two corpora.</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/fig-l20220930141919_639b4b66238077baac47db6c88b3ba41">
 <details><summary>Code</summary><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">article_id_cond</span> <span class="op">&lt;-</span> <span class="fu">get_article_ids</span><span class="op">(</span><span class="va">both_datasets</span>, <span class="st">"cond"</span><span class="op">)</span></span>
 <span><span class="va">article_id_pers</span> <span class="op">&lt;-</span> <span class="fu">get_article_ids</span><span class="op">(</span><span class="va">both_datasets</span>, <span class="st">"pers"</span><span class="op">)</span></span>
 <span><span class="va">article_id_obes</span> <span class="op">&lt;-</span> <span class="fu">get_article_ids</span><span class="op">(</span><span class="va">both_datasets</span>, <span class="st">"obes"</span><span class="op">)</span></span>
@@ -434,7 +441,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>  <span class="op">)</span><span class="op">)</span> </span>
 <span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span>device <span class="op">=</span> <span class="st">"png"</span>,</span>
-<span>   <span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"400_analysis"</span>,<span class="st">"stacked_chart.png"</span><span class="op">)</span>,</span>
+<span>   <span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"400_analysis"</span>,<span class="st">"venn.png"</span><span class="op">)</span>,</span>
 <span>   bg <span class="op">=</span> <span class="st">"white"</span>,</span>
 <span>   width <span class="op">=</span> <span class="fl">10</span>,</span>
 <span>   height <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -446,8 +453,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">for_stacked_chart</span> <span class="op">|&gt;</span> </span>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/fig-l20220930141902_1f1406f47e11a32100a2b79f65445803">
+<details><summary>Code</summary><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">for_stacked_chart_data</span> <span class="op">&lt;-</span> <span class="va">for_stacked_chart</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>group <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
 <span>  <span class="va">grp</span> <span class="op">==</span> <span class="st">"cond_obes"</span> <span class="op">~</span> <span class="st">"two"</span>,</span>
 <span>  <span class="va">grp</span> <span class="op">==</span> <span class="st">"pers_obes"</span> <span class="op">~</span> <span class="st">"two"</span>,</span>
@@ -455,16 +462,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>  <span class="cn">TRUE</span> <span class="op">~</span> <span class="va">grp</span></span>
 <span>  <span class="op">)</span><span class="op">)</span>  <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">group</span>, </span>
-<span> levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"none"</span>, <span class="st">"all3"</span>, <span class="st">"two"</span>, <span class="st">"cond_obes"</span>, <span class="st">"cond_pers"</span>, <span class="st">"pers_obes"</span>, <span class="st">"obes"</span>, <span class="st">"pers"</span>, <span class="st">"cond"</span><span class="op">)</span>,</span>
+<span> levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"none"</span>, <span class="st">"pers"</span>, <span class="st">"all3"</span>, <span class="st">"two"</span>, <span class="st">"cond_obes"</span>, <span class="st">"pers_obes"</span>,<span class="st">"cond_pers"</span>, <span class="st">"obes"</span>,  <span class="st">"cond"</span><span class="op">)</span>,</span>
 <span> labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
 <span> <span class="st">"no occurrences of any of the three targeted language practices"</span>,</span>
+<span> <span class="st">"occurrences of person-first language"</span>,</span>
 <span> <span class="st">"occurrences of all three targeted language practices"</span>,</span>
 <span> <span class="st">"occurrences of two of the three targeted language practices"</span>,</span>
-<span> <span class="st">"cond_obes"</span>, <span class="st">"cond_pers"</span>, <span class="st">"pers_obes"</span>,</span>
+<span> <span class="st">"cond_obes"</span>, <span class="st">"pers_obes"</span>,<span class="st">"cond_pers"</span>,</span>
 <span> <span class="st">"occurrences of adjective lemma 'the obese'"</span>,</span>
-<span> <span class="st">"occurrences of person-first language"</span>,</span>
 <span> <span class="st">"occurrences of condition-first language"</span></span>
-<span> <span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span> <span class="op">)</span><span class="op">)</span><span class="op">)</span> </span>
+<span></span>
+<span><span class="va">for_stacked_chart_data</span> <span class="op">|&gt;</span></span>
+<span> <span class="co">#    mutate(group = factor(group, </span></span>
+<span> <span class="co"># labels = c(</span></span>
+<span> <span class="co"># "NoOccurence",</span></span>
+<span> <span class="co"># "Person-first",</span></span>
+<span> <span class="co"># "All3",</span></span>
+<span> <span class="co"># "2of3",</span></span>
+<span> <span class="co"># "Obese",</span></span>
+<span> <span class="co"># "Condition-first"</span></span>
+<span> <span class="co"># ))) |&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">group</span>, <span class="va">source_type</span>, <span class="va">corpus</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>n_articles <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">source_type</span>, <span class="va">corpus</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>total <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n_articles</span><span class="op">)</span>, proportion_articles <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">100</span> <span class="op">*</span> <span class="va">n_articles</span><span class="op">/</span><span class="va">total</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">total</span>, <span class="op">-</span><span class="va">n_articles</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">pivot_wider</a></span><span class="op">(</span>values_from <span class="op">=</span> <span class="va">proportion_articles</span>, names_from <span class="op">=</span> <span class="va">group</span>, values_fill <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://readr.tidyverse.org/reference/write_delim.html">write_csv</a></span><span class="op">(</span><span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"300_data_processed"</span>, <span class="st">"percentage_table.csv"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span><span class="va">mfig</span> <span class="op">&lt;-</span></span>
+<span>  <span class="va">for_stacked_chart_data</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>fill<span class="op">=</span><span class="va">group</span>, </span>
@@ -475,20 +507,68 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"Proportion articles in corpus"</span>,</span>
 <span>        labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="va"><a href="https://scales.r-lib.org/reference/percent_format.html">percent</a></span><span class="op">)</span> <span class="op">+</span></span>
 <span> <span class="co"># set axis limits in coord_cartesian</span></span>
-<span> <span class="co"># + coord_cartesian(ylim = c(0, 0.4))</span></span>
-<span><span class="co"># scale_fill_grey(start = 0.9, end = 0.2) + </span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>axis.text.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>angle <span class="op">=</span> <span class="fl">35</span>, vjust <span class="op">=</span> <span class="fl">1</span>, hjust<span class="op">=</span><span class="fl">1</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_grey.html">scale_fill_grey</a></span><span class="op">(</span>start <span class="op">=</span> <span class="fl">0.9</span>, end <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>axis.text.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>angle <span class="op">=</span> <span class="fl">35</span>, vjust <span class="op">=</span> <span class="fl">1</span>, hjust<span class="op">=</span><span class="fl">1</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">""</span>,</span>
-<span>   fill <span class="op">=</span> <span class="st">""</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>   fill <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">mfig</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span>device <span class="op">=</span> <span class="st">"png"</span>,</span>
+<span>   <span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"400_analysis"</span>,<span class="st">"b_w_proportion_to100.png"</span><span class="op">)</span>,</span>
+<span>   bg <span class="op">=</span> <span class="st">"white"</span>,</span>
+<span>   width <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>   height <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">mfig</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_cartesian.html">coord_cartesian</a></span><span class="op">(</span>ylim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.3</span><span class="op">)</span><span class="op">)</span> </span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span>device <span class="op">=</span> <span class="st">"png"</span>,</span>
+<span>   <span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"400_analysis"</span>,<span class="st">"b_w_proportion.png"</span><span class="op">)</span>,</span>
+<span>   bg <span class="op">=</span> <span class="st">"white"</span>,</span>
+<span>   width <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>   height <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">mfig</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span>device <span class="op">=</span> <span class="st">"png"</span>,</span>
+<span>   <span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"400_analysis"</span>,<span class="st">"b_w_proportion_legendbottom_to100.png"</span><span class="op">)</span>,</span>
+<span>   bg <span class="op">=</span> <span class="st">"white"</span>,</span>
+<span>   width <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>   height <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">mfig</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_cartesian.html">coord_cartesian</a></span><span class="op">(</span>ylim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.3</span><span class="op">)</span><span class="op">)</span> </span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span>device <span class="op">=</span> <span class="st">"png"</span>,</span>
+<span>   <span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"400_analysis"</span>,<span class="st">"b_w_proportion_legendbottom.png"</span><span class="op">)</span>,</span>
+<span>   bg <span class="op">=</span> <span class="st">"white"</span>,</span>
+<span>   width <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>   height <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<div id="fig-l20220930141902" class="quarto-figure quarto-figure-center">
+<div id="fig-l20220930141902-1" class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="ConditionAndPersonFirst_files/figure-html/fig-l20220930141902-1.png" class="img-fluid figure-img" width="672"></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;2: Proportion of articles in each corpus that have instances of all three language types, two language types, a single (specified) language type or no language types. We can see that most articles in both corpora have no use of any of the 3 language types described.</figcaption><p></p>
 </figure>
 </div>
 </div>
+<div class="cell-output-display">
+<div id="fig-l20220930141902-2" class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="ConditionAndPersonFirst_files/figure-html/fig-l20220930141902-2.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3: Proportion of articles in each corpus that have instances of all three language types, two language types, a single (specified) language type or no language types. We can see that most articles in both corpora have no use of any of the 3 language types described.</figcaption><p></p>
+</figure>
 </div>
-<div class="cell">
+</div>
+<div class="cell-output-display">
+<div id="fig-l20220930141902-3" class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="ConditionAndPersonFirst_files/figure-html/fig-l20220930141902-3.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4: Proportion of articles in each corpus that have instances of all three language types, two language types, a single (specified) language type or no language types. We can see that most articles in both corpora have no use of any of the 3 language types described.</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div id="fig-l20220930141902-4" class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="ConditionAndPersonFirst_files/figure-html/fig-l20220930141902-4.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5: Proportion of articles in each corpus that have instances of all three language types, two language types, a single (specified) language type or no language types. We can see that most articles in both corpora have no use of any of the 3 language types described.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20220930143330_3828e5f305aae9e1517c716b67887145">
 <details><summary>Code</summary><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">corpus_articles_grouped</span> <span class="op">&lt;-</span> <span class="va">for_stacked_chart</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">corpus</span>, <span class="va">source_type</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
@@ -651,7 +731,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <p>We can also provide a less detailed version of the above summary, where each article could be counted once to each category it belonged to (so, for example, one with all 3 could be counted 3 times: towards condition-first, person-first and OBESE). Let’s generate this summary:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20220930143443_4b6e047fda9d6e72ba4c0c8bec46ced3">
 <details><summary>Code</summary><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">fortable11</span> <span class="op">&lt;-</span></span>
 <span>  <span class="va">both_datasets</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">article_id</span>, <span class="va">corpus</span>, <span class="va">source_type</span>, <span class="va">dataset</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -716,7 +796,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <p>And get the percentages table:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l2022093ldldld_9660e8250768d6b8f379c6ad03be0801">
 <details><summary>Code</summary><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">fortable11</span> <span class="op">|&gt;</span></span>
 <span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>prop <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">100</span><span class="op">*</span><span class="va">article_count</span><span class="op">/</span><span class="va">corpus_count</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">article_count</span>, <span class="op">-</span><span class="va">corpus_count</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -763,7 +843,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section><section id="article-length-differences-in-australian-and-uk-broadsheets-and-tabloids" class="level2"><h2 data-anchor-id="article-length-differences-in-australian-and-uk-broadsheets-and-tabloids">Article length differences in Australian and UK broadsheets and tabloids</h2>
 <section id="australian-broadsheets-vs-tabloids" class="level3"><h3 data-anchor-id="australian-broadsheets-vs-tabloids">Australian broadsheets vs tabloids</h3>
 <p>Are texts in the Australian sub-corpus used for this study also longer than in broadsheets than in tabloids, like was reported for the larger study?</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/fig-l20220930143659_22c8ac30fe9c9111b751bc9ec628d33a">
 <details><summary>Code</summary><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">histogram_pairwise</span><span class="op">(</span><span class="va">au_broadsheet_wordcounts</span>,</span>
 <span>       <span class="va">au_tabloid_wordcounts</span>,</span>
 <span>       <span class="st">"broadsheet"</span>,</span>
@@ -771,18 +851,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </details><div class="cell-output-display">
 <div id="fig-l20220930143659" class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="ConditionAndPersonFirst_files/figure-html/fig-l20220930143659-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3: Histogram of word count (x) and number (y) of articles from tabloids and broadsheets in the Australian corpus. Broadsheets appear to have higher word counts than tabloids in the dataset.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6: Histogram of word count (x) and number (y) of articles from tabloids and broadsheets in the Australian corpus. Broadsheets appear to have higher word counts than tabloids in the dataset.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Let’s use a t-test to consider?</p>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-8_ce69ff5b0bbb424989b263d3165006cc">
 <details><summary>Code</summary><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">report</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/report/reference/report.html">report</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">au_broadsheet_wordcounts</span>,</span>
 <span>        <span class="va">au_tabloid_wordcounts</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between au_broadsheet_wordcounts and au_tabloid_wordcounts (mean of x = 841.70, mean of y = 555.04) suggests that the effect is positive, statistically significant, and medium (difference = 286.66, 95% CI [257.15, 316.17], t(4261.47) = 19.04, p &lt; .001; Cohen’s d = 0.54, 95% CI [0.48, 0.59])</p>
+</div>
 <p>The non-parametric FP test supports this as well:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-9_4f6db924b4abd4ba00ff76a960c18ea2">
 <details><summary>Code</summary><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_wc</span><span class="op">(</span>wc1 <span class="op">=</span> <span class="va">au_broadsheet_wordcounts</span>,</span>
 <span>     wc2 <span class="op">=</span> <span class="va">au_tabloid_wordcounts</span>,</span>
 <span>     label1 <span class="op">=</span> <span class="st">"broadsheet"</span>,</span>
@@ -798,7 +880,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <p>Conclusion: Articles in Australian broadsheets are longer than articles in Australian tabloids.</p>
 </section><section id="uk-broadsheets-vs-tabloids" class="level3"><h3 data-anchor-id="uk-broadsheets-vs-tabloids">UK broadsheets vs tabloids</h3>
 <p>Are texts in tabloids also shorter than in broadsheets in the UK, like they are in Australia?</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/fig-l202209301433939393_0416005b61ed27bad086d89307629ffb">
 <details><summary>Code</summary><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">histogram_pairwise</span><span class="op">(</span>wc1 <span class="op">=</span> <span class="va">uk_broadsheet_wordcounts</span>,</span>
 <span>       wc2 <span class="op">=</span> <span class="va">uk_tabloid_wordcounts</span>,</span>
 <span>       label1 <span class="op">=</span> <span class="st">"broadsheets"</span>,</span>
@@ -806,20 +888,22 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </details><div class="cell-output-display">
 <div id="fig-l202209301433939393" class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="ConditionAndPersonFirst_files/figure-html/fig-l202209301433939393-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4: Histogram of word count (x) and number (y) of articles from tabloids and broadsheets in the UK corpus. Similar to the Australian corpus, broadsheets appear to have higher word counts than tabloids in the dataset.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;7: Histogram of word count (x) and number (y) of articles from tabloids and broadsheets in the UK corpus. Similar to the Australian corpus, broadsheets appear to have higher word counts than tabloids in the dataset.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Based on the visualisation in Figure <a href="#fig-l202209301433939393">Figure&nbsp;4</a>, this appears to be the case. Let’s use a parametric test to assess.</p>
+<p>Based on the visualisation in Figure <a href="#fig-l202209301433939393">Figure&nbsp;7</a>, this appears to be the case. Let’s use a parametric test to assess.</p>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-11_11a633daec82d6730c19a23f8bbe57e4">
 <details><summary>Code</summary><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">report</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/report/reference/report.html">report</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span></span>
 <span>  <span class="va">uk_broadsheet_wordcounts</span>, </span>
 <span>  <span class="va">uk_tabloid_wordcounts</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between uk_broadsheet_wordcounts and uk_tabloid_wordcounts (mean of x = 718.31, mean of y = 561.20) suggests that the effect is positive, statistically significant, and small (difference = 157.11, 95% CI [139.76, 174.46], t(14856.49) = 17.75, p &lt; .001; Cohen’s d = 0.29, 95% CI [0.26, 0.32])</p>
+</div>
 <p>Yes, articles in broadsheets are indeed longer, although the effect size is not as large (small vs medium for the Australian corpus).</p>
 <p>Does the non-parametric FP test support this as well?</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-12_f64f0027a0c418d468539c034522a916">
 <details><summary>Code</summary><div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_wc</span><span class="op">(</span>wc1 <span class="op">=</span> <span class="va">uk_broadsheet_wordcounts</span>,</span>
 <span>     wc2 <span class="op">=</span> <span class="va">uk_tabloid_wordcounts</span>,</span>
 <span>     label1 <span class="op">=</span> <span class="st">"broadsheet"</span>,</span>
@@ -836,8 +920,8 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <p>Conclusion: Articles in UK broadsheets are longer than articles in UK tabloids.</p>
 </section><section id="australian-vs-uk-broadsheets" class="level3"><h3 data-anchor-id="australian-vs-uk-broadsheets">Australian vs UK broadsheets</h3>
 <p>Are texts in broadsheets from Australia and the UK different in length?</p>
-<p>The visualisation in Figure <a href="#fig-l2022093019">Figure&nbsp;5</a> suggests this is the case.</p>
-<div class="cell">
+<p>The visualisation in Figure <a href="#fig-l2022093019">Figure&nbsp;8</a> suggests this is the case.</p>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/fig-l2022093019_c4e8ae4ea0dfbb71eced33d9ffbdecbf">
 <details><summary>Code</summary><div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">histogram_pairwise</span><span class="op">(</span><span class="va">au_broadsheet_wordcounts</span>,</span>
 <span>       <span class="va">uk_broadsheet_wordcounts</span>,</span>
 <span>       <span class="st">"Aus"</span>,</span>
@@ -845,19 +929,21 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </details><div class="cell-output-display">
 <div id="fig-l2022093019" class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="ConditionAndPersonFirst_files/figure-html/fig-l2022093019-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;5: Histogram of word count (x) and number (y) of articles from broadsheets in the Australian and UK corpus. Articles in UK broadsheets are somewhat shorter than in Australian ones.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;8: Histogram of word count (x) and number (y) of articles from broadsheets in the Australian and UK corpus. Articles in UK broadsheets are somewhat shorter than in Australian ones.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Let’s use a t-test to consider?</p>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-14_a68acb6a4e9f7c189323a6d462e12397">
 <details><summary>Code</summary><div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">report</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/report/reference/report.html">report</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">au_broadsheet_wordcounts</span>,</span>
 <span>        <span class="va">uk_broadsheet_wordcounts</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between au_broadsheet_wordcounts and uk_broadsheet_wordcounts (mean of x = 841.70, mean of y = 718.31) suggests that the effect is positive, statistically significant, and small (difference = 123.39, 95% CI [95.96, 150.83], t(3660.02) = 8.82, p &lt; .001; Cohen’s d = 0.21, 95% CI [0.16, 0.26])</p>
+</div>
 <p>Yes, there appears to be a small difference in text length between Australian and UK broadsheets, with articles in UK broadsheets being somewhat shorter.</p>
 <p>Does the non-parametric FP test support this as well?</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-15_94cf148c36087ca9a4dc75c65a780f76">
 <details><summary>Code</summary><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_wc</span><span class="op">(</span>wc1 <span class="op">=</span> <span class="va">au_broadsheet_wordcounts</span>,</span>
 <span>     wc2 <span class="op">=</span> <span class="va">uk_broadsheet_wordcounts</span>,</span>
 <span>     label1 <span class="op">=</span> <span class="st">"AUS"</span>,</span>
@@ -874,8 +960,8 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <p>Conclusion: Articles in Australian broadsheets are longer than articles in UK broadsheets.</p>
 </section><section id="australian-vs-uk-tabloids" class="level3"><h3 data-anchor-id="australian-vs-uk-tabloids">Australian vs UK tabloids</h3>
 <p>Are texts in tabloids from Australia and the UK different in length?</p>
-<p>The visualisation in Figure <a href="#fig-l2022dkldkdkdkd">Figure&nbsp;6</a> suggests that there is no difference between the two.</p>
-<div class="cell">
+<p>The visualisation in Figure <a href="#fig-l2022dkldkdkdkd">Figure&nbsp;9</a> suggests that there is no difference between the two.</p>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/fig-l2022dkldkdkdkd_19730b35cfdaa9bc8293b802333c6d4e">
 <details><summary>Code</summary><div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">histogram_pairwise</span><span class="op">(</span><span class="va">au_tabloid_wordcounts</span>,</span>
 <span>       <span class="va">uk_tabloid_wordcounts</span>,</span>
 <span>       <span class="st">"Aus"</span>,</span>
@@ -883,19 +969,21 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </details><div class="cell-output-display">
 <div id="fig-l2022dkldkdkdkd" class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="ConditionAndPersonFirst_files/figure-html/fig-l2022dkldkdkdkd-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;6: Histogram of word count (x) and number (y) of articles from tabloids in the Australian and UK corpus. There doesn’t seem to be a difference in length between articles in Australian and UK tabloids.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;9: Histogram of word count (x) and number (y) of articles from tabloids in the Australian and UK corpus. There doesn’t seem to be a difference in length between articles in Australian and UK tabloids.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Let’s use a t-test to consider?</p>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-17_0e39ec6fb91103d60ca38706d560ff40">
 <details><summary>Code</summary><div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">report</span><span class="fu">::</span><span class="fu"><a href="https://easystats.github.io/report/reference/report.html">report</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">au_tabloid_wordcounts</span>,</span>
 <span>        <span class="va">uk_tabloid_wordcounts</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between au_tabloid_wordcounts and uk_tabloid_wordcounts (mean of x = 555.04, mean of y = 561.20) suggests that the effect is negative, statistically not significant, and very small (difference = -6.16, 95% CI [-26.64, 14.31], t(6001.53) = -0.59, p = 0.555; Cohen’s d = -0.01, 95% CI [-0.05, 0.03])</p>
+</div>
 <p>No, there appears to be no difference in length between articles in Australian and UK tabloids.</p>
 <p>Does the non-parametric FP test support this as well?</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-18_f2912db01e3e3a70a304dc32bb443290">
 <details><summary>Code</summary><div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_wc</span><span class="op">(</span>wc1 <span class="op">=</span> <span class="va">au_tabloid_wordcounts</span>,</span>
 <span>     wc2 <span class="op">=</span> <span class="va">uk_tabloid_wordcounts</span>,</span>
 <span>     label1 <span class="op">=</span> <span class="st">"AUS"</span>,</span>
@@ -904,7 +992,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  wc by label (AUS, UK)
-Z = -0.58397, p-value = 0.5563
+Z = -0.58397, p-value = 0.5529
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
@@ -912,7 +1000,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </section></section><section id="person-first-language" class="level2"><h2 data-anchor-id="person-first-language">Person-first language</h2>
 <section id="australian-corpus" class="level3"><h3 data-anchor-id="australian-corpus">Australian corpus</h3>
 <p>Let’s generate a frequency table (sum of no hits in text) for person-first language:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20220930165339_b2c8baa1d7d174166698f0043f07ca26">
 <details><summary>Code</summary><div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pers_4chisq_matrix_sumhits</span> <span class="op">&lt;-</span></span>
 <span>  <span class="va">both_datasets</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">dataset</span> <span class="op">==</span> <span class="st">"pers"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -953,7 +1041,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>We also need to find the probability of observing these values given the total word count in each of the cells (for example, the number of total words in the Australian broadsheet corpus). Let’s calculate these values:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20220930165341_a2be9c49eec5ebcee0f1028055a0ef57">
 <details><summary>Code</summary><div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">generate_wc</span><span class="op">(</span><span class="va">metadata</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
@@ -982,7 +1070,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>Is there a difference in the frequency of use of person-first language in tabloids and broadsheets in the Australian corpus?</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20220930165502_baebb5845bf97746f52786b96f2a93f1">
 <details><summary>Code</summary><div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">pers_4chisq_matrix_sumhits</span>, </span>
 <span>           col_no <span class="op">=</span> <span class="fl">1</span>, </span>
 <span>           type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -1035,7 +1123,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 <p>Based on a Chi-square test, there is a slight difference between the expected and observed frequency of instances of person-first language in the Australian corpus (p &lt; 0.05), with broadsheets having somewhat more instances of person-first language than tabloids in the Australian corpus.</p>
 <p>This also holds true when we consider the number of articles that have at least one instance of person-first language:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l202209301655022_ab8b829d6bc47722dfa23e1eb8024ec8">
 <details><summary>Code</summary><div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">pers_4chisq_matrix_noarticles</span>, </span>
 <span>           col_no <span class="op">=</span> <span class="fl">1</span>, </span>
 <span>           type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -1087,11 +1175,13 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>If we consider a t-test on the frequency (per million words) of the Australian corpus (including all texts in each sub-corpus, including those without instances), a difference is not detected.</p>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-22_6e550413786eaf586ff8ac10ae3e9a30">
 <details><summary>Code</summary><div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"AUS"</span>, <span class="st">"pers_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between broadsheet and tabloid (mean of x = 17.81, mean of y = 11.68) suggests that the effect is positive, statistically not significant, and very small (difference = 6.13, 95% CI [-4.24, 16.51], t(5183.11) = 1.16, p = 0.247; Cohen’s d = 0.03, 95% CI [-0.02, 0.09])</p>
+</div>
 <p>If we instead use a non-parametric test, there is also no difference detected.</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-23_b2803effe576e1f55c70d2e91b25b030">
 <details><summary>Code</summary><div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_broad_vs_tabl</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>,</span>
 <span>        corpus_label <span class="op">=</span> <span class="st">"AUS"</span>,</span>
 <span>        dataset <span class="op">=</span> <span class="st">"pers"</span>,</span>
@@ -1101,13 +1191,13 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  pers_freq by source_type (broadsheet, tabloid)
-Z = 1.1248, p-value = 0.2611
+Z = 1.1248, p-value = 0.265
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 </section><section id="uk-corpus" class="level3"><h3 data-anchor-id="uk-corpus">UK corpus</h3>
 <p>What about the total number of instances of person-first language in the UK corpus?</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l202209301652211_15c626da4d8107b21c7637f9b4a4a5c3">
 <details><summary>Code</summary><div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">pers_4chisq_matrix_sumhits</span>, </span>
 <span>           col_no <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>           type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -1159,7 +1249,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>No difference is observed between the number of observed and expected instances of use of person-first language in the UK corpus between tabloids and broadsheets.</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20220930139393939_e24e22c78bad9ef975b06d6f448ab5c7">
 <details><summary>Code</summary><div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">pers_4chisq_matrix_noarticles</span>, </span>
 <span>           col_no <span class="op">=</span> <span class="fl">2</span>, </span>
 <span>           type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -1212,11 +1302,13 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 <p>This lack of a difference also holds true when we consider the number of articles that have at least one instance of person-first language.</p>
 <p>If we consider a t-test on the frequency (per million words) of the UK corpus (including all texts in each sub-corpus, including those without instances), a difference is not detected.</p>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-26_32376522f3feec6a8fcdc20d669f4744">
 <details><summary>Code</summary><div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"UK"</span>, <span class="st">"pers_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between broadsheet and tabloid (mean of x = 8.52, mean of y = 12.12) suggests that the effect is negative, statistically not significant, and very small (difference = -3.61, 95% CI [-9.81, 2.60], t(13624.58) = -1.14, p = 0.255; Cohen’s d = -0.02, 95% CI [-0.05, 0.01])</p>
+</div>
 <p>If we use a non-parametric test, there is also no difference detected.</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-27_664f6d615135e50e9a9fc6d36b9b1446">
 <details><summary>Code</summary><div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_broad_vs_tabl</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>,</span>
 <span>        corpus_label <span class="op">=</span> <span class="st">"UK"</span>,</span>
 <span>        dataset <span class="op">=</span> <span class="st">"pers"</span>,</span>
@@ -1226,14 +1318,14 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  pers_freq by source_type (broadsheet, tabloid)
-Z = -1.1324, p-value = 0.269
+Z = -1.1324, p-value = 0.2569
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 </section><section id="australian-vs-uk-broadsheets-1" class="level3"><h3 data-anchor-id="australian-vs-uk-broadsheets-1">Australian vs UK broadsheets</h3>
 <p>Let’s compare Australian and UK broadsheets.</p>
 <p>Is there a difference in the frequency of use of person-first language in broadsheets in the Australian vs UK corpus?</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20220930165932b_9a3ac9b88e568002a1b1b0ec40d30653">
 <details><summary>Code</summary><div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># broadsheets</span></span>
 <span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">pers_4chisq_matrix_sumhits</span>, </span>
 <span>       row_no <span class="op">=</span> <span class="fl">1</span>,</span>
@@ -1291,7 +1383,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 <p>There is a difference between the expected and observed frequency of instances of person-first language in Australian vs UK broadsheets(p &lt; 0.005).</p>
 <p>We can see that person-first language is used more frequently than we would expect in Australian broadsheets, and less frequently in UK ones.</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20220930165945b_2f17dae17aed51db97f54400a1112579">
 <details><summary>Code</summary><div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># broadsheets</span></span>
 <span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">pers_4chisq_matrix_noarticles</span>, </span>
 <span>       row_no <span class="op">=</span> <span class="fl">1</span>,</span>
@@ -1349,11 +1441,13 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 <p>This also holds true when we consider the number of articles that have at least one instance of person-first language.</p>
 <p>If we consider the frequency (per million words) of the Australian vs UK broadsheets (including all texts in each sub-corpus, including those without instances), a very small difference is detected, with Australian broadsheets having a higher frequency than UK ones:</p>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-30_d9540477d5dc5c01d725f0560e931ea3">
 <details><summary>Code</summary><div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"broadsheet"</span>, <span class="st">"pers_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between aus and uk (mean of x = 17.81, mean of y = 8.52) suggests that the effect is positive, statistically significant, and very small (difference = 9.30, 95% CI [1.14, 17.46], t(3250.78) = 2.23, p = 0.026; Cohen’s d = 0.08, 95% CI [9.57e-03, 0.15])</p>
+</div>
 <p>Is this supported by non-parametric analysis</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-31_cbf3ffc2515257e6b0b9b27f2b19c8a2">
 <details><summary>Code</summary><div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_aus_vs_uk</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>,</span>
 <span>      source_label <span class="op">=</span> <span class="st">"broadsheet"</span>,</span>
 <span>      dataset <span class="op">=</span> <span class="st">"pers"</span>,</span>
@@ -1363,7 +1457,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  pers_freq by corpus (AUS, UK)
-Z = 2.408, p-value = 0.0139
+Z = 2.408, p-value = 0.017
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
@@ -1371,7 +1465,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </section><section id="australian-vs-uk-tabloids-1" class="level3"><h3 data-anchor-id="australian-vs-uk-tabloids-1">Australian vs UK tabloids</h3>
 <p>Let’s compare Australian and UK tabloids.</p>
 <p>Is there a difference in the frequency of use of person-first language in tabloids in the Australian vs UK corpus?</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20220930165932_a31e64011540bae59781314e92404b64">
 <details><summary>Code</summary><div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># tabloids</span></span>
 <span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">pers_4chisq_matrix_sumhits</span>, </span>
 <span>       row_no <span class="op">=</span> <span class="fl">2</span>,</span>
@@ -1429,7 +1523,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 <p>The observed and expected number of instances of person-first language is approximately the same in Australian and British tabloids.</p>
 <p>This also holds true when we consider the number of articles that have at least one instance of person-first language:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20220930165945_e671544392557a68ab03e92dfc6b0f71">
 <details><summary>Code</summary><div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># tabloids</span></span>
 <span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">pers_4chisq_matrix_noarticles</span>, </span>
 <span>       row_no <span class="op">=</span> <span class="fl">2</span>,</span>
@@ -1486,11 +1580,13 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>If we consider the frequency (per million words) in the Australian vs UK tabloids (including all texts in each sub-corpus, including those without instances), no significant differences are observed as well.</p>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-34_973511908aaa3404f1f88f7c5dea3193">
 <details><summary>Code</summary><div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"tabloid"</span>, <span class="st">"pers_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between aus and uk (mean of x = 11.68, mean of y = 12.12) suggests that the effect is negative, statistically not significant, and very small (difference = -0.45, 95% CI [-9.37, 8.48], t(6445.87) = -0.10, p = 0.922; Cohen’s d = -2.44e-03, 95% CI [-0.05, 0.05])</p>
+</div>
 <p>The non-parametric test leads to a similar conclusion:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-35_581d7c82c5ebd48388451ad2f00865f9">
 <details><summary>Code</summary><div class="sourceCode" id="cb45"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>,</span>
 <span>      <span class="st">"tabloid"</span>,</span>
 <span>      <span class="st">"pers"</span>,</span>
@@ -1500,14 +1596,14 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  pers_freq by corpus (AUS, UK)
-Z = -0.093724, p-value = 0.9279
+Z = -0.093724, p-value = 0.9238
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>In summary, we do not observe a difference in the use of person-first language in Australian vs UK tabloids.</p>
 <hr></section></section><section id="condition-first-language" class="level2"><h2 data-anchor-id="condition-first-language">Condition-first language</h2>
 <p>Let’s generate a frequency table (sum of no hits in text) for condition-first language:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20220930165339hfhhfhf_6ed16eff7f730a129bdf00a3fc994f44">
 <details><summary>Code</summary><div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cond_4chisq_matrix_sumhits</span> <span class="op">&lt;-</span></span>
 <span>  <span class="va">both_datasets</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">dataset</span> <span class="op">==</span> <span class="st">"cond"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -1549,7 +1645,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 <section id="australian-corpus-1" class="level3"><h3 data-anchor-id="australian-corpus-1">Australian corpus</h3>
 <p>We can assess the difference between these total number of uses of condition-first language in the Australian corpus, using a Chi-square test:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20210930165502_17bc10a50e37085b7c8dd406aff35486">
 <details><summary>Code</summary><div class="sourceCode" id="cb48"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">cond_4chisq_matrix_sumhits</span>, </span>
 <span>           col_no <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>           type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -1601,7 +1697,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>There is a higher number of instances of condition-first language used in tabloids, and a lower number of instances in broadsheets in the Australian corpus.</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l202109301655022_7adc0d516d053e1f9106e1909727995e">
 <details><summary>Code</summary><div class="sourceCode" id="cb49"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">cond_4chisq_matrix_noarticles</span>, </span>
 <span>           col_no <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>           type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span><span class="op">|&gt;</span></span>
@@ -1654,10 +1750,12 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 <p>This also somewhat holds true, although is not highly significant, when we consider the number of articles that have at least one instance of condition-first language.</p>
 <p>If we consider a t-test on the frequency (per million words) of the Australian corpus (including all texts in each sub-corpus, including those without instances), a very small difference is detected, with tabloids having a higher frequency of use of condition-first language vs broadsheets.</p>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-39_51f2640c9169bf72336908794c1d9415">
 <details><summary>Code</summary><div class="sourceCode" id="cb50"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"AUS"</span>, <span class="st">"cond_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between broadsheet and tabloid (mean of x = 847.96, mean of y = 1315.95) suggests that the effect is negative, statistically significant, and very small (difference = -467.99, 95% CI [-614.83, -321.16], t(5364.35) = -6.25, p &lt; .001; Cohen’s d = -0.17, 95% CI [-0.22, -0.12])</p>
-<div class="cell">
+</div>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-40_05ac9ab74cfda9e41e3f0c23d3819c55">
 <details><summary>Code</summary><div class="sourceCode" id="cb51"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>,</span>
 <span>        corpus_label <span class="op">=</span> <span class="st">"AUS"</span>,</span>
 <span>        dataset <span class="op">=</span> <span class="st">"cond"</span>, </span>
@@ -1673,7 +1771,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </section><section id="uk-corpus-1" class="level3"><h3 data-anchor-id="uk-corpus-1">UK corpus</h3>
 <p>We can assess the difference between these total number of uses of condition-first language in the UK corpus, using a Chi-square test. There is a higher number of instances of condition-first language used in tabloids, and a lower number of instances in broadsheets, in the UK corpus:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l202109301652211_ef25176c6e995904770202a5371f136a">
 <details><summary>Code</summary><div class="sourceCode" id="cb53"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">cond_4chisq_matrix_sumhits</span>, </span>
 <span>           col_no <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>           type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -1725,7 +1823,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>This also holds true when we consider the number of articles that have at least one instance of condition-first language.</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20210930139393939_bcdd6b69d49f9151283a5bb879673eb2">
 <details><summary>Code</summary><div class="sourceCode" id="cb54"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">cond_4chisq_matrix_noarticles</span>, </span>
 <span>           col_no <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>           type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -1777,11 +1875,13 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>If we consider a t-test on the frequency (per million words) of the UK corpus (including all texts in each sub-corpus, including those without instances), a very small difference is detected, with a higher mean frequency in tabloids than broadsheets.</p>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-42_ed3e3a88a6ea73e85bcea1a04028040e">
 <details><summary>Code</summary><div class="sourceCode" id="cb55"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"UK"</span>, <span class="st">"cond_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between broadsheet and tabloid (mean of x = 629.40, mean of y = 835.37) suggests that the effect is negative, statistically significant, and very small (difference = -205.97, 95% CI [-277.76, -134.18], t(15067.94) = -5.62, p &lt; .001; Cohen’s d = -0.09, 95% CI [-0.12, -0.06])</p>
+</div>
 <p>This is also supported by the FP test:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-43_df4e597d6f9cf2a4016b136931f5fab4">
 <details><summary>Code</summary><div class="sourceCode" id="cb56"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>,</span>
 <span>        corpus_label <span class="op">=</span> <span class="st">"UK"</span>,</span>
 <span>        dataset <span class="op">=</span> <span class="st">"cond"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1795,7 +1895,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </section><section id="australian-vs-uk-broadsheets-2" class="level3"><h3 data-anchor-id="australian-vs-uk-broadsheets-2">Australian vs UK broadsheets</h3>
 <p>There is a higher number of uses of condition-first language in Australian broadsheets, and a lower number in UK broadsheets:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20210930165932b_df8aa82fb9a713ef3cae30a1f5e230ad">
 <details><summary>Code</summary><div class="sourceCode" id="cb58"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">cond_4chisq_matrix_sumhits</span>, </span>
 <span>       row_no <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>       type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -1851,7 +1951,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>This also holds true when we consider the number of articles that have at least one instance of condition-first language:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20210930165945b_95ed1f5c6ae7f31b4b7877352e01f194">
 <details><summary>Code</summary><div class="sourceCode" id="cb59"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">cond_4chisq_matrix_noarticles</span>, </span>
 <span>           row_no <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>           type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -1907,11 +2007,13 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>If we consider the frequency (per million words) of the Australian vs UK broadsheets (including all texts in each sub-corpus, including those without instances), a very small difference is detected, with Australian broadsheets having a higher frequency than UK ones:</p>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-46_897e0cb40dc605f7a3a36df35f95e20c">
 <details><summary>Code</summary><div class="sourceCode" id="cb60"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"broadsheet"</span>, <span class="st">"cond_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between aus and uk (mean of x = 847.96, mean of y = 629.40) suggests that the effect is positive, statistically significant, and very small (difference = 218.56, 95% CI [115.85, 321.27], t(3442.55) = 4.17, p &lt; .001; Cohen’s d = 0.14, 95% CI [0.08, 0.21])</p>
+</div>
 <p>This is also supported by the FP test:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-47_e7ba2d43951d736132e358e93182cfb2">
 <details><summary>Code</summary><div class="sourceCode" id="cb61"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_aus_vs_uk</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>, </span>
 <span>  source_label <span class="op">=</span> <span class="st">"broadsheet"</span>,</span>
 <span>  dataset <span class="op">=</span> <span class="st">"cond"</span>,</span>
@@ -1921,13 +2023,13 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  cond_freq by corpus (AUS, UK)
-Z = 4.3017, p-value &lt; 1e-04
+Z = 4.3017, p-value = 1e-04
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 </section><section id="australian-vs-uk-tabloids-2" class="level3"><h3 data-anchor-id="australian-vs-uk-tabloids-2">Australian vs UK tabloids</h3>
 <p>There is a higher number of uses of condition-first language in Australian tabloids, and a lower number in UK tabloids:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20210930165932_7b22463bc199cceffdac0be0e2c43849">
 <details><summary>Code</summary><div class="sourceCode" id="cb63"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">cond_4chisq_matrix_sumhits</span>, </span>
 <span>       row_no <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>       type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -1983,7 +2085,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>This also holds true when we consider the number of articles that have at least one instance of condition-first language:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20210930165945_fcd0b095e79809aa1c05782b8d38bfcb">
 <details><summary>Code</summary><div class="sourceCode" id="cb64"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">cond_4chisq_matrix_noarticles</span>, </span>
 <span>           row_no  <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>           type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -2039,11 +2141,13 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>If we consider the frequency (per million words) in the Australian vs UK tabloids (including all texts in each sub-corpus, including those without instances), the frequency of use of condition-first language is higher in Australian tabloids, and lower in UK ones.</p>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-50_53195b4cfb470aa52514dae2185a59f9">
 <details><summary>Code</summary><div class="sourceCode" id="cb65"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"tabloid"</span>, <span class="st">"cond_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between aus and uk (mean of x = 1315.95, mean of y = 835.37) suggests that the effect is positive, statistically significant, and small (difference = 480.58, 95% CI [353.41, 607.75], t(4659.62) = 7.41, p &lt; .001; Cohen’s d = 0.22, 95% CI [0.16, 0.27])</p>
+</div>
 <p>This is also supported by the FP test:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-51_61858069b0d72cbcdb2d2a8fc3fa52f4">
 <details><summary>Code</summary><div class="sourceCode" id="cb66"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_aus_vs_uk</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>, </span>
 <span>  source_label <span class="op">=</span> <span class="st">"tabloid"</span>,</span>
 <span>  dataset <span class="op">=</span> <span class="st">"cond"</span>,</span>
@@ -2060,7 +2164,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <p>As shown above, there is no significant difference in articles lengths between Australian and UK tabloids.</p>
 <hr></section></section><section id="use-of-the-adjective-lemma-obese-1" class="level2"><h2 data-anchor-id="use-of-the-adjective-lemma-obese-1">Use of the adjective lemma OBESE</h2>
 <p>Let’s generate a frequency table (sum of no hits in text) for use of the adjective lemma OBESE:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-lkdskdkd_a68665182c7d6128cec9c8e4d918d55d">
 <details><summary>Code</summary><div class="sourceCode" id="cb68"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">obes_4chisq_matrix_sumhits</span> <span class="op">&lt;-</span></span>
 <span>  <span class="va">both_datasets</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">dataset</span> <span class="op">==</span> <span class="st">"obes"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -2102,7 +2206,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 <section id="australian-corpus-2" class="level3"><h3 data-anchor-id="australian-corpus-2">Australian corpus</h3>
 <p>We can assess the difference between these total number of uses of the adjective lemma OBESE language in the Australian corpus, using a Chi-square test:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20090030165932b_42498f45c43520178e5dcbc4cdcf35dd">
 <details><summary>Code</summary><div class="sourceCode" id="cb69"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">obes_4chisq_matrix_sumhits</span>, </span>
 <span>           col_no <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>           type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -2154,7 +2258,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>There is no difference in the total count of use of the adjective lemma OBESE in Australian broadsheets vs tabloids.</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20090030165945b_c67d5b71813d6ac0ebf6c6866838584f">
 <details><summary>Code</summary><div class="sourceCode" id="cb70"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">obes_4chisq_matrix_noarticles</span>, </span>
 <span>           col_no <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>           type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span><span class="op">|&gt;</span></span>
@@ -2207,12 +2311,14 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 <p>There is no difference in the number of articles that use the adjective lemma OBESE in Australian broadsheets vs tabloids.</p>
 <p>If we consider a t-test on the frequency (per million words) of the Australian corpus (including all texts in each sub-corpus, including those without instances), a very small difference is detected (p &lt; 0.05), with tabloids having a higher frequency of use of condition-first language vs broadsheets.</p>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-55_67381f078797aec0f4c088c9855027da">
 <details><summary>Code</summary><div class="sourceCode" id="cb71"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"AUS"</span>, <span class="st">"obes_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between broadsheet and tabloid (mean of x = 42.65, mean of y = 70.46) suggests that the effect is negative, statistically significant, and very small (difference = -27.81, 95% CI [-53.34, -2.29], t(4843.32) = -2.14, p = 0.033; Cohen’s d = -0.06, 95% CI [-0.12, -5.04e-03])</p>
+</div>
 <p>This could be attributed in part to the longer article length described for tabloids than for broadsheets above.</p>
 <p>This is not strongly supported (p &lt; 0.1) via a non-parametric FP test:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-56_c9b5e2dac12fb2663c82c5084fe2f498">
 <details><summary>Code</summary><div class="sourceCode" id="cb72"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>,</span>
 <span>        corpus_label <span class="op">=</span> <span class="st">"AUS"</span>,</span>
 <span>        dataset <span class="op">=</span> <span class="st">"obes"</span>, </span>
@@ -2222,13 +2328,13 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  obes_freq by source_type (broadsheet, tabloid)
-Z = -1.9091, p-value = 0.0512
+Z = -1.9091, p-value = 0.0521
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 </section><section id="uk-corpus-2" class="level3"><h3 data-anchor-id="uk-corpus-2">UK corpus</h3>
 <p>We can assess the difference between these total number of uses of the adjective lemma OBESE in the UK corpus between tabloids and broadsheets. Similar to the Australian corpus, no difference is detected.</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20090030165932_909ede4f3674c610207f39e00d9ebb0f">
 <details><summary>Code</summary><div class="sourceCode" id="cb74"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">pers_4chisq_matrix_sumhits</span>, </span>
 <span>           col_no <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>           type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -2280,7 +2386,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>There is also no difference when we consider the number of articles that have at least one instance of condition-first language.</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20090030165945_22575830483c366e3a08ae2a3760ce8c">
 <details><summary>Code</summary><div class="sourceCode" id="cb75"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_tabloid_broadsheet</span><span class="op">(</span><span class="va">pers_4chisq_matrix_noarticles</span>, </span>
 <span>           col_no <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>           type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -2332,12 +2438,14 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>If we consider a t-test on the frequency (per million words) of the UK corpus (including all texts in each sub-corpus, including those without instances), a very small difference is detected, with a higher mean frequency in tabloids than broadsheets.</p>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-59_04c50ba26546b458384a24616bf13f57">
 <details><summary>Code</summary><div class="sourceCode" id="cb76"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"UK"</span>, <span class="st">"obes_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between broadsheet and tabloid (mean of x = 62.96, mean of y = 96.08) suggests that the effect is negative, statistically significant, and very small (difference = -33.12, 95% CI [-54.84, -11.40], t(13745.07) = -2.99, p = 0.003; Cohen’s d = -0.05, 95% CI [-0.08, -0.02])</p>
+</div>
 <p>Again, like the case of the Australian corpus, this could be explained by articles in tabloids being overall shorter than in broadsheets in the UK corpus.</p>
 <p>There is some support for this difference when using a non-parametric FP test (p &lt; 0.01):</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-60_23f4587870bace01aab2653cf742bb82">
 <details><summary>Code</summary><div class="sourceCode" id="cb77"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_broad_vs_tabl</span><span class="op">(</span><span class="va">frequency_table</span>,</span>
 <span>        corpus_label <span class="op">=</span> <span class="st">"UK"</span>,</span>
 <span>        dataset <span class="op">=</span> <span class="st">"obes"</span>, </span>
@@ -2353,7 +2461,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </section><section id="australian-vs-uk-broadsheets-3" class="level3"><h3 data-anchor-id="australian-vs-uk-broadsheets-3">Australian vs UK broadsheets</h3>
 <p>There is not a strong difference in use of the adjective lemma OBESE between Australian and UK broadsheets.</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20100030165932b_8a4ec54909225aea5383800db1d75804">
 <details><summary>Code</summary><div class="sourceCode" id="cb79"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">obes_4chisq_matrix_sumhits</span>, </span>
 <span>       row_no <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>       type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -2409,7 +2517,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>This lack of a difference also holds true when we consider the number of articles that have at least one instance of the adjective lemma OBESE:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20100030165945b_63f6a504e5405ca5b68ba3a92d759314">
 <details><summary>Code</summary><div class="sourceCode" id="cb80"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">obes_4chisq_matrix_sumhits</span>, </span>
 <span>           row_no <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>           type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -2465,11 +2573,13 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>If we consider the frequency (per million words) of the Australian vs UK broadsheets (including all texts in each sub-corpus, including those without instances), a very small difference is detected, with UK broadsheets having a higher frequency than Australian ones:</p>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-63_e5ad3f10d52f81ad4de7f74d976d6b9d">
 <details><summary>Code</summary><div class="sourceCode" id="cb81"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"broadsheet"</span>, <span class="st">"obes_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between aus and uk (mean of x = 42.65, mean of y = 62.96) suggests that the effect is negative, statistically significant, and very small (difference = -20.31, 95% CI [-37.99, -2.62], t(6599.44) = -2.25, p = 0.024; Cohen’s d = -0.06, 95% CI [-0.10, -7.15e-03])</p>
+</div>
 <p>This is also supported by the FP test:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-64_a349a672d4ce6f9be0b366e9ac81c216">
 <details><summary>Code</summary><div class="sourceCode" id="cb82"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_aus_vs_uk</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>, </span>
 <span>  source_label <span class="op">=</span> <span class="st">"broadsheet"</span>,</span>
 <span>  dataset <span class="op">=</span> <span class="st">"obes"</span>,</span>
@@ -2479,14 +2589,14 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  obes_freq by corpus (AUS, UK)
-Z = -1.6747, p-value = 0.0917
+Z = -1.6747, p-value = 0.0883
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>This discrepancy may be explained by the fact that, as discussed above, articles in UK broadsheets are somewhat shorter than in Australian ones.</p>
 </section><section id="australian-vs-uk-tabloids-3" class="level3"><h3 data-anchor-id="australian-vs-uk-tabloids-3">Australian vs UK tabloids</h3>
 <p>There is a somewhat lower number of total instances of use of the adjective lemma OBESE in Australian tabloids, and a higher number in UK tabloids (p &lt; 0.05):</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20100030165932_fc8d9a312de5baf24963e2db7eda99aa">
 <details><summary>Code</summary><div class="sourceCode" id="cb84"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">obes_4chisq_matrix_sumhits</span>, </span>
 <span>       row_no <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>       type <span class="op">=</span> <span class="st">"wc"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -2542,7 +2652,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>This also holds true when we consider the number of articles that have at least one instance of the adjective lemma OBESE:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/tbl-l20100030165945_44f718fe0341738f58d474630055c49e">
 <details><summary>Code</summary><div class="sourceCode" id="cb85"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">get_chisq_aus_uk</span><span class="op">(</span><span class="va">obes_4chisq_matrix_noarticles</span>, </span>
 <span>           row_no  <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>           type <span class="op">=</span> <span class="st">"art"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -2598,11 +2708,13 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>If we consider the frequency (per million words) in the Australian vs UK tabloids (including all texts in each sub-corpus, including those without instances), no significant differences in frequency are observed.</p>
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-67_0a6d34a094b6cdf0bc36879f2a26eb6b">
 <details><summary>Code</summary><div class="sourceCode" id="cb86"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ttest_aus_vs_uk</span><span class="op">(</span><span class="va">frequency_table</span>, <span class="st">"tabloid"</span>, <span class="st">"obes_freq"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between aus and uk (mean of x = 70.46, mean of y = 96.08) suggests that the effect is negative, statistically not significant, and very small (difference = -25.62, 95% CI [-54.08, 2.85], t(7380.43) = -1.76, p = 0.078; Cohen’s d = -0.04, 95% CI [-0.09, 4.57e-03])</p>
+</div>
 <p>This is also supported by the FP test:</p>
-<div class="cell">
+<div class="cell" data-hash="ConditionAndPersonFirst_cache/html/unnamed-chunk-68_03dde009be5f10f392bfd0477a852f3b">
 <details><summary>Code</summary><div class="sourceCode" id="cb87"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_aus_vs_uk</span><span class="op">(</span>freq_table <span class="op">=</span> <span class="va">frequency_table</span>, </span>
 <span>  source_label <span class="op">=</span> <span class="st">"tabloid"</span>,</span>
 <span>  dataset <span class="op">=</span> <span class="st">"obes"</span>,</span>
@@ -2612,7 +2724,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  obes_freq by corpus (AUS, UK)
-Z = -1.5974, p-value = 0.1038
+Z = -1.5974, p-value = 0.1202
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>

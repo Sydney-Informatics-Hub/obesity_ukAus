@@ -1,8 +1,10 @@
 .Rproj.user
 .Rhistory
-.RData
+*.RData
 .DS_Store
 .Rprofile
+*rdb
+*rdx
 
 # Ignore raw data
 100_data_raw/*
