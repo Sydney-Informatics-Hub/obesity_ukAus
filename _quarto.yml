@@ -15,17 +15,11 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - text: "Data Cleaning & EDA"
-        menu:
-          - text: "Dataset comparison and cleaning"
-            href: 100_data_cleaning_scripts_EDA/dataEDA.qmd
       - text: Analysis
         menu:
           - text: "Analysis"
             href: 400_analysis/ConditionAndPersonFirst.qmd
     right:
-      - text: "Scope"
-        href: 000_scoping/scoping.qmd
       - about.qmd
   repo-url: https://github.com/Sydney-Informatics-Hub/
   repo-actions: [edit, issue]

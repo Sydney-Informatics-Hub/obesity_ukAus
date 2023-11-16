@@ -4,7 +4,4 @@ title: "Obesity comparison of UK and Australian corpora"
 
 This is the landing page for the comparison between the UK and Australian obesity corpora.
 
-Please see the following:
-
-- [Exploratory data analysis and summary statistics](100_data_cleaning_scripts_EDA/dataEDA.html)
-- [Condition- vs Person- first language and use of adjective lemma OBESE](400_analysis/ConditionAndPersonFirst.html)
+Please see the rendered analysis results and code [here](https://sydney-informatics-hub.github.io/obesity_ukAus/).
