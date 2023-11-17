@@ -123,14 +123,6 @@ metadata |>
   kable()
 ```
 
-
-```{r}
-both_datasets |> 
-  group_by(corpus, source_type) |>
-  summarise(total_hits = sum(no_hits_in_text))
-```
-
-
 ## Proportion and number of articles using any of the language types in the two corpora
 
 Let's find the total number of articles that use one or more language types in the two corpora.
