@@ -1,5 +1,5 @@
 ---
-title: "Condition and person-first language & use of the adjective lemma OBESE"
+title: 'Condition and person-first language and use of nominal adjectival "the obese"'
 author: "Darya Vanichkina"
 warning: false
 message: false
@@ -43,15 +43,15 @@ We use the following tests to compare the sub-corpora:
 
 - There is a higher number of instances and articles that use condition-first language in Australian tabloids, and a lower number in UK tabloids (p(Chi-sq) < 0.001). The frequency is also higher in Australian tabloids (mean Australian 1315.95 wpm, mean UK 835.37 wpm, p(FP) < 1e-04). This is especially striking given that there is no difference in overall article length between Australian and UK tabloids.
 
-### Use of the adjective lemma OBESE
+### Use of "the obese" (nominal adjectival)
 
 - In the Australian corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.05, p(FP) < 0.1) when considering frequencies, with tabloids having a higher frequency of use of condition-first language vs broadsheets (mean broadsheet frequency 42.65 wpm, mean tabloid 70.46 wpm). This discrepancy is most likely at least partially explained by the much longer article lengths of broadsheets vs tabloids in this corpus.
 
-- Similarly, in the UK corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.01, p(FP) < 0.01) when considering frequencies, with tabloids having a higher frequency of use of the adjective lemma OBESE vs broadsheets (mean broadsheet frequency 62.96 wpm, mean tabloid 96.08 wpm). This discrepancy is most likely at least partially explained by the much longer article lengths of broadsheets vs tabloids in this corpus, similar to the Australian corpus.
+- Similarly, in the UK corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.01, p(FP) < 0.01) when considering frequencies, with tabloids having a higher frequency of use of nominal adjectival "the obese" vs broadsheets (mean broadsheet frequency 62.96 wpm, mean tabloid 96.08 wpm). This discrepancy is most likely at least partially explained by the much longer article lengths of broadsheets vs tabloids in this corpus, similar to the Australian corpus.
 
-- When comparing use of the adjective lemma OBESE in the Australian vs UK broadsheets, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.05, p(FP) < 0.1) when considering frequencies, with UK broadsheets having a higher frequency of use of the adjective lemma OBESE vs Australian ones (mean frequency Australia - 42.65 wpm, UK - 62.96 wpm). This discrepancy may be explained by the fact that, as discussed above, articles in UK broadsheets are somewhat shorter than in Australian ones.
+- When comparing use of nominal adjectival "the obese" in the Australian vs UK broadsheets, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.05, p(FP) < 0.1) when considering frequencies, with UK broadsheets having a higher frequency of use of nominal adjectival "the obese" vs Australian ones (mean frequency Australia - 42.65 wpm, UK - 62.96 wpm). This discrepancy may be explained by the fact that, as discussed above, articles in UK broadsheets are somewhat shorter than in Australian ones.
 
-- There is a somewhat lower number of total instances of use and articles with at least one instance of use of the adjective lemma OBESE in Australian tabloids, and a higher number in UK tabloids (p(Chi-sq) < 0.05). However, this difference is not supported by frequency analysis (mean Australian 70.46 wpm, mean UK 96.08 wpm), when using both parametric or non-parametric tests.
+- There is a somewhat lower number of total instances of use and articles with at least one instance of use of nominal adjectival "the obese" in Australian tabloids, and a higher number in UK tabloids (p(Chi-sq) < 0.05). However, this difference is not supported by frequency analysis (mean Australian 70.46 wpm, mean UK 96.08 wpm), when using both parametric or non-parametric tests.
 
 ```{r loadLibs, warning=FALSE, message=FALSE}
 library(here)
@@ -123,13 +123,21 @@ metadata |>
   kable()
 ```
 
+
+```{r}
+both_datasets |> 
+  group_by(corpus, source_type) |>
+  summarise(total_hits = sum(no_hits_in_text))
+```
+
+
 ## Proportion and number of articles using any of the language types in the two corpora
 
 Let's find the total number of articles that use one or more language types in the two corpora.
 
 ```{r}
 #| label: fig-l20220930141919
-#| fig-cap: "Venn diagram of overlap between articles that use condition-first, person-first and adjective lemma OBESE in the two corpora."
+#| fig-cap: "Venn diagram of overlap between articles that use condition-first, person-first and nominal adjectival 'the obese' in the two corpora."
 article_id_cond <- get_article_ids(both_datasets, "cond")
 article_id_pers <- get_article_ids(both_datasets, "pers")
 article_id_obes <- get_article_ids(both_datasets, "obes")
@@ -184,7 +192,7 @@ for_stacked_chart_data <- for_stacked_chart |>
  "occurrences of all three targeted language practices",
  "occurrences of two of the three targeted language practices",
  "cond_obes", "pers_obes","cond_pers",
- "occurrences of adjective lemma 'the obese'",
+ "occurrences of nominal adjectival 'the obese'",
  "occurrences of condition-first language"
  ))) 
 
@@ -277,7 +285,7 @@ for_stacked_chart |>
   kable()
 ```
 
-We can also provide a less detailed version of the above summary, where each article could be counted once to each category it belonged to (so, for example, one with all 3 could be counted 3 times: towards condition-first, person-first and OBESE). Let's generate this summary:
+We can also provide a less detailed version of the above summary, where each article could be counted once to each category it belonged to (so, for example, one with all 3 could be counted 3 times: towards condition-first, person-first and "the obese" (nominal adjectival)). Let's generate this summary:
 
 ```{r}
 #| label: tbl-l20220930143443
@@ -314,7 +322,7 @@ And get the percentages table:
 
 ```{r}
 #| label: tbl-l2022093ldldld
-#| tbl-cap: "Percentage of articles (relative to total number of articles in each subcorpus) that feature the language types. Note that each article may be counted multiple times, for example, twice, if it includes use of both condition-first language and the adjective lemma OBESE."
+#| tbl-cap: "Percentage of articles (relative to total number of articles in each subcorpus) that feature the language types. Note that each article may be counted multiple times, for example, twice, if it includes use of both condition-first language and 'the obese' (nominal adjectival)."
 fortable11 |>
 mutate(prop = round(100*article_count/corpus_count, 2)) |>
   select(-article_count, -corpus_count) |>
@@ -868,13 +876,13 @@ As shown above, there is no significant difference in articles lengths between A
 
 ------------------------------------------------------------------------
 
-## Use of the adjective lemma OBESE
+## Use of nominal adjectival "the obese"
 
-Let's generate a frequency table (sum of no hits in text) for use of the adjective lemma OBESE:
+Let's generate a frequency table (sum of no hits in text) for use of nominal adjectival "the obese":
 
 ```{r}
 #| label: tbl-lkdskdkd
-#| tbl-cap: "Number of articles that feature use of the adjective lemma OBESE in UK and Australian tabloids and broadsheets."
+#| tbl-cap: 'Number of articles that feature use of "the obese" (nominal adjectival) in UK and Australian tabloids and broadsheets.'
 obes_4chisq_matrix_sumhits <-
   both_datasets |> 
   filter(dataset == "obes") |>
@@ -893,31 +901,31 @@ obes_4chisq_matrix_sumhits |>
 
 ### Australian corpus
 
-We can assess the difference between these total number of uses of the adjective lemma OBESE language in the Australian corpus, using a Chi-square test:
+We can assess the difference between these total number of uses of nominal adjectival "the obese" language in the Australian corpus, using a Chi-square test:
 
 ```{r}
 #| label: tbl-l20090030165932b
-#| tbl-cap: "Results of Chi-square test between the number of articles that use the adjective lemma OBESE in Australian broadsheets vs tabloids vs the number that would be expected based on total word count of articles from each of those subcorpora."
+#| tbl-cap: 'Results of Chi-square test between the number of articles that use nominal adjectival "the obese" in Australian broadsheets vs tabloids vs the number that would be expected based on total word count of articles from each of those subcorpora.'
 get_chisq_tabloid_broadsheet(obes_4chisq_matrix_sumhits, 
            col_no = 1,
            type = "wc") |>
   kable()
 ```
 
-There is no difference in the total count of use of the adjective lemma OBESE in Australian broadsheets vs tabloids.
+There is no difference in the total count of use of nominal adjectival "the obese" in Australian broadsheets vs tabloids.
 
 ```{r}
 #| label: tbl-l20090030165945b
-#| tbl-cap: "Results of Chi-square test between the number of articles that use the adjective lemma OBESE in Australian broadsheets vs tabloids vs the number that would be expected based on total number of articles from each of those subcorpora."
+#| tbl-cap: 'Results of Chi-square test between the number of articles that use nominal adjectival "the obese" in Australian broadsheets vs tabloids vs the number that would be expected based on total number of articles from each of those subcorpora.'
 get_chisq_tabloid_broadsheet(obes_4chisq_matrix_noarticles, 
            col_no = 1,
            type = "art")|>
   kable()
 ```
 
-There is no difference in the number of articles that use the adjective lemma OBESE in Australian broadsheets vs tabloids.
+There is no difference in the number of articles that use nominal adjectival "the obese" in Australian broadsheets vs tabloids.
 
-If we consider a t-test on the frequency (per million words) of the Australian corpus (including all texts in each sub-corpus, including those without instances), a very small difference is detected (p < 0.05), with tabloids having a higher frequency of use of condition-first language vs broadsheets.
+If we consider a t-test on the frequency (per million words) of the Australian corpus (including all texts in each sub-corpus, including those without instances), a very small difference is detected (p < 0.05), with tabloids having a higher frequency of use of "the obese" (nominal adjectival) vs broadsheets.
 
 ```{r results='asis'}
 ttest_broad_vs_tabl(frequency_table, "AUS", "obes_freq")
@@ -937,22 +945,22 @@ fp_test_broad_vs_tabl(frequency_table,
 
 ### UK corpus
 
-We can assess the difference between these total number of uses of the adjective lemma OBESE in the UK corpus between tabloids and broadsheets. Similar to the Australian corpus, no difference is detected.
+We can assess the difference between these total number of uses of nominal adjectival "the obese" in the UK corpus between tabloids and broadsheets. Similar to the Australian corpus, no difference is detected.
 
 ```{r}
 #| label: tbl-l20090030165932
-#| tbl-cap: "Results of Chi-square test between the number of articles that use the adjective lemma OBESE in UK broadsheets vs tabloids vs the number that would be expected based on total word count of articles from each of those subcorpora."
+#| tbl-cap: 'Results of Chi-square test between the number of articles that use nominal adjectival "the obese" in UK broadsheets vs tabloids vs the number that would be expected based on total word count of articles from each of those subcorpora.'
 get_chisq_tabloid_broadsheet(pers_4chisq_matrix_sumhits, 
            col_no = 2,
            type = "wc") |>
   kable()
 ```
 
-There is also no difference when we consider the number of articles that have at least one instance of condition-first language.
+There is also no difference when we consider the number of articles that have at least one instance of use of "the obese" (nominal adjectival).
 
 ```{r}
 #| label: tbl-l20090030165945
-#| tbl-cap: "Results of Chi-square test between the number of articles that use the adjective lemma OBESE in UK broadsheets vs tabloids vs the number that would be expected based on total number of articles from each of those subcorpora."
+#| tbl-cap: 'Results of Chi-square test between the number of articles that use nominal adjectival "the obese" in UK broadsheets vs tabloids vs the number that would be expected based on total number of articles from each of those subcorpora.'
 get_chisq_tabloid_broadsheet(pers_4chisq_matrix_noarticles, 
            col_no = 2,
            type = "art") |>
@@ -979,22 +987,22 @@ fp_test_broad_vs_tabl(frequency_table,
 
 ### Australian vs UK broadsheets
 
-There is not a strong difference in use of the adjective lemma OBESE between Australian and UK broadsheets.
+There is not a strong difference in use of nominal adjectival "the obese" between Australian and UK broadsheets.
 
 ```{r}
 #| label: tbl-l20100030165932b
-#| tbl-cap: "Results of Chi-square test between the number of articles that use the adjective lemma OBESE in broadsheets in the UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora."
+#| tbl-cap: 'Results of Chi-square test between the number of articles that use nominal adjectival "the obese" in broadsheets in the UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora.'
 get_chisq_aus_uk(obes_4chisq_matrix_sumhits, 
        row_no = 1,
        type = "wc") |>
   kable()
 ```
 
-This lack of a difference also holds true when we consider the number of articles that have at least one instance of the adjective lemma OBESE:
+This lack of a difference also holds true when we consider the number of articles that have at least one instance of "the obese" (nominal adjectival):
 
 ```{r}
 #| label: tbl-l20100030165945b
-#| tbl-cap: "Results of Chi-square test between the number of articles that use the adjective lemma OBESE in broadsheets in the UK and Australia vs the number that would be expected based on total number of articles from each of those subcorpora."
+#| tbl-cap: 'Results of Chi-square test between the number of articles that use nominal adjectival "the obese" in broadsheets in the UK and Australia vs the number that would be expected based on total number of articles from each of those subcorpora.'
 get_chisq_aus_uk(obes_4chisq_matrix_sumhits, 
            row_no = 1,
            type = "art") |>
@@ -1021,22 +1029,22 @@ This discrepancy may be explained by the fact that, as discussed above, articles
 
 ### Australian vs UK tabloids
 
-There is a somewhat lower number of total instances of use of the adjective lemma OBESE in Australian tabloids, and a higher number in UK tabloids (p < 0.05):
+There is a somewhat lower number of total instances of use of "the obese" (nominal adjectival) in Australian tabloids, and a higher number in UK tabloids (p < 0.05):
 
 ```{r}
 #| label: tbl-l20100030165932
-#| tbl-cap: "Results of Chi-square test between the number of articles that use the adjective lemma OBESE in tabloids in the UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora."
+#| tbl-cap: 'Results of Chi-square test between the number of articles that use nominal adjectival "the obese" in tabloids in the UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora.'
 get_chisq_aus_uk(obes_4chisq_matrix_sumhits, 
        row_no = 2,
        type = "wc") |>
   kable()
 ```
 
-This also holds true when we consider the number of articles that have at least one instance of the adjective lemma OBESE:
+This also holds true when we consider the number of articles that have at least one instance of "the obese" (nominal adjectival):
 
 ```{r}
 #| label: tbl-l20100030165945
-#| tbl-cap: "Results of Chi-square test between the number of articles that use the adjective lemma OBESE in tabloids in the UK and Australia vs the number that would be expected based on total number of articles from each of those subcorpora."
+#| tbl-cap: 'Results of Chi-square test between the number of articles that use nominal adjectival "the obese" in tabloids in the UK and Australia vs the number that would be expected based on total number of articles from each of those subcorpora.'
 get_chisq_aus_uk(obes_4chisq_matrix_noarticles, 
            row_no  = 2,
            type = "art") |>
