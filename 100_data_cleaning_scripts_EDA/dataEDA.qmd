@@ -31,12 +31,12 @@ Finally, a different syntax was used to generate the final UK and Australian cor
 
 - Condition-first language: "[word="obese"%c] [fullsemtag=".*S2.*"]" (for Australian corpus: meeting criteria "*obesity_boolean_ukcorpus*: *True*")
 - Person-first language: "[fullsemtag=".*S2.*"] [word="with"] []? [word="obesity"]"
-- Nominal "the obese": the_obese_nominal->Yes (2022-Jul-12 17:55):  query “the obese" returned 870 matches in 713 different texts, manually categorised as &ldquo;1&rdquo; (UK corpus) and the_obese_nominal (1)->Yes (2022-Mar-18 05:03):  query “the obese", in subcorpus "Tara Parallel Corpus",  returned 296 matches in 259 different texts, manually categorised as &ldquo;1&rdquo (Aus corpus)
+- Nominal adjectival "the obese": the_obese_nominal->Yes (2022-Jul-12 17:55):  query “the obese" returned 870 matches in 713 different texts, manually categorised as "1"; (UK corpus) and the_obese_nominal (1)->Yes (2022-Mar-18 05:03):  query “the obese", in subcorpus "Tara Parallel Corpus",  returned 296 matches in 259 different texts, manually categorised as "1" (Aus corpus)
 
 
 - Person-first language: UK vs Australia: i.e. `uk_with_obesity_new.txt` vs `aus_subset_with_obesity_new.txt`.
 
-- "The adjective lemma OBESE": UK vs Australia i.e uk_the obese `text-frequency-data.txt` vs `aoc_subset_the_obese_cat_nominal.txt`
+- "The nominal adjectival 'the obese'": UK vs Australia i.e uk_the obese `text-frequency-data.txt` vs `aoc_subset_the_obese_cat_nominal.txt`
 
 ```{r getData, warning=FALSE, message=FALSE}
 library(here)
@@ -393,11 +393,11 @@ uk_all_of_interest |>
   kable()
 ```
 
-For the adjective lemma OBESE:
+For "the obese" (nominal adjectival):
 
 ```{r}
 #| label: tbl-l20220930183416c
-#| tbl-cap: "Number of articles featuring the adjective lemma OBESE by year and source in the UK corpus."
+#| tbl-cap: "Number of articles featuring 'the obese' (nominal adjectival) by year and source in the UK corpus."
 uk_all_of_interest |>
   filter(dataset == "obes") |>
   group_by(year) |>
