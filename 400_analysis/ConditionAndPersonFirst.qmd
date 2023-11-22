@@ -130,6 +130,8 @@ metadata |>
 We have the following number of articles and total word count from each of the sources:
 
 ```{r}
+#| label: tbl-l20220930adfasdf
+#| tbl-cap: "Total number of articles and words from each source."
 corpus_stats_grouped <-
   metadata |> 
   group_by(source, corpus,source_type) |> 
@@ -141,6 +143,8 @@ corpus_stats_grouped |> kable()
 And the following statistics for the entire datasets:
 
 ```{r}
+#| label: tbl-l20220930adad
+#| tbl-cap: "Total number of articles and words from each source type, grouped by country of origin."
 corpus_stats_grouped |>
   ungroup()|>
   group_by(corpus,source_type) |>
