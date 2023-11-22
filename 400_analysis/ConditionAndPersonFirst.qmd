@@ -1,5 +1,5 @@
 ---
-title: 'Condition and person-first language and use of nominal adjectival "the obese"'
+title: 'Identity and person-first language and use of nominal adjectival "the obese"'
 author: "Darya Vanichkina"
 warning: false
 message: false
@@ -18,10 +18,10 @@ We use the following tests to compare the sub-corpora:
 
 ### Article length differences:
 
-- Articles in Australian broadsheets are longer than in Australian tabloids (mean 841.70 vs 555.04, respectively, p(FP) < 1e-05).
-- Articles in UK broadsheets are longer than in UK tabloids (mean 718.31 vs 561.20, respectively, p(FP) < 1e-04).
-- Articles in Australian broadsheets are longer than in UK broadsheets (mean 841.70 vs 718.31, respectively, p(FP) < 1e-04).
-- There is no difference in length between articles in Australian and UK tabloids (mean 555.04 vs 561.20, respectively).
+- Articles in Australian broadsheets are longer than in Australian tabloids (mean 830.78 vs 558.72, respectively, p(FP) < 1e-05).
+- Articles in UK broadsheets are longer than in UK tabloids (mean 718.72 vs 557.11, respectively, p(FP) < 1e-04).
+- Articles in Australian broadsheets are longer than in UK broadsheets (mean 830.78 vs 718.72, respectively, p(FP) < 1e-04).
+- There is no difference in length between articles in Australian and UK tabloids (mean 558.72 vs 557.11, respectively).
 
 ### Use of person-first language:
 
@@ -29,29 +29,29 @@ We use the following tests to compare the sub-corpora:
 
 - In the UK corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets, when considering contingency table and frequency based analyses similar to the above.
 
-- Australian broadsheets have somewhat higher total number of instances (p(Chi-sq) < 0.005) and number of articles (p < 0.0005) using person-first language than UK broadsheets. This difference is supported when considering the mean frequency of language use (mean Australian broadsheets = 17.81 words per million (wpm), mean UK broadsheets 8.52 wpm) across the corpus with parametric and non-parametric tests (p(FP) < 0.05)).
+- Australian broadsheets have somewhat higher total number of instances (p(Chi-sq) < 0.001) and number of articles (p < 0.0001) using person-first language than UK broadsheets. This difference is supported when considering the mean frequency of language use (mean Australian broadsheets = 22.61 words per million (wpm), mean UK broadsheets 10.68 wpm) across the corpus with parametric and non-parametric tests (p(FP) < 0.05)).
 
 - There is no difference between the number of instances, articles or frequency of between Australian and UK tabloids.
 
-### Use of condition-first language:
+### Use of identity-first language:
 
-- Australian broadsheets have a lower than expected total number of instances (p(Chi-sq) < 0.001) and number of articles (p < 0.1) using condition-first language vs Australian tabloids. If we instead look at the frequency of use, the opposite result is observed, with a higher frequency of condition-first language in tabloids than in broadsheets (mean broadsheets = 847.96 wpm vs 1315.95 wpm in tabloids, p(FP) < 1e-04). This discrepancy may be attributable to the fact that articles in broadsheets are longer than those in tabloids (mean 841.70 words for broadsheets vs 555.04 for tabloids), as described above, so comparing mean frequencies of the same number of instances results in a difference frequency because the word count being divided by for broadsheets is 1.5x than that of tabloids.
+- Australian broadsheets have a lower than expected total number of instances (p(Chi-sq) < 0.001) using identity-first language vs Australian tabloids; however, this is not supported by comparing the number of articles with at least one instance, where no difference is detected. If we instead look at the frequency of use, the opposite result is observed, with a higher frequency of identity-first language in tabloids than in broadsheets (mean broadsheets = 1076.39 wpm vs 1642.61 wpm in tabloids, p(FP) < 1e-04). This discrepancy may be attributable to the fact that articles in broadsheets are longer than those in tabloids (mean 830.78 words for broadsheets vs 558.72 for tabloids), as described above, so comparing mean frequencies of the same number of instances results in a difference frequency because the word count being divided by for broadsheets is 1.5x than that of tabloids.
 
-- In the UK corpus, there is a higher number than expected of instances and articles containing at least one instance of condition-first language used in tabloids, and a lower number in broadsheets (p < 0.0001). A very small difference in frequency is also detected, with a higher mean frequency in tabloids than broadsheets (mean broadsheets 629.40 wpm, mean of tabloids 835.37 wpm, p(FP) < 1e-04).
+- In the UK corpus, there is a higher number than expected of instances and articles containing at least one instance of identity-first language used in tabloids, and a lower number in broadsheets (p < 0.01). A very small difference in frequency is also detected, with a higher mean frequency in tabloids than broadsheets (mean broadsheets 788.81 wpm, mean of tabloids 1009.57 wpm, p(FP) < 1e-04).
 
-- There is a higher number of instances and articles with at least one instance (p(Chi-sq) < 0.001) of condition-first language in Australian vs UK broadsheets. If we consider the frequency, a difference is also detected, with Australian broadsheets having a higher frequency than UK ones (mean Australian 847.96 wpm, mean UK 629.40 wpm, p(FP) < 1e-04).
+- There is a higher number of instances and articles with at least one instance (p(Chi-sq) < 0.001) of identity-first language in Australian vs UK broadsheets. If we consider the frequency, a difference is also detected, with Australian broadsheets having a higher frequency than UK ones (mean Australian 1076.39 wpm, mean UK 788.81 wpm, p(FP) < 1e-04).
 
-- There is a higher number of instances and articles that use condition-first language in Australian tabloids, and a lower number in UK tabloids (p(Chi-sq) < 0.001). The frequency is also higher in Australian tabloids (mean Australian 1315.95 wpm, mean UK 835.37 wpm, p(FP) < 1e-04). This is especially striking given that there is no difference in overall article length between Australian and UK tabloids.
+- There is a higher number of instances and articles that use identity-first language in Australian tabloids, and a lower number in UK tabloids (p(Chi-sq) < 0.001). The frequency is also higher in Australian tabloids (mean Australian 1642.61 wpm, mean UK 1009.57 wpm, p(FP) < 1e-04). This is especially striking given that there is no difference in overall article length between Australian and UK tabloids.
 
 ### Use of "the obese" (nominal adjectival)
 
-- In the Australian corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.05, p(FP) < 0.1) when considering frequencies, with tabloids having a higher frequency of use of condition-first language vs broadsheets (mean broadsheet frequency 42.65 wpm, mean tabloid 70.46 wpm). This discrepancy is most likely at least partially explained by the much longer article lengths of broadsheets vs tabloids in this corpus.
+- In the Australian corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.05, p(FP) < 0.1) when considering frequencies, with tabloids having a higher frequency of use than broadsheets (mean broadsheet frequency 54.14 wpm, mean tabloid 87.95 wpm). This discrepancy is most likely at least partially explained by the much longer article lengths of broadsheets vs tabloids in this corpus.
 
-- Similarly, in the UK corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.01, p(FP) < 0.01) when considering frequencies, with tabloids having a higher frequency of use of nominal adjectival "the obese" vs broadsheets (mean broadsheet frequency 62.96 wpm, mean tabloid 96.08 wpm). This discrepancy is most likely at least partially explained by the much longer article lengths of broadsheets vs tabloids in this corpus, similar to the Australian corpus.
+- Similarly, in the UK corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.01, p(FP) < 0.01) when considering frequencies, with tabloids having a higher frequency of use of nominal adjectival "the obese" vs broadsheets (mean broadsheet frequency 78.9 wpm, mean tabloid 116.11 wpm). This discrepancy is most likely at least partially explained by the much longer article lengths of broadsheets vs tabloids in this corpus, similar to the Australian corpus.
 
-- When comparing use of nominal adjectival "the obese" in the Australian vs UK broadsheets, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.05, p(FP) < 0.1) when considering frequencies, with UK broadsheets having a higher frequency of use of nominal adjectival "the obese" vs Australian ones (mean frequency Australia - 42.65 wpm, UK - 62.96 wpm). This discrepancy may be explained by the fact that, as discussed above, articles in UK broadsheets are somewhat shorter than in Australian ones.
+- When comparing use of nominal adjectival "the obese" in the Australian vs UK broadsheets, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.01) when considering frequencies, with UK broadsheets having a higher frequency of use of nominal adjectival "the obese" vs Australian ones (mean frequency Australia - 54.14 wpm, UK - 78.90 wpm), but this is not supported with the non-parametric test.
 
-- There is a somewhat lower number of total instances of use and articles with at least one instance of use of nominal adjectival "the obese" in Australian tabloids, and a higher number in UK tabloids (p(Chi-sq) < 0.05). However, this difference is not supported by frequency analysis (mean Australian 70.46 wpm, mean UK 96.08 wpm), when using both parametric or non-parametric tests.
+- There is a somewhat lower number of total instances of use (p(Chi-sq) < 0.05) and articles (p(Chi-sq) < 0.1) with at least one instance of use of nominal adjectival "the obese" in Australian tabloids, and a higher number in UK tabloids . However, this difference is not supported by frequency analysis (mean Australian 87.95 wpm, mean UK 116.11 wpm), when using both parametric or non-parametric tests.
 
 ```{r loadLibs, warning=FALSE, message=FALSE}
 library(here)
@@ -68,10 +68,14 @@ theme_set(theme_minimal())
 ```
 
 ```{r loadData, message=FALSE}
-metadata <-read_csv(here::here("200_data_clean/", "full_metadata.csv"))
-both_datasets <-  read_csv(here::here("200_data_clean/", "both_datasets.csv")) |> 
+metadata <-read_csv(here::here("200_data_clean/", "full_metadata.csv")) |> 
   # get data for correct time window
   filter(year >= 2008 & year <=2016)
+both_datasets <-  read_csv(here::here("200_data_clean/", "both_datasets.csv")) |> 
+  # get data for correct time window
+  filter(year >= 2008 & year <=2016) |>
+  # change cond to iden to match what's in final article text
+  mutate(dataset = case_when(dataset == "cond" ~ "iden", TRUE ~ dataset))
 
 source(here::here("400_analysis", "functions.R"))
 
@@ -107,7 +111,7 @@ frequency_table <-
       values_from = freq_per_million_words,
       values_fill = 0)}
   ) |>
-  replace_na(list(cond_freq = 0, 
+  replace_na(list(iden_freq = 0, 
       pers_freq = 0,
       obes_freq = 0))
 ```
@@ -123,19 +127,45 @@ metadata |>
   kable()
 ```
 
+We have the following number of articles and total word count from each of the sources:
+
+```{r}
+corpus_stats_grouped <-
+  metadata |> 
+  group_by(source, corpus,source_type) |> 
+  summarise(total_articles = n(), total_words = sum(no_words_in_text)) |>
+  arrange(corpus, source)
+corpus_stats_grouped |> kable()
+```
+
+And the following statistics for the entire datasets:
+
+```{r}
+corpus_stats_grouped |>
+  ungroup()|>
+  group_by(corpus,source_type) |>
+  summarise(all_words_corpus = sum(total_words),
+         all_articles = sum(total_articles)) |>
+  rename(`Total words in subcorpus` = all_words_corpus, 
+         `Total articles in subcorpus`= all_articles)
+
+```
+
+
+
 ## Proportion and number of articles using any of the language types in the two corpora
 
 Let's find the total number of articles that use one or more language types in the two corpora.
 
 ```{r}
 #| label: fig-l20220930141919
-#| fig-cap: "Venn diagram of overlap between articles that use condition-first, person-first and nominal adjectival 'the obese' in the two corpora."
-article_id_cond <- get_article_ids(both_datasets, "cond")
+#| fig-cap: "Venn diagram of overlap between articles that use identity-first, person-first and nominal adjectival 'the obese' in the two corpora."
+article_id_iden <- get_article_ids(both_datasets, "iden")
 article_id_pers <- get_article_ids(both_datasets, "pers")
 article_id_obes <- get_article_ids(both_datasets, "obes")
 
 ggvenn(list(
-  `Condition first` = article_id_cond,
+  `Identity first` = article_id_iden,
   `Person first` = article_id_pers,
   `Obese` = article_id_obes),
   fill_color = c("white", "white", "white")) +
@@ -145,13 +175,13 @@ for_stacked_chart <-
   metadata |>
   select(article_id, corpus, source_type) |>
   mutate(grp = case_when(
-  article_id %in% base::intersect(base::intersect(article_id_cond, article_id_pers), article_id_obes) ~ "all3",
+  article_id %in% base::intersect(base::intersect(article_id_iden, article_id_pers), article_id_obes) ~ "all3",
   # two
-  article_id %in% base::intersect(article_id_cond, article_id_pers) ~ "cond_pers",
-  article_id %in% base::intersect(article_id_obes, article_id_cond) ~ "cond_obes",
+  article_id %in% base::intersect(article_id_iden, article_id_pers) ~ "iden_pers",
+  article_id %in% base::intersect(article_id_obes, article_id_iden) ~ "iden_obes",
   article_id %in% base::intersect(article_id_obes, article_id_pers) ~ "pers_obes",
   # one
-  article_id %in% article_id_cond ~ "cond",
+  article_id %in% article_id_iden ~ "iden",
   article_id %in% article_id_pers ~ "pers",
   article_id %in% article_id_obes ~ "obes",
   # none
@@ -171,21 +201,21 @@ ggsave(device = "png",
 #| label: fig-l20220930141902
 for_stacked_chart_data <- for_stacked_chart |> 
   mutate(group = case_when(
-  grp == "cond_obes" ~ "two",
+  grp == "iden_obes" ~ "two",
   grp == "pers_obes" ~ "two",
-  grp == "cond_pers" ~ "two",
+  grp == "iden_pers" ~ "two",
   TRUE ~ grp
   ))  |>
   mutate(group = factor(group, 
- levels = c("none", "pers", "all3", "two", "cond_obes", "pers_obes","cond_pers", "obes",  "cond"),
+ levels = c("none", "pers", "all3", "two", "iden_obes", "pers_obes","iden_pers", "obes",  "iden"),
  labels = c(
  "no occurrences of any of the three targeted language practices",
  "occurrences of person-first language",
  "occurrences of all three targeted language practices",
  "occurrences of two of the three targeted language practices",
- "cond_obes", "pers_obes","cond_pers",
+ "iden_obes", "pers_obes","iden_pers",
  "occurrences of nominal adjectival 'the obese'",
- "occurrences of condition-first language"
+ "occurrences of identity-first language"
  ))) 
 
 for_stacked_chart_data |>
@@ -196,7 +226,7 @@ for_stacked_chart_data |>
  # "All3",
  # "2of3",
  # "Obese",
- # "Condition-first"
+ # "identity-first"
  # ))) |>
   group_by(group, source_type, corpus) |>
   summarise(n_articles = n()) |>
@@ -234,7 +264,7 @@ ggsave(device = "png",
    width = 10,
    height = 4)
 
-mfig + coord_cartesian(ylim = c(0, 0.3)) 
+mfig + coord_cartesian(ylim = c(0, 0.4)) 
 ggsave(device = "png",
    here::here("400_analysis","b_w_proportion.png"),
    bg = "white",
@@ -248,7 +278,7 @@ ggsave(device = "png",
    width = 12,
    height = 4)
 
-mfig + theme(legend.position = "bottom") + coord_cartesian(ylim = c(0, 0.3)) 
+mfig + theme(legend.position = "bottom") + coord_cartesian(ylim = c(0, 0.4)) 
 ggsave(device = "png",
    here::here("400_analysis","b_w_proportion_legendbottom.png"),
    bg = "white",
@@ -277,7 +307,7 @@ for_stacked_chart |>
   kable()
 ```
 
-We can also provide a less detailed version of the above summary, where each article could be counted once to each category it belonged to (so, for example, one with all 3 could be counted 3 times: towards condition-first, person-first and "the obese" (nominal adjectival)). Let's generate this summary:
+We can also provide a less detailed version of the above summary, where each article could be counted once to each category it belonged to (so, for example, one with all 3 could be counted 3 times: towards identity-first, person-first and "the obese" (nominal adjectival)). Let's generate this summary:
 
 ```{r}
 #| label: tbl-l20220930143443
@@ -297,7 +327,7 @@ fortable11 <-
   mutate(subset = paste(corpus, source_type, sep = "_")) |>
   ungroup() |>
   select(-corpus, -source_type) |>
-  mutate(dataset = factor(dataset, levels = c("pers", "cond", "obes")),
+  mutate(dataset = factor(dataset, levels = c("pers", "iden", "obes")),
    subset = factor(subset, levels = c("AUS_tabloid",
                 "UK_tabloid",
                 "AUS_broadsheet",
@@ -314,13 +344,33 @@ And get the percentages table:
 
 ```{r}
 #| label: tbl-l2022093ldldld
-#| tbl-cap: "Percentage of articles (relative to total number of articles in each subcorpus) that feature the language types. Note that each article may be counted multiple times, for example, twice, if it includes use of both condition-first language and 'the obese' (nominal adjectival)."
+#| tbl-cap: "Percentage of articles (relative to total number of articles in each subcorpus) that feature the language types. Note that each article may be counted multiple times, for example, twice, if it includes use of both identity-first language and 'the obese' (nominal adjectival)."
 fortable11 |>
 mutate(prop = round(100*article_count/corpus_count, 2)) |>
   select(-article_count, -corpus_count) |>
   pivot_wider(values_from = prop, names_from = subset) |>
   kable()
 
+```
+
+Finally, we can summarise the total number of instances of language use in the entire corpus (if an article has 5 instances of identity-first language, 2 of person-first and 3 of the nominal adjectival "the obese" it will contribute 5, 2 and 3 to the sum of the values of the "iden", "pers" and "obes" in the table below, vs 1 each in the table above).
+
+```{r}
+#| label: tbl-l20220930143443dfasdfa
+#| tbl-cap: "Sum of instances of language use."
+
+both_datasets |> 
+  select(corpus, source_type, dataset, no_hits_in_text) |> 
+  group_by(dataset, corpus, source_type) |> 
+  summarise(total_instances = sum(no_hits_in_text)) |>
+  mutate(title_row = paste(corpus, source_type, sep = "_")) |>
+  ungroup() |>
+  select(-corpus, -source_type) |>
+  pivot_wider(names_from = title_row, values_from = total_instances) |>
+  mutate(dataset = factor(dataset, levels = c("pers", "iden", "obes")))|>
+  arrange(dataset)|>
+  kable()
+  
 ```
 
 ## Article length differences in Australian and UK broadsheets and tabloids
@@ -415,7 +465,7 @@ report::report(t.test(au_broadsheet_wordcounts,
         uk_broadsheet_wordcounts))
 ```
 
-Yes, there appears to be a small difference in text length between Australian and UK broadsheets, with articles in UK broadsheets being somewhat shorter.
+Yes, there appears to be a very small difference in text length between Australian and UK broadsheets, with articles in UK broadsheets being somewhat shorter.
 
 Does the non-parametric FP test support this as well?
 
@@ -683,88 +733,88 @@ In summary, we do not observe a difference in the use of person-first language i
 
 ------------------------------------------------------------------------
 
-## Condition-first language
+## identity-first language
 
-Let's generate a frequency table (sum of no hits in text) for condition-first language:
+Let's generate a frequency table (sum of no hits in text) for identity-first language:
 
 ```{r}
 #| label: tbl-l20220930165339hfhhfhf
-#| tbl-cap: "Number of articles that feature condition-first language in UK and Australian tabloids and broadsheets."
-cond_4chisq_matrix_sumhits <-
+#| tbl-cap: "Number of articles that feature identity-first language in UK and Australian tabloids and broadsheets."
+iden_4chisq_matrix_sumhits <-
   both_datasets |> 
-  filter(dataset == "cond") |>
+  filter(dataset == "iden") |>
   generate_conting_tab_sumhits() |>
   as.matrix()
 
-cond_4chisq_matrix_noarticles <-
+iden_4chisq_matrix_noarticles <-
   both_datasets |> 
-  filter(dataset == "cond") |>
+  filter(dataset == "iden") |>
   generate_conting_tab_noarticles() |>
   as.matrix()
 
-cond_4chisq_matrix_sumhits |>
+iden_4chisq_matrix_sumhits |>
   kable()
 ```
 
 ### Australian corpus
 
-We can assess the difference between these total number of uses of condition-first language in the Australian corpus, using a Chi-square test:
+We can assess the difference between these total number of uses of identity-first language in the Australian corpus, using a Chi-square test:
 
 ```{r}
 #| label: tbl-l20210930165502
-#| tbl-cap: "Results of Chi-square test between the number of articles that use condition-first language in the Australian corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus."
-get_chisq_tabloid_broadsheet(cond_4chisq_matrix_sumhits, 
+#| tbl-cap: "Results of Chi-square test between the number of articles that use identity-first language in the Australian corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus."
+get_chisq_tabloid_broadsheet(iden_4chisq_matrix_sumhits, 
            col_no = 1,
            type = "wc") |>
   kable()
 ```
 
-There is a higher number of instances of condition-first language used in tabloids, and a lower number of instances in broadsheets in the Australian corpus.
+There is a higher number of instances of identity-first language used in tabloids, and a lower number of instances in broadsheets in the Australian corpus.
 
 ```{r}
 #| label: tbl-l202109301655022
-#| tbl-cap: "Results of Chi-square test between the number of articles that use condition-first language in the Australian corpus vs the number that would be expected based on the total number of articles from tabloids and broadsheets in that subcorpus."
-get_chisq_tabloid_broadsheet(cond_4chisq_matrix_noarticles, 
+#| tbl-cap: "Results of Chi-square test between the number of articles that use identity-first language in the Australian corpus vs the number that would be expected based on the total number of articles from tabloids and broadsheets in that subcorpus."
+get_chisq_tabloid_broadsheet(iden_4chisq_matrix_noarticles, 
            col_no = 1,
            type = "art")|>
   kable()
 ```
 
-This also somewhat holds true, although is not highly significant, when we consider the number of articles that have at least one instance of condition-first language.
+No difference is observed, however, when we contrast the number of articles that have at least one instance of identity-first language.
 
-If we consider a t-test on the frequency (per million words) of the Australian corpus (including all texts in each sub-corpus, including those without instances), a very small difference is detected, with tabloids having a higher frequency of use of condition-first language vs broadsheets.
+If we consider a t-test on the frequency (per million words) of the Australian corpus (including all texts in each sub-corpus, including those without instances), a very small difference is detected, with tabloids having a higher frequency of use of identity-first language vs broadsheets.
 
 ```{r results='asis'}
-ttest_broad_vs_tabl(frequency_table, "AUS", "cond_freq")
+ttest_broad_vs_tabl(frequency_table, "AUS", "iden_freq")
 ```
 
 ```{r}
 fp_test_broad_vs_tabl(frequency_table,
         corpus_label = "AUS",
-        dataset = "cond", 
-        formula(cond_freq ~ source_type), 
+        dataset = "iden", 
+        formula(iden_freq ~ source_type), 
         dist = mydistribution)
 ```
 
 ### UK corpus
 
-We can assess the difference between these total number of uses of condition-first language in the UK corpus, using a Chi-square test. There is a higher number of instances of condition-first language used in tabloids, and a lower number of instances in broadsheets, in the UK corpus:
+We can assess the difference between these total number of uses of identity-first language in the UK corpus, using a Chi-square test. There is a higher number of instances of identity-first language used in tabloids, and a lower number of instances in broadsheets, in the UK corpus:
 
 ```{r _uk}
 #| label: tbl-l202109301652211
-#| tbl-cap: "Results of Chi-square test between the number of articles that use condition-first language in the UK corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus."
-get_chisq_tabloid_broadsheet(cond_4chisq_matrix_sumhits, 
+#| tbl-cap: "Results of Chi-square test between the number of articles that use identity-first language in the UK corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus."
+get_chisq_tabloid_broadsheet(iden_4chisq_matrix_sumhits, 
            col_no = 2,
            type = "wc") |>
   kable()
 ```
 
-This also holds true when we consider the number of articles that have at least one instance of condition-first language.
+This also holds true when we consider the number of articles that have at least one instance of identity-first language.
 
 ```{r}
 #| label: tbl-l20210930139393939
-#| tbl-cap: "Results of Chi-square test between the number of articles that use condition-first language in the UK corpus vs the number that would be expected based on the total number of articles from tabloids and broadsheets in that subcorpus."
-get_chisq_tabloid_broadsheet(cond_4chisq_matrix_noarticles, 
+#| tbl-cap: "Results of Chi-square test between the number of articles that use identity-first language in the UK corpus vs the number that would be expected based on the total number of articles from tabloids and broadsheets in that subcorpus."
+get_chisq_tabloid_broadsheet(iden_4chisq_matrix_noarticles, 
            col_no = 2,
            type = "art") |>
   kable()
@@ -773,7 +823,7 @@ get_chisq_tabloid_broadsheet(cond_4chisq_matrix_noarticles,
 If we consider a t-test on the frequency (per million words) of the UK corpus (including all texts in each sub-corpus, including those without instances), a very small difference is detected, with a higher mean frequency in tabloids than broadsheets.
 
 ```{r results='asis'}
-ttest_broad_vs_tabl(frequency_table, "UK", "cond_freq")
+ttest_broad_vs_tabl(frequency_table, "UK", "iden_freq")
 ```
 
 This is also supported by the FP test:
@@ -781,28 +831,28 @@ This is also supported by the FP test:
 ```{r}
 fp_test_broad_vs_tabl(frequency_table,
         corpus_label = "UK",
-        dataset = "cond")
+        dataset = "iden")
 ```
 
 ### Australian vs UK broadsheets
 
-There is a higher number of uses of condition-first language in Australian broadsheets, and a lower number in UK broadsheets:
+There is a higher number of uses of identity-first language in Australian broadsheets, and a lower number in UK broadsheets:
 
 ```{r}
 #| label: tbl-l20210930165932b
-#| tbl-cap: "Results of Chi-square test between the number of articles that use condition-first language in broadsheets in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora."
-get_chisq_aus_uk(cond_4chisq_matrix_sumhits, 
+#| tbl-cap: "Results of Chi-square test between the number of articles that use identity-first language in broadsheets in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora."
+get_chisq_aus_uk(iden_4chisq_matrix_sumhits, 
        row_no = 1,
        type = "wc") |>
   kable()
 ```
 
-This also holds true when we consider the number of articles that have at least one instance of condition-first language:
+This also holds true when we consider the number of articles that have at least one instance of identity-first language:
 
 ```{r}
 #| label: tbl-l20210930165945b
-#| tbl-cap: "Results of Chi-square test between the number of articles that use condition-first language in broadsheets in UK and Australia vs the number that would be expected based on total number of articles from each of those subcorpora."
-get_chisq_aus_uk(cond_4chisq_matrix_noarticles, 
+#| tbl-cap: "Results of Chi-square test between the number of articles that use identity-first language in broadsheets in UK and Australia vs the number that would be expected based on total number of articles from each of those subcorpora."
+get_chisq_aus_uk(iden_4chisq_matrix_noarticles, 
            row_no = 1,
            type = "art") |>
   kable()
@@ -811,7 +861,7 @@ get_chisq_aus_uk(cond_4chisq_matrix_noarticles,
 If we consider the frequency (per million words) of the Australian vs UK broadsheets (including all texts in each sub-corpus, including those without instances), a very small difference is detected, with Australian broadsheets having a higher frequency than UK ones:
 
 ```{r results='asis'}
-ttest_aus_vs_uk(frequency_table, "broadsheet", "cond_freq")
+ttest_aus_vs_uk(frequency_table, "broadsheet", "iden_freq")
 ```
 
 This is also supported by the FP test:
@@ -819,39 +869,39 @@ This is also supported by the FP test:
 ```{r}
 fp_test_aus_vs_uk(freq_table = frequency_table, 
   source_label = "broadsheet",
-  dataset = "cond",
-  myformula = formula(cond_freq ~ corpus),
+  dataset = "iden",
+  myformula = formula(iden_freq ~ corpus),
   dist = mydistribution)
 ```
 
 ### Australian vs UK tabloids
 
-There is a higher number of uses of condition-first language in Australian tabloids, and a lower number in UK tabloids:
+There is a higher number of uses of identity-first language in Australian tabloids, and a lower number in UK tabloids:
 
 ```{r}
 #| label: tbl-l20210930165932
-#| tbl-cap: "Results of Chi-square test between the number of articles that use condition-first language in tabloids in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora."
-get_chisq_aus_uk(cond_4chisq_matrix_sumhits, 
+#| tbl-cap: "Results of Chi-square test between the number of articles that use identity-first language in tabloids in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora."
+get_chisq_aus_uk(iden_4chisq_matrix_sumhits, 
        row_no = 2,
        type = "wc") |>
   kable()
 ```
 
-This also holds true when we consider the number of articles that have at least one instance of condition-first language:
+This also holds true when we consider the number of articles that have at least one instance of identity-first language:
 
 ```{r}
 #| label: tbl-l20210930165945
-#| tbl-cap: "Results of Chi-square test between the number of articles that use condition-first language in tabloids in UK and Australia vs the number that would be expected based on total number of articles from each of those subcorpora."
-get_chisq_aus_uk(cond_4chisq_matrix_noarticles, 
+#| tbl-cap: "Results of Chi-square test between the number of articles that use identity-first language in tabloids in UK and Australia vs the number that would be expected based on total number of articles from each of those subcorpora."
+get_chisq_aus_uk(iden_4chisq_matrix_noarticles, 
            row_no  = 2,
            type = "art") |>
   kable()
 ```
 
-If we consider the frequency (per million words) in the Australian vs UK tabloids (including all texts in each sub-corpus, including those without instances), the frequency of use of condition-first language is higher in Australian tabloids, and lower in UK ones.
+If we consider the frequency (per million words) in the Australian vs UK tabloids (including all texts in each sub-corpus, including those without instances), the frequency of use of identity-first language is higher in Australian tabloids, and lower in UK ones.
 
 ```{r results='asis'}
-ttest_aus_vs_uk(frequency_table, "tabloid", "cond_freq")
+ttest_aus_vs_uk(frequency_table, "tabloid", "iden_freq")
 ```
 
 This is also supported by the FP test:
@@ -859,8 +909,8 @@ This is also supported by the FP test:
 ```{r}
 fp_test_aus_vs_uk(freq_table = frequency_table, 
   source_label = "tabloid",
-  dataset = "cond",
-  myformula = formula(cond_freq ~ corpus),
+  dataset = "iden",
+  myformula = formula(iden_freq ~ corpus),
   dist = mydistribution)
 ```
 
@@ -979,7 +1029,7 @@ fp_test_broad_vs_tabl(frequency_table,
 
 ### Australian vs UK broadsheets
 
-There is not a strong difference in use of nominal adjectival "the obese" between Australian and UK broadsheets.
+No difference is observed in the use of nominal adjectival "the obese" between Australian and UK broadsheets.
 
 ```{r}
 #| label: tbl-l20100030165932b
@@ -1007,7 +1057,7 @@ If we consider the frequency (per million words) of the Australian vs UK broadsh
 ttest_aus_vs_uk(frequency_table, "broadsheet", "obes_freq")
 ```
 
-This is also supported by the FP test:
+The FP test does not detect this difference:
 
 ```{r}
 fp_test_aus_vs_uk(freq_table = frequency_table, 
@@ -1025,14 +1075,14 @@ There is a somewhat lower number of total instances of use of "the obese" (nomin
 
 ```{r}
 #| label: tbl-l20100030165932
-#| tbl-cap: 'Results of Chi-square test between the number of articles that use nominal adjectival "the obese" in tabloids in the UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora.'
+#| tbl-cap: 'Results of Chi-square test between the number of instances of the nominal adjectival "the obese" in tabloids in the UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora.'
 get_chisq_aus_uk(obes_4chisq_matrix_sumhits, 
        row_no = 2,
        type = "wc") |>
   kable()
 ```
 
-This also holds true when we consider the number of articles that have at least one instance of "the obese" (nominal adjectival):
+This is somewhat supported (p < 0.1) when we consider the number of articles that have at least one instance of "the obese" (nominal adjectival):
 
 ```{r}
 #| label: tbl-l20100030165945

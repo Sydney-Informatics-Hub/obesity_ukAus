@@ -149,8 +149,8 @@ mydistribution <- approximate(nresample = 10000,
 wmw_test_broad_vs_tabl <- function(
     freq_table = frequency_table,
     corpus_label = "AUS",
-    dataset = "cond",
-    myformula = formula(cond_freq ~ source_type),
+    dataset = "iden",
+    myformula = formula(iden_freq ~ source_type),
     dist = mydistribution) {
   df <- freq_table |>
     filter(corpus == corpus_label) |>
@@ -165,8 +165,8 @@ wmw_test_broad_vs_tabl <- function(
 wmw_test_aus_vs_uk <- function(
     freq_table = frequency_table,
     source_label = "broadsheet",
-    dataset = "cond",
-    myformula = formula(cond_freq ~ corpus),
+    dataset = "iden",
+    myformula = formula(iden_freq ~ corpus),
     dist = mydistribution) {
   df <- freq_table |>
     filter(source_type == source_label) |>
@@ -181,8 +181,8 @@ wmw_test_aus_vs_uk <- function(
 fp_test_broad_vs_tabl <- function(
     freq_table = frequency_table,
     corpus_label = "AUS",
-    dataset = "cond",
-    myformula = formula(cond_freq ~ source_type),
+    dataset = "iden",
+    myformula = formula(iden_freq ~ source_type),
     dist = mydistribution) {
   df <- freq_table |>
     filter(corpus == corpus_label) |>
@@ -197,8 +197,8 @@ fp_test_broad_vs_tabl <- function(
 fp_test_aus_vs_uk <- function(
     freq_table = frequency_table,
     source_label = "broadsheet",
-    dataset = "cond",
-    myformula = formula(cond_freq ~ corpus),
+    dataset = "iden",
+    myformula = formula(iden_freq ~ corpus),
     dist = mydistribution) {
   df <- freq_table |>
     filter(source_type == source_label) |>

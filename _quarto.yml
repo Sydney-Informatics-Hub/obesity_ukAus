@@ -16,9 +16,7 @@ website:
       - href: index.qmd
         text: Home
       - text: Analysis
-        menu:
-          - text: "Analysis"
-            href: 400_analysis/ConditionAndPersonFirst.qmd
+        href: 400_analysis/ConditionAndPersonFirst.qmd
     right:
       - about.qmd
   repo-url: https://github.com/Sydney-Informatics-Hub/
