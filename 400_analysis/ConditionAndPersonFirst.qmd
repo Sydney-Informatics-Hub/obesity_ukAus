@@ -147,7 +147,8 @@ corpus_stats_grouped |>
   summarise(all_words_corpus = sum(total_words),
          all_articles = sum(total_articles)) |>
   rename(`Total words in subcorpus` = all_words_corpus, 
-         `Total articles in subcorpus`= all_articles)
+         `Total articles in subcorpus`= all_articles) |>
+  kable()
 
 ```
 
