@@ -12,9 +12,9 @@ fig-cap-location: top
 
 We use the following tests to compare the sub-corpora:
 
-- Chi-square goodness-of-fit tests, considerin:
+- Chi-square goodness-of-fit tests, considering:
     - The total sub-corpus word count as the probability of observing a specific feature, when considering the sum of instances.
-    - The total number of articles in the subcorpus, when considering number of articles that feature at least one instance.
+    - The total number of articles in the sub-corpus, when considering number of articles that feature at least one instance.
 - Parametric t-tests comparing the mean frequencies, with texts without the feature considered to have a value of 0.
 - The non-parametric Fisher-Pitman Permutation Test test with 10000 re-samples, comparing the mean frequencies, with texts without the feature considered to have a value of 0.
 
