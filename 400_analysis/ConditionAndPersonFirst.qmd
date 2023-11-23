@@ -3,7 +3,7 @@ title: 'Identity and person-first language and use of nominal adjectival "the ob
 author: "Darya Vanichkina"
 warning: false
 message: false
-fig-cap-location: bottom
+fig-cap-location: top
 ---
 
 ## Executive summary
@@ -12,7 +12,9 @@ fig-cap-location: bottom
 
 We use the following tests to compare the sub-corpora:
 
-- Chi-square goodness-of-fit tests, considering the total sub-corpus word count as the probability of observing a specific feature.
+- Chi-square goodness-of-fit tests, considerin:
+    - The total sub-corpus word count as the probability of observing a specific feature, when considering the sum of instances.
+    - The total number of articles in the subcorpus, when considering number of articles that feature at least one instance.
 - Parametric t-tests comparing the mean frequencies, with texts without the feature considered to have a value of 0.
 - The non-parametric Fisher-Pitman Permutation Test test with 10000 re-samples, comparing the mean frequencies, with texts without the feature considered to have a value of 0.
 
@@ -25,11 +27,11 @@ We use the following tests to compare the sub-corpora:
 
 ### Use of person-first language:
 
-- Australian broadsheets have somewhat higher total number of instances (p(Chi-sq) < 0.05) and number of articles (p < 0.001) using person-first language than Australian tabloids, however, this difference is not supported when considering the mean frequency of language use across the corpus with parametric or non-parametric tests.
+- Australian broadsheets have somewhat higher total number of instances (p(Chi-sq) < 0.05) and number of articles (p < 0.001) using person-first language than tabloids, however, this difference is not supported when considering the mean frequency of language use across the corpus with parametric or non-parametric tests.
 
-- In the UK corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets, when considering contingency table and frequency based analyses similar to the above.
+- In the UK corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table and frequency based analyses similar to the above.
 
-- Australian broadsheets have somewhat higher total number of instances (p(Chi-sq) < 0.001) and number of articles (p < 0.0001) using person-first language than UK broadsheets. This difference is supported when considering the mean frequency of language use (mean Australian broadsheets = 22.61 words per million (wpm), mean UK broadsheets 10.68 wpm) across the corpus with parametric and non-parametric tests (p(FP) < 0.05)).
+- Australian broadsheets have somewhat higher total number of instances (p(Chi-sq) < 0.001) and number of articles (p < 0.001) using person-first language than UK broadsheets. This difference is supported when considering the mean frequency of language use (mean Australian broadsheets = 22.61 words per million (wpm), mean UK broadsheets 10.68 wpm) across the corpus with parametric and non-parametric tests (p(FP) < 0.05)).
 
 - There is no difference between the number of instances, articles or frequency of between Australian and UK tabloids.
 
@@ -37,7 +39,7 @@ We use the following tests to compare the sub-corpora:
 
 - Australian broadsheets have a lower than expected total number of instances (p(Chi-sq) < 0.001) using identity-first language vs Australian tabloids; however, this is not supported by comparing the number of articles with at least one instance, where no difference is detected. If we instead look at the frequency of use, the opposite result is observed, with a higher frequency of identity-first language in tabloids than in broadsheets (mean broadsheets = 1076.39 wpm vs 1642.61 wpm in tabloids, p(FP) < 1e-04). This discrepancy may be attributable to the fact that articles in broadsheets are longer than those in tabloids (mean 830.78 words for broadsheets vs 558.72 for tabloids), as described above, so comparing mean frequencies of the same number of instances results in a difference frequency because the word count being divided by for broadsheets is 1.5x than that of tabloids.
 
-- In the UK corpus, there is a higher number than expected of instances and articles containing at least one instance of identity-first language used in tabloids, and a lower number in broadsheets (p < 0.01). A very small difference in frequency is also detected, with a higher mean frequency in tabloids than broadsheets (mean broadsheets 788.81 wpm, mean of tabloids 1009.57 wpm, p(FP) < 1e-04).
+- In the UK corpus, there is a higher number than expected of instances and articles containing at least one instance of identity-first language used in tabloids, and a lower number in broadsheets (p < 0.01). A very small difference in frequency is also detected, with a higher mean frequency in tabloids than broadsheets (mean broadsheets 788.81 wpm, mean of tabloids 1009.57 wpm, p(FP) < 1e-04). 
 
 - There is a higher number of instances and articles with at least one instance (p(Chi-sq) < 0.001) of identity-first language in Australian vs UK broadsheets. If we consider the frequency, a difference is also detected, with Australian broadsheets having a higher frequency than UK ones (mean Australian 1076.39 wpm, mean UK 788.81 wpm, p(FP) < 1e-04).
 
@@ -45,13 +47,13 @@ We use the following tests to compare the sub-corpora:
 
 ### Use of "the obese" (nominal adjectival)
 
-- In the Australian corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.05, p(FP) < 0.1) when considering frequencies, with tabloids having a higher frequency of use than broadsheets (mean broadsheet frequency 54.14 wpm, mean tabloid 87.95 wpm). This discrepancy is most likely at least partially explained by the much longer article lengths of broadsheets vs tabloids in this corpus.
+- In the Australian corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. Frequency-based analysis does not suggest a strong difference either.
 
-- Similarly, in the UK corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.01, p(FP) < 0.01) when considering frequencies, with tabloids having a higher frequency of use of nominal adjectival "the obese" vs broadsheets (mean broadsheet frequency 78.9 wpm, mean tabloid 116.11 wpm). This discrepancy is most likely at least partially explained by the much longer article lengths of broadsheets vs tabloids in this corpus, similar to the Australian corpus.
+- Similarly, in the UK corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.01, p(FP) < 0.01) when considering frequencies, with tabloids having a higher frequency of use of nominal adjectival "the obese" vs broadsheets (mean broadsheet frequency 78.9 wpm, mean tabloid 116.11 wpm).
 
-- When comparing use of nominal adjectival "the obese" in the Australian vs UK broadsheets, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.01) when considering frequencies, with UK broadsheets having a higher frequency of use of nominal adjectival "the obese" vs Australian ones (mean frequency Australia - 54.14 wpm, UK - 78.90 wpm), but this is not supported with the non-parametric test.
+- When comparing use of nominal adjectival "the obese" in the Australian vs UK broadsheets, no differences in the number of instances or articles are observed when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.05) when considering frequencies, with UK broadsheets having a higher frequency of use of nominal adjectival "the obese" vs Australian ones (mean frequency Australia - 54.14 wpm, UK - 78.90 wpm), but this is not supported with the non-parametric test.
 
-- There is a somewhat lower number of total instances of use (p(Chi-sq) < 0.05) and articles (p(Chi-sq) < 0.1) with at least one instance of use of nominal adjectival "the obese" in Australian tabloids, and a higher number in UK tabloids . However, this difference is not supported by frequency analysis (mean Australian 87.95 wpm, mean UK 116.11 wpm), when using both parametric or non-parametric tests.
+- There is a somewhat lower number of total instances of use (p(Chi-sq) < 0.05) and articles (p(Chi-sq) < 0.1) with at least one instance of use of nominal adjectival "the obese" in Australian tabloids, and a higher number in UK tabloids . However, this difference is not supported by frequency analysis (mean Australian 87.95 wpm, mean UK 116.11 wpm), when using both parametric and non-parametric tests.
 
 ```{r loadLibs, warning=FALSE, message=FALSE}
 library(here)
@@ -214,13 +216,13 @@ for_stacked_chart_data <- for_stacked_chart |>
   mutate(group = factor(group, 
  levels = c("none", "pers", "all3", "two", "iden_obes", "pers_obes","iden_pers", "obes",  "iden"),
  labels = c(
- "no occurrences of any of the three targeted language practices",
- "occurrences of person-first language",
- "occurrences of all three targeted language practices",
- "occurrences of two of the three targeted language practices",
+ "no occurrences",
+ "person-first language",
+ "all three practices",
+ "two language practices",
  "iden_obes", "pers_obes","iden_pers",
- "occurrences of nominal adjectival 'the obese'",
- "occurrences of identity-first language"
+ "nominal adjectival 'the obese'",
+ "identity-first language"
  ))) 
 
 for_stacked_chart_data |>
@@ -432,9 +434,7 @@ report::report(t.test(
   uk_tabloid_wordcounts))
 ```
 
-Yes, articles in broadsheets are indeed longer, although the effect size is not as large (small vs medium for the Australian corpus). 
-
-Does the non-parametric FP test support this as well?
+Yes, articles in broadsheets are indeed longer, similar to the Australian corpus. Does the non-parametric FP test support this as well?
 
 ```{r}
 fp_test_wc(wc1 = uk_broadsheet_wordcounts,
@@ -559,7 +559,7 @@ Is there a difference in the frequency of use of person-first language in tabloi
 
 ```{r}
 #| label: tbl-l20220930165502
-#| tbl-cap: "Results of Chi-square test between the number of articles that use person-first language in the Australian corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus."
+#| tbl-cap: "Results of Chi-square test between the number of instances of person-first language in the Australian corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus."
 get_chisq_tabloid_broadsheet(pers_4chisq_matrix_sumhits, 
            col_no = 1, 
            type = "wc") |>
@@ -601,7 +601,7 @@ What about the total number of instances of person-first language in the UK corp
 
 ```{r}
 #| label: tbl-l202209301652211
-#| tbl-cap: "Results of Chi-square test between the number of articles that use person-first language in the UK corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus."
+#| tbl-cap: "Results of Chi-square test between the number of instances of person-first language in the UK corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus."
 get_chisq_tabloid_broadsheet(pers_4chisq_matrix_sumhits, 
            col_no = 2,
            type = "wc") |>
@@ -645,7 +645,7 @@ Is there a difference in the frequency of use of person-first language in broads
 
 ```{r}
 #| label: tbl-l20220930165932b
-#| tbl-cap: "Results of Chi-square test between the number of articles that use person-first language in broadsheets in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora."
+#| tbl-cap: "Results of Chi-square test between the number of instances of person-first language in broadsheets in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora."
 # broadsheets
 get_chisq_aus_uk(pers_4chisq_matrix_sumhits, 
        row_no = 1,
@@ -696,7 +696,7 @@ Is there a difference in the frequency of use of person-first language in tabloi
 
 ```{r}
 #| label: tbl-l20220930165932
-#| tbl-cap: "Results of Chi-square test between the number of articles that use person-first language in tabloids in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora."
+#| tbl-cap: "Results of Chi-square test between the number of instances of person-first language in tabloids in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora."
 # tabloids
 get_chisq_aus_uk(pers_4chisq_matrix_sumhits, 
        row_no = 2,
@@ -738,7 +738,7 @@ In summary, we do not observe a difference in the use of person-first language i
 
 ------------------------------------------------------------------------
 
-## identity-first language
+## Identity-first language
 
 Let's generate a frequency table (sum of no hits in text) for identity-first language:
 
@@ -767,7 +767,7 @@ We can assess the difference between these total number of uses of identity-firs
 
 ```{r}
 #| label: tbl-l20210930165502
-#| tbl-cap: "Results of Chi-square test between the number of articles that use identity-first language in the Australian corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus."
+#| tbl-cap: "Results of Chi-square test between the number of instances of identity-first language in the Australian corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus."
 get_chisq_tabloid_broadsheet(iden_4chisq_matrix_sumhits, 
            col_no = 1,
            type = "wc") |>
@@ -807,7 +807,7 @@ We can assess the difference between these total number of uses of identity-firs
 
 ```{r _uk}
 #| label: tbl-l202109301652211
-#| tbl-cap: "Results of Chi-square test between the number of articles that use identity-first language in the UK corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus."
+#| tbl-cap: "Results of Chi-square test between the number of instances of identity-first language in the UK corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus."
 get_chisq_tabloid_broadsheet(iden_4chisq_matrix_sumhits, 
            col_no = 2,
            type = "wc") |>
@@ -845,7 +845,7 @@ There is a higher number of uses of identity-first language in Australian broads
 
 ```{r}
 #| label: tbl-l20210930165932b
-#| tbl-cap: "Results of Chi-square test between the number of articles that use identity-first language in broadsheets in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora."
+#| tbl-cap: "Results of Chi-square test between the number of instances of identity-first language in broadsheets in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora."
 get_chisq_aus_uk(iden_4chisq_matrix_sumhits, 
        row_no = 1,
        type = "wc") |>
@@ -885,7 +885,7 @@ There is a higher number of uses of identity-first language in Australian tabloi
 
 ```{r}
 #| label: tbl-l20210930165932
-#| tbl-cap: "Results of Chi-square test between the number of articles that use identity-first language in tabloids in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora."
+#| tbl-cap: "Results of Chi-square test between the number of instances of identity-first language in tabloids in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora."
 get_chisq_aus_uk(iden_4chisq_matrix_sumhits, 
        row_no = 2,
        type = "wc") |>
@@ -952,7 +952,7 @@ We can assess the difference between these total number of uses of nominal adjec
 
 ```{r}
 #| label: tbl-l20090030165932b
-#| tbl-cap: 'Results of Chi-square test between the number of articles that use nominal adjectival "the obese" in Australian broadsheets vs tabloids vs the number that would be expected based on total word count of articles from each of those subcorpora.'
+#| tbl-cap: 'Results of Chi-square test between the number of instances of the nominal adjectival "the obese" in Australian broadsheets vs tabloids vs the number that would be expected based on total word count of articles from each of those subcorpora.'
 get_chisq_tabloid_broadsheet(obes_4chisq_matrix_sumhits, 
            col_no = 1,
            type = "wc") |>
@@ -996,7 +996,7 @@ We can assess the difference between these total number of uses of nominal adjec
 
 ```{r}
 #| label: tbl-l20090030165932
-#| tbl-cap: 'Results of Chi-square test between the number of articles that use nominal adjectival "the obese" in UK broadsheets vs tabloids vs the number that would be expected based on total word count of articles from each of those subcorpora.'
+#| tbl-cap: 'Results of Chi-square test between the number of instances of the nominal adjectival "the obese" in UK broadsheets vs tabloids vs the number that would be expected based on total word count of articles from each of those subcorpora.'
 get_chisq_tabloid_broadsheet(pers_4chisq_matrix_sumhits, 
            col_no = 2,
            type = "wc") |>
@@ -1038,7 +1038,7 @@ No difference is observed in the use of nominal adjectival "the obese" between A
 
 ```{r}
 #| label: tbl-l20100030165932b
-#| tbl-cap: 'Results of Chi-square test between the number of articles that use nominal adjectival "the obese" in broadsheets in the UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora.'
+#| tbl-cap: 'Results of Chi-square test between the instances of the nominal adjectival "the obese" in broadsheets in the UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora.'
 get_chisq_aus_uk(obes_4chisq_matrix_sumhits, 
        row_no = 1,
        type = "wc") |>

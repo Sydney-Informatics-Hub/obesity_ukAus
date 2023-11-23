@@ -177,7 +177,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>We use the following tests to compare the sub-corpora:</p>
 <ul>
-<li>Chi-square goodness-of-fit tests, considering the total sub-corpus word count as the probability of observing a specific feature.</li>
+<li>Chi-square goodness-of-fit tests, considerin:
+<ul>
+<li>The total sub-corpus word count as the probability of observing a specific feature, when considering the sum of instances.</li>
+<li>The total number of articles in the subcorpus, when considering number of articles that feature at least one instance.</li>
+</ul>
+</li>
 <li>Parametric t-tests comparing the mean frequencies, with texts without the feature considered to have a value of 0.</li>
 <li>The non-parametric Fisher-Pitman Permutation Test test with 10000 re-samples, comparing the mean frequencies, with texts without the feature considered to have a value of 0.</li>
 </ul>
@@ -189,9 +194,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>There is no difference in length between articles in Australian and UK tabloids (mean 558.72 vs 557.11, respectively).</li>
 </ul></section><section id="use-of-person-first-language" class="level3"><h3 data-anchor-id="use-of-person-first-language">Use of person-first language:</h3>
 <ul>
-<li><p>Australian broadsheets have somewhat higher total number of instances (p(Chi-sq) &lt; 0.05) and number of articles (p &lt; 0.001) using person-first language than Australian tabloids, however, this difference is not supported when considering the mean frequency of language use across the corpus with parametric or non-parametric tests.</p></li>
-<li><p>In the UK corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets, when considering contingency table and frequency based analyses similar to the above.</p></li>
-<li><p>Australian broadsheets have somewhat higher total number of instances (p(Chi-sq) &lt; 0.001) and number of articles (p &lt; 0.0001) using person-first language than UK broadsheets. This difference is supported when considering the mean frequency of language use (mean Australian broadsheets = 22.61 words per million (wpm), mean UK broadsheets 10.68 wpm) across the corpus with parametric and non-parametric tests (p(FP) &lt; 0.05)).</p></li>
+<li><p>Australian broadsheets have somewhat higher total number of instances (p(Chi-sq) &lt; 0.05) and number of articles (p &lt; 0.001) using person-first language than tabloids, however, this difference is not supported when considering the mean frequency of language use across the corpus with parametric or non-parametric tests.</p></li>
+<li><p>In the UK corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table and frequency based analyses similar to the above.</p></li>
+<li><p>Australian broadsheets have somewhat higher total number of instances (p(Chi-sq) &lt; 0.001) and number of articles (p &lt; 0.001) using person-first language than UK broadsheets. This difference is supported when considering the mean frequency of language use (mean Australian broadsheets = 22.61 words per million (wpm), mean UK broadsheets 10.68 wpm) across the corpus with parametric and non-parametric tests (p(FP) &lt; 0.05)).</p></li>
 <li><p>There is no difference between the number of instances, articles or frequency of between Australian and UK tabloids.</p></li>
 </ul></section><section id="use-of-identity-first-language" class="level3"><h3 data-anchor-id="use-of-identity-first-language">Use of identity-first language:</h3>
 <ul>
@@ -201,10 +206,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>There is a higher number of instances and articles that use identity-first language in Australian tabloids, and a lower number in UK tabloids (p(Chi-sq) &lt; 0.001). The frequency is also higher in Australian tabloids (mean Australian 1642.61 wpm, mean UK 1009.57 wpm, p(FP) &lt; 1e-04). This is especially striking given that there is no difference in overall article length between Australian and UK tabloids.</p></li>
 </ul></section><section id="use-of-the-obese-nominal-adjectival" class="level3"><h3 data-anchor-id="use-of-the-obese-nominal-adjectival">Use of “the obese” (nominal adjectival)</h3>
 <ul>
-<li><p>In the Australian corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) &lt; 0.05, p(FP) &lt; 0.1) when considering frequencies, with tabloids having a higher frequency of use than broadsheets (mean broadsheet frequency 54.14 wpm, mean tabloid 87.95 wpm). This discrepancy is most likely at least partially explained by the much longer article lengths of broadsheets vs tabloids in this corpus.</p></li>
-<li><p>Similarly, in the UK corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) &lt; 0.01, p(FP) &lt; 0.01) when considering frequencies, with tabloids having a higher frequency of use of nominal adjectival “the obese” vs broadsheets (mean broadsheet frequency 78.9 wpm, mean tabloid 116.11 wpm). This discrepancy is most likely at least partially explained by the much longer article lengths of broadsheets vs tabloids in this corpus, similar to the Australian corpus.</p></li>
-<li><p>When comparing use of nominal adjectival “the obese” in the Australian vs UK broadsheets, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) &lt; 0.01) when considering frequencies, with UK broadsheets having a higher frequency of use of nominal adjectival “the obese” vs Australian ones (mean frequency Australia - 54.14 wpm, UK - 78.90 wpm), but this is not supported with the non-parametric test.</p></li>
-<li><p>There is a somewhat lower number of total instances of use (p(Chi-sq) &lt; 0.05) and articles (p(Chi-sq) &lt; 0.1) with at least one instance of use of nominal adjectival “the obese” in Australian tabloids, and a higher number in UK tabloids . However, this difference is not supported by frequency analysis (mean Australian 87.95 wpm, mean UK 116.11 wpm), when using both parametric or non-parametric tests.</p></li>
+<li><p>In the Australian corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. Frequency-based analysis does not suggest a strong difference either.</p></li>
+<li><p>Similarly, in the UK corpus, no differences in the number of instances or articles are observed between tabloids and broadsheets when considering contingency table based analysis. There is a very small difference detected (p(t-test) &lt; 0.01, p(FP) &lt; 0.01) when considering frequencies, with tabloids having a higher frequency of use of nominal adjectival “the obese” vs broadsheets (mean broadsheet frequency 78.9 wpm, mean tabloid 116.11 wpm).</p></li>
+<li><p>When comparing use of nominal adjectival “the obese” in the Australian vs UK broadsheets, no differences in the number of instances or articles are observed when considering contingency table based analysis. There is a very small difference detected (p(t-test) &lt; 0.05) when considering frequencies, with UK broadsheets having a higher frequency of use of nominal adjectival “the obese” vs Australian ones (mean frequency Australia - 54.14 wpm, UK - 78.90 wpm), but this is not supported with the non-parametric test.</p></li>
+<li><p>There is a somewhat lower number of total instances of use (p(Chi-sq) &lt; 0.05) and articles (p(Chi-sq) &lt; 0.1) with at least one instance of use of nominal adjectival “the obese” in Australian tabloids, and a higher number in UK tabloids . However, this difference is not supported by frequency analysis (mean Australian 87.95 wpm, mean UK 116.11 wpm), when using both parametric and non-parametric tests.</p></li>
 </ul>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://here.r-lib.org/">here</a></span><span class="op">)</span></span>
@@ -661,8 +666,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>   height <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div id="fig-l20220930141919" class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="ConditionAndPersonFirst_files/figure-html/fig-l20220930141919-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1: Venn diagram of overlap between articles that use identity-first, person-first and nominal adjectival ‘the obese’ in the two corpora.</figcaption><p></p>
+<figure class="figure"><p></p><figcaption class="figure-caption">Figure&nbsp;1: Venn diagram of overlap between articles that use identity-first, person-first and nominal adjectival ‘the obese’ in the two corpora.</figcaption><p></p>
+<p><img src="ConditionAndPersonFirst_files/figure-html/fig-l20220930141919-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -678,13 +683,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">group</span>, </span>
 <span> levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"none"</span>, <span class="st">"pers"</span>, <span class="st">"all3"</span>, <span class="st">"two"</span>, <span class="st">"iden_obes"</span>, <span class="st">"pers_obes"</span>,<span class="st">"iden_pers"</span>, <span class="st">"obes"</span>,  <span class="st">"iden"</span><span class="op">)</span>,</span>
 <span> labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
-<span> <span class="st">"no occurrences of any of the three targeted language practices"</span>,</span>
-<span> <span class="st">"occurrences of person-first language"</span>,</span>
-<span> <span class="st">"occurrences of all three targeted language practices"</span>,</span>
-<span> <span class="st">"occurrences of two of the three targeted language practices"</span>,</span>
+<span> <span class="st">"no occurrences"</span>,</span>
+<span> <span class="st">"person-first language"</span>,</span>
+<span> <span class="st">"all three practices"</span>,</span>
+<span> <span class="st">"two language practices"</span>,</span>
 <span> <span class="st">"iden_obes"</span>, <span class="st">"pers_obes"</span>,<span class="st">"iden_pers"</span>,</span>
-<span> <span class="st">"occurrences of nominal adjectival 'the obese'"</span>,</span>
-<span> <span class="st">"occurrences of identity-first language"</span></span>
+<span> <span class="st">"nominal adjectival 'the obese'"</span>,</span>
+<span> <span class="st">"identity-first language"</span></span>
 <span> <span class="op">)</span><span class="op">)</span><span class="op">)</span> </span>
 <span></span>
 <span><span class="va">for_stacked_chart_data</span> <span class="op">|&gt;</span></span>
@@ -755,29 +760,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>   height <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div id="fig-l20220930141902-1" class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="ConditionAndPersonFirst_files/figure-html/fig-l20220930141902-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;2: Proportion of articles in each corpus that have instances of all three language types, two language types, a single (specified) language type or no language types. We can see that most articles in both corpora have no use of any of the 3 language types described.</figcaption><p></p>
+<figure class="figure"><p></p><figcaption class="figure-caption">Figure&nbsp;2: Proportion of articles in each corpus that have instances of all three language types, two language types, a single (specified) language type or no language types. We can see that most articles in both corpora have no use of any of the 3 language types described.</figcaption><p></p>
+<p><img src="ConditionAndPersonFirst_files/figure-html/fig-l20220930141902-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output-display">
 <div id="fig-l20220930141902-2" class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="ConditionAndPersonFirst_files/figure-html/fig-l20220930141902-2.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3: Proportion of articles in each corpus that have instances of all three language types, two language types, a single (specified) language type or no language types. We can see that most articles in both corpora have no use of any of the 3 language types described.</figcaption><p></p>
+<figure class="figure"><p></p><figcaption class="figure-caption">Figure&nbsp;3: Proportion of articles in each corpus that have instances of all three language types, two language types, a single (specified) language type or no language types. We can see that most articles in both corpora have no use of any of the 3 language types described.</figcaption><p></p>
+<p><img src="ConditionAndPersonFirst_files/figure-html/fig-l20220930141902-2.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output-display">
 <div id="fig-l20220930141902-3" class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="ConditionAndPersonFirst_files/figure-html/fig-l20220930141902-3.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4: Proportion of articles in each corpus that have instances of all three language types, two language types, a single (specified) language type or no language types. We can see that most articles in both corpora have no use of any of the 3 language types described.</figcaption><p></p>
+<figure class="figure"><p></p><figcaption class="figure-caption">Figure&nbsp;4: Proportion of articles in each corpus that have instances of all three language types, two language types, a single (specified) language type or no language types. We can see that most articles in both corpora have no use of any of the 3 language types described.</figcaption><p></p>
+<p><img src="ConditionAndPersonFirst_files/figure-html/fig-l20220930141902-3.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output-display">
 <div id="fig-l20220930141902-4" class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="ConditionAndPersonFirst_files/figure-html/fig-l20220930141902-4.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;5: Proportion of articles in each corpus that have instances of all three language types, two language types, a single (specified) language type or no language types. We can see that most articles in both corpora have no use of any of the 3 language types described.</figcaption><p></p>
+<figure class="figure"><p></p><figcaption class="figure-caption">Figure&nbsp;5: Proportion of articles in each corpus that have instances of all three language types, two language types, a single (specified) language type or no language types. We can see that most articles in both corpora have no use of any of the 3 language types described.</figcaption><p></p>
+<p><img src="ConditionAndPersonFirst_files/figure-html/fig-l20220930141902-4.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1115,8 +1120,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>       <span class="st">"tabloid"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div id="fig-l20220930143659" class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="ConditionAndPersonFirst_files/figure-html/fig-l20220930143659-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;6: Histogram of word count (x) and number (y) of articles from tabloids and broadsheets in the Australian corpus. Broadsheets appear to have higher word counts than tabloids in the dataset.</figcaption><p></p>
+<figure class="figure"><p></p><figcaption class="figure-caption">Figure&nbsp;6: Histogram of word count (x) and number (y) of articles from tabloids and broadsheets in the Australian corpus. Broadsheets appear to have higher word counts than tabloids in the dataset.</figcaption><p></p>
+<p><img src="ConditionAndPersonFirst_files/figure-html/fig-l20220930143659-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1150,8 +1155,8 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <span>       label2 <span class="op">=</span> <span class="st">"tabloids"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div id="fig-l202209301433939393" class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="ConditionAndPersonFirst_files/figure-html/fig-l202209301433939393-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;7: Histogram of word count (x) and number (y) of articles from tabloids and broadsheets in the UK corpus. Similar to the Australian corpus, broadsheets appear to have higher word counts than tabloids in the dataset.</figcaption><p></p>
+<figure class="figure"><p></p><figcaption class="figure-caption">Figure&nbsp;7: Histogram of word count (x) and number (y) of articles from tabloids and broadsheets in the UK corpus. Similar to the Australian corpus, broadsheets appear to have higher word counts than tabloids in the dataset.</figcaption><p></p>
+<p><img src="ConditionAndPersonFirst_files/figure-html/fig-l202209301433939393-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1162,8 +1167,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <span>  <span class="va">uk_tabloid_wordcounts</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><p>Effect sizes were labelled following Cohen’s (1988) recommendations.</p>
 <p>The Welch Two Sample t-test testing the difference between uk_broadsheet_wordcounts and uk_tabloid_wordcounts (mean of x = 718.72, mean of y = 557.11) suggests that the effect is positive, statistically significant, and small (difference = 161.61, 95% CI [142.54, 180.68], t(11987.64) = 16.61, p &lt; .001; Cohen’s d = 0.30, 95% CI [0.26, 0.33])</p>
-<p>Yes, articles in broadsheets are indeed longer, although the effect size is not as large (small vs medium for the Australian corpus).</p>
-<p>Does the non-parametric FP test support this as well?</p>
+<p>Yes, articles in broadsheets are indeed longer, similar to the Australian corpus. Does the non-parametric FP test support this as well?</p>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fp_test_wc</span><span class="op">(</span>wc1 <span class="op">=</span> <span class="va">uk_broadsheet_wordcounts</span>,</span>
 <span>     wc2 <span class="op">=</span> <span class="va">uk_tabloid_wordcounts</span>,</span>
@@ -1189,8 +1193,8 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <span>       <span class="st">"UK"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div id="fig-l2022093019" class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="ConditionAndPersonFirst_files/figure-html/fig-l2022093019-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;8: Histogram of word count (x) and number (y) of articles from broadsheets in the Australian and UK corpus. Articles in UK broadsheets are somewhat shorter than in Australian ones.</figcaption><p></p>
+<figure class="figure"><p></p><figcaption class="figure-caption">Figure&nbsp;8: Histogram of word count (x) and number (y) of articles from broadsheets in the Australian and UK corpus. Articles in UK broadsheets are somewhat shorter than in Australian ones.</figcaption><p></p>
+<p><img src="ConditionAndPersonFirst_files/figure-html/fig-l2022093019-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1227,8 +1231,8 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <span>       <span class="st">"UK"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div id="fig-l2022dkldkdkdkd" class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="ConditionAndPersonFirst_files/figure-html/fig-l2022dkldkdkdkd-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;9: Histogram of word count (x) and number (y) of articles from tabloids in the Australian and UK corpus. There doesn’t seem to be a difference in length between articles in Australian and UK tabloids.</figcaption><p></p>
+<figure class="figure"><p></p><figcaption class="figure-caption">Figure&nbsp;9: Histogram of word count (x) and number (y) of articles from tabloids in the Australian and UK corpus. There doesn’t seem to be a difference in length between articles in Australian and UK tabloids.</figcaption><p></p>
+<p><img src="ConditionAndPersonFirst_files/figure-html/fig-l2022dkldkdkdkd-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1249,7 +1253,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  wc by label (AUS, UK)
-Z = 0.13595, p-value = 0.8897
+Z = 0.13595, p-value = 0.8932
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
@@ -1335,7 +1339,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </details><div class="cell-output-display">
 <div id="tbl-l20220930165502">
 <table class="table table-sm table-striped">
-<caption>Table&nbsp;10: Results of Chi-square test between the number of articles that use person-first language in the Australian corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus.</caption>
+<caption>Table&nbsp;10: Results of Chi-square test between the number of instances of person-first language in the Australian corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus.</caption>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">method</td>
@@ -1446,7 +1450,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  pers_freq by source_type (broadsheet, tabloid)
-Z = 1.1711, p-value = 0.2488
+Z = 1.1711, p-value = 0.2538
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
@@ -1460,7 +1464,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </details><div class="cell-output-display">
 <div id="tbl-l202209301652211">
 <table class="table table-sm table-striped">
-<caption>Table&nbsp;12: Results of Chi-square test between the number of articles that use person-first language in the UK corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus.</caption>
+<caption>Table&nbsp;12: Results of Chi-square test between the number of instances of person-first language in the UK corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus.</caption>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">method</td>
@@ -1571,7 +1575,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  pers_freq by source_type (broadsheet, tabloid)
-Z = -1.0151, p-value = 0.3155
+Z = -1.0151, p-value = 0.3082
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
@@ -1587,7 +1591,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </details><div class="cell-output-display">
 <div id="tbl-l20220930165932b">
 <table class="table table-sm table-striped">
-<caption>Table&nbsp;14: Results of Chi-square test between the number of articles that use person-first language in broadsheets in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora.</caption>
+<caption>Table&nbsp;14: Results of Chi-square test between the number of instances of person-first language in broadsheets in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora.</caption>
 <thead><tr class="header">
 <th style="text-align: left;"></th>
 <th style="text-align: left;">broadsheet</th>
@@ -1708,7 +1712,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  pers_freq by corpus (AUS, UK)
-Z = 2.453, p-value = 0.0142
+Z = 2.453, p-value = 0.0147
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
@@ -1725,7 +1729,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </details><div class="cell-output-display">
 <div id="tbl-l20220930165932">
 <table class="table table-sm table-striped">
-<caption>Table&nbsp;16: Results of Chi-square test between the number of articles that use person-first language in tabloids in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora.</caption>
+<caption>Table&nbsp;16: Results of Chi-square test between the number of instances of person-first language in tabloids in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora.</caption>
 <thead><tr class="header">
 <th style="text-align: left;"></th>
 <th style="text-align: left;">tabloid</th>
@@ -1845,12 +1849,12 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  pers_freq by corpus (AUS, UK)
-Z = -0.012715, p-value = 0.9875
+Z = -0.012715, p-value = 0.9886
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
 <p>In summary, we do not observe a difference in the use of person-first language in Australian vs UK tabloids.</p>
-<hr></section></section><section id="identity-first-language" class="level2"><h2 data-anchor-id="identity-first-language">identity-first language</h2>
+<hr></section></section><section id="identity-first-language" class="level2"><h2 data-anchor-id="identity-first-language">Identity-first language</h2>
 <p>Let’s generate a frequency table (sum of no hits in text) for identity-first language:</p>
 <div class="cell">
 <details><summary>Code</summary><div class="sourceCode" id="cb50"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">iden_4chisq_matrix_sumhits</span> <span class="op">&lt;-</span></span>
@@ -1902,7 +1906,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </details><div class="cell-output-display">
 <div id="tbl-l20210930165502">
 <table class="table table-sm table-striped">
-<caption>Table&nbsp;19: Results of Chi-square test between the number of articles that use identity-first language in the Australian corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus.</caption>
+<caption>Table&nbsp;19: Results of Chi-square test between the number of instances of identity-first language in the Australian corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus.</caption>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">method</td>
@@ -2026,7 +2030,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </details><div class="cell-output-display">
 <div id="tbl-l202109301652211">
 <table class="table table-sm table-striped">
-<caption>Table&nbsp;21: Results of Chi-square test between the number of articles that use identity-first language in the UK corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus.</caption>
+<caption>Table&nbsp;21: Results of Chi-square test between the number of instances of identity-first language in the UK corpus vs the number that would be expected based on total word count of articles from tabloids and broadsheets in that subcorpus.</caption>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">method</td>
@@ -2148,7 +2152,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </details><div class="cell-output-display">
 <div id="tbl-l20210930165932b">
 <table class="table table-sm table-striped">
-<caption>Table&nbsp;23: Results of Chi-square test between the number of articles that use identity-first language in broadsheets in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora.</caption>
+<caption>Table&nbsp;23: Results of Chi-square test between the number of instances of identity-first language in broadsheets in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora.</caption>
 <thead><tr class="header">
 <th style="text-align: left;"></th>
 <th style="text-align: left;">broadsheet</th>
@@ -2280,7 +2284,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </details><div class="cell-output-display">
 <div id="tbl-l20210930165932">
 <table class="table table-sm table-striped">
-<caption>Table&nbsp;25: Results of Chi-square test between the number of articles that use identity-first language in tabloids in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora.</caption>
+<caption>Table&nbsp;25: Results of Chi-square test between the number of instances of identity-first language in tabloids in UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora.</caption>
 <thead><tr class="header">
 <th style="text-align: left;"></th>
 <th style="text-align: left;">tabloid</th>
@@ -2455,7 +2459,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </details><div class="cell-output-display">
 <div id="tbl-l20090030165932b">
 <table class="table table-sm table-striped">
-<caption>Table&nbsp;28: Results of Chi-square test between the number of articles that use nominal adjectival “the obese” in Australian broadsheets vs tabloids vs the number that would be expected based on total word count of articles from each of those subcorpora.</caption>
+<caption>Table&nbsp;28: Results of Chi-square test between the number of instances of the nominal adjectival “the obese” in Australian broadsheets vs tabloids vs the number that would be expected based on total word count of articles from each of those subcorpora.</caption>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">method</td>
@@ -2567,7 +2571,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  obes_freq by source_type (broadsheet, tabloid)
-Z = -1.8469, p-value = 0.0674
+Z = -1.8469, p-value = 0.0651
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
@@ -2581,7 +2585,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </details><div class="cell-output-display">
 <div id="tbl-l20090030165932">
 <table class="table table-sm table-striped">
-<caption>Table&nbsp;30: Results of Chi-square test between the number of articles that use nominal adjectival “the obese” in UK broadsheets vs tabloids vs the number that would be expected based on total word count of articles from each of those subcorpora.</caption>
+<caption>Table&nbsp;30: Results of Chi-square test between the number of instances of the nominal adjectival “the obese” in UK broadsheets vs tabloids vs the number that would be expected based on total word count of articles from each of those subcorpora.</caption>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">method</td>
@@ -2692,7 +2696,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  obes_freq by source_type (broadsheet, tabloid)
-Z = -2.716, p-value = 0.006
+Z = -2.716, p-value = 0.0062
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
@@ -2706,7 +2710,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 </details><div class="cell-output-display">
 <div id="tbl-l20100030165932b">
 <table class="table table-sm table-striped">
-<caption>Table&nbsp;32: Results of Chi-square test between the number of articles that use nominal adjectival “the obese” in broadsheets in the UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora.</caption>
+<caption>Table&nbsp;32: Results of Chi-square test between the instances of the nominal adjectival “the obese” in broadsheets in the UK and Australia vs the number that would be expected based on total word count of articles from each of those subcorpora.</caption>
 <thead><tr class="header">
 <th style="text-align: left;"></th>
 <th style="text-align: left;">broadsheet</th>
@@ -2824,7 +2828,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  obes_freq by corpus (AUS, UK)
-Z = -1.622, p-value = 0.1016
+Z = -1.622, p-value = 0.1045
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
@@ -2957,7 +2961,7 @@ alternative hypothesis: true mu is not equal to 0</code></pre>
 <pre><code>
     Approximative Two-Sample Fisher-Pitman Permutation Test
 data:  obes_freq by corpus (AUS, UK)
-Z = -1.4319, p-value = 0.1539
+Z = -1.4319, p-value = 0.1538
 alternative hypothesis: true mu is not equal to 0</code></pre>
 </div>
 </div>
