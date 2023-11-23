@@ -53,7 +53,7 @@ We use the following tests to compare the sub-corpora:
 
 - When comparing use of nominal adjectival "the obese" in the Australian vs UK broadsheets, no differences in the number of instances or articles are observed when considering contingency table based analysis. There is a very small difference detected (p(t-test) < 0.05) when considering frequencies, with UK broadsheets having a higher frequency of use of nominal adjectival "the obese" vs Australian ones (mean frequency Australia - 54.14 wpm, UK - 78.90 wpm), but this is not supported with the non-parametric test.
 
-- There is a somewhat lower number of total instances of use (p(Chi-sq) < 0.05) and articles (p(Chi-sq) < 0.1) with at least one instance of use of nominal adjectival "the obese" in Australian tabloids, and a higher number in UK tabloids . However, this difference is not supported by frequency analysis (mean Australian 87.95 wpm, mean UK 116.11 wpm), when using both parametric and non-parametric tests.
+- There is a somewhat lower number of total instances of use (p(Chi-sq) < 0.05) and articles (p(Chi-sq) < 0.1) with at least one instance of use of nominal adjectival "the obese" in Australian tabloids, and a higher number in UK tabloids. However, this difference is not supported by frequency analysis (mean Australian 87.95 wpm, mean UK 116.11 wpm), when using both parametric and non-parametric tests.
 
 ```{r loadLibs, warning=FALSE, message=FALSE}
 library(here)
